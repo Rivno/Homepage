@@ -1,0 +1,12 @@
+{
+  "name": "homepage",
+  "version": "0.0.0",
+  "dependencies": {
+    "knockout": "*",
+    "knockout-mapping": "*",
+    "knockout-validation": "*",
+    "bootstrap": "*",
+    "modernizr": "*",
+    "jquery": "*"
+  }
+}

@@ -1,0 +1,84 @@
+﻿input[type="submit"]
+, input[type="button"]
+, button 
+{
+    background-color: #f4f3f3;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 8px;
+    width: auto;
+}
+
+    input[type="submit"]:hover
+    , input[type="button"]:hover
+    , button :hover
+    {
+        background-color: #d3dce0;
+    }
+
+.button-icon 
+{
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    padding-left: 20px!important;
+}
+
+    .button-icon.search
+    {
+        background-image: url(../images/Search_16x16.png);
+    }
+    
+    .button-icon.memoriser
+    {
+        background-image: url(../Images/page_edit.gif);
+    }
+    
+    .button-icon.save
+    {
+        background-image: url(../Images/disk.png);
+    }
+    
+    .button-icon.accept
+    {
+        background-image: url(../Images/accept.png);
+    }
+    
+    .button-icon.edit
+    {
+        background-image: url(../Images/edit.gif);
+    }
+    
+    .button-icon.souscrire
+    {
+        background-image: url(../Images/ged_docsortant.gif);
+    }
+
+span.button-icon
+{
+    display: inline-block;
+    height:16px;
+    width:16px;
+    border: 1px solid transparent;
+    padding:0!important;
+    background-position:0 0;
+    vertical-align:bottom
+}
+
+    span.button-icon:hover
+    {
+        border: 1px solid black;
+        background-color: #e2e2e2;
+        cursor:pointer
+    }
+
+        span.button-icon.close
+        {
+            background-image: url(../images/Close_16x16.png);
+            opacity:0.5
+        }
+
+            span.button-icon.close:hover
+            {
+                opacity:1
+            }
