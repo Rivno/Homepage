@@ -19,26 +19,26 @@ exports.map = function(app, options){
         var controllerModule = require(folder + file.split('.')[0]);
         var controller = new controllerModule.controller();
         var routeParam = controller.name;
-        console.log('controller : ' + routeParam);
+        //console.log('controller : ' + routeParam);
 
         if (options.defaultPage) {
             if (controller.name === options.defaultPage.controller 
                 && controller[options.defaultPage.action] != undefined) {
                 app.get('/', controller[options.defaultPage.action]);
-                console.log('route : / created')
+                //console.log('route : / created')
             }
         }
 
         if (controller.index) {
             app.get(prefix + routeParam, controller.index);
-            console.log('route : ' + prefix + routeParam + ' created');
+            //console.log('route : ' + prefix + routeParam + ' created');
         }
 
         for (var action in controller) {
             if (typeof controller[action] === 'function' 
                 && (action.length > 0 && action[0] != "_")) {
                 app.get(prefix + routeParam + '/' + action, controller[action]);
-                console.log('route : ' + prefix + routeParam + '/' + action + ' created');
+                //console.log('route : ' + prefix + routeParam + '/' + action + ' created');
             }
         }
     });

@@ -58,11 +58,10 @@ exports.controller = function() {
 				body += d;
 			});
 			resp.addListener('error', function () {
-				console.log("error");
+				//console.log("error");
 			});
 			resp.addListener('end', function () {
 				simplexml.parse(body, function (e, parsed) {
-					//console.log(parsed);
 					var data = null;
 
 					if (parsed) {					
@@ -130,7 +129,7 @@ exports.controller = function() {
 
 								for (var i = 0; i < 5 && i < xmlItems.length; i++) {
 									var item = xmlItems[i];
-									console.log(item);
+									
 									items.push({
 									 	Title: item.title,
 									 	Link: item.link,
