@@ -8,6 +8,7 @@ exports.map = function(app, options){
 
     var folder = options.path;
     var prefix = '/';
+
     if (options.prefix) {
         prefix += options.prefix + "/";
     }
@@ -19,6 +20,14 @@ exports.map = function(app, options){
         var controller = new controllerModule.controller();
         var routeParam = controller.name;
         console.log('controller : ' + routeParam);
+
+        if (options.defaultPage) {
+            if (controller.name === options.defaultPage.controller 
+                && controller[options.defaultPage.action] != undefined) {
+                app.get('/', controller[options.defaultPage.action]);
+                console.log('route : / created')
+            }
+        }
 
         if (controller.index) {
             app.get(prefix + routeParam, controller.index);

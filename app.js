@@ -10,6 +10,10 @@ var serveStatic = require("serve-static");
 var fs = require('fs');
 var htmlMapRoute = require("./app/tools/system/htmlMapRoute");
 
+var configuration = JSON.parse(
+    fs.readFileSync('config.json')
+);
+
 var app = express();
 
 // view engine setup
@@ -30,8 +34,8 @@ app.use(cookieParser());
 
 app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}));
 
-htmlMapRoute.map(app, { path: __dirname + '/app/controllers/' });
-htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api'});
+htmlMapRoute.map(app, { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage });
+htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -67,4 +71,11 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app; 
+//module.exports = app;
+var debug = require('debug')('expressapp');
+
+app.set('port', process.env.PORT || 1337);
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+}); 
