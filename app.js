@@ -38,7 +38,7 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
 //htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
 app.get('/', function (req, res) {
-    res.send('hello');
+    res.send('__dirname: ' + __dirname);
 });
 
 /// catch 404 and forward to error handler
