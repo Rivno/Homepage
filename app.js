@@ -35,11 +35,11 @@ app.use(cookieParser());
 app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}));
 
 //htmlMapRoute.map(app, { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage });
-//htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
+htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
 app.get('/', function (req, res) { res.send('Hello'); });
 app.get('/home', function (req, res) { res.render('home/index', { title: "Homepage" } ); });
-app.get('/api/default', function (req, res) { res.json({"plop": "plop"}); });
+//app.get('/api/default', function (req, res) { res.json({"plop": "plop"}); });
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
