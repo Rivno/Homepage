@@ -37,11 +37,12 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
 //htmlMapRoute.map(app, { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage });
 //htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
-app.get('/', function (req, res) { 
+
+
 
     var options = { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage };
 
-    var fs = require('fs');
+    //var fs = require('fs');
 
     var folder = options.path;
     var prefix = '/';
@@ -79,12 +80,6 @@ app.get('/', function (req, res) {
             }
         }
     });
-
-
-    res.json(controllers); 
-});
-app.get('/home', function (req, res) { res.render('home/index', { title: "Homepage" } ); });
-//app.get('/api/default', function (req, res) { res.json({"plop": "plop"}); });
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
