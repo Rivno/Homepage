@@ -38,6 +38,9 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
 //htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
 app.get('/', function (req, res) { 
+
+    var options = { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage };
+
     var fs = require('fs');
 
     var folder = options.path;
