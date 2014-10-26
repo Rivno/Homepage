@@ -52,7 +52,7 @@ app.get('/', function (req, res) {
 
     var controllers = fs.readdirSync(folder);
 
-    /*controllers.forEach(function (file) {
+    controllers.forEach(function (file) {
         var controllerModule = require(folder + file.split('.')[0]);
         var controller = new controllerModule.controller();
         var routeParam = controller.name;
@@ -78,7 +78,7 @@ app.get('/', function (req, res) {
                 //console.log('route : ' + prefix + routeParam + '/' + action + ' created');
             }
         }
-    });*/
+    });
 
 
     res.json(controllers); 
