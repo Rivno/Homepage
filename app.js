@@ -35,9 +35,51 @@ app.use(cookieParser());
 app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}));
 
 //htmlMapRoute.map(app, { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage });
-htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
+//htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
-app.get('/', function (req, res) { res.send('Hello'); });
+app.get('/', function (req, res) { 
+    var fs = require('fs');
+
+    var folder = options.path;
+    var prefix = '/';
+
+    if (options.prefix) {
+        prefix += options.prefix + "/";
+    }
+
+    var controllers = fs.readdirSync(folder);
+
+    /*controllers.forEach(function (file) {
+        var controllerModule = require(folder + file.split('.')[0]);
+        var controller = new controllerModule.controller();
+        var routeParam = controller.name;
+        //console.log('controller : ' + routeParam);
+
+        if (options.defaultPage) {
+            if (controller.name === options.defaultPage.controller 
+                && controller[options.defaultPage.action] != undefined) {
+                app.get('/', controller[options.defaultPage.action]);
+                //console.log('route : / created')
+            }
+        }
+
+        if (controller.index) {
+            app.get(prefix + routeParam, controller.index);
+            //console.log('route : ' + prefix + routeParam + ' created');
+        }
+
+        for (var action in controller) {
+            if (typeof controller[action] === 'function' 
+                && (action.length > 0 && action[0] != "_")) {
+                app.get(prefix + routeParam + '/' + action, controller[action]);
+                //console.log('route : ' + prefix + routeParam + '/' + action + ' created');
+            }
+        }
+    });*/
+
+
+    res.json(controllers); 
+});
 app.get('/home', function (req, res) { res.render('home/index', { title: "Homepage" } ); });
 //app.get('/api/default', function (req, res) { res.json({"plop": "plop"}); });
 
