@@ -40,8 +40,10 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
 
 
 
-    var optionss = [{ path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage },
-    { path: __dirname + '/app/api/', prefix: 'api' }];
+    var optionss = [
+        { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage }
+        //,{ path: __dirname + '/app/api/', prefix: 'api' }
+        ];
 
     //var fs = require('fs');
 for (var i in optionss) {
