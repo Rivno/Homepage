@@ -17,7 +17,9 @@
     "serve-static": "*",
     "moment": "~2.0.0",
     "path": "*",
-    "ejs-locals": "*"
+    "ejs-locals": "*",
+    "xml-simple": "*",
+    "xml2js": "*"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

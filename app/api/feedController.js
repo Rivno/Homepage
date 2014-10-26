@@ -1,5 +1,6 @@
 var http = require("http");
 var simplexml = require("xml-simple");
+var xml2js = require("xml2js");
 
 exports.controller = function() {
     this.name = "feed";
@@ -98,7 +99,7 @@ exports.controller = function() {
 					}
 					else {
 
-						var parseString = require("xml2js").parseString;
+						var parseString = xml2js.parseString;
 						parseString(body, function (err, result) {
 							if (result) {		
 								if (result['rdf:RDF']) {

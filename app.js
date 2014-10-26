@@ -34,62 +34,8 @@ app.use(cookieParser());
 
 app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}));
 
-//htmlMapRoute.map(app, { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage });
-//htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
-
-
-
-
-    var optionss = [
-        { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage }
-        //,{ path: __dirname + '/app/api/', prefix: 'api' }
-        ];
-
-    //var fs = require('fs');
-//for (var i in optionss) {
-app.get('/', function (req, res) {
-    var options = { path: __dirname + '/app/api/', prefix: 'api' };
-    var folder = options.path;
-    var prefix = '/';
-
-    if (options.prefix) {
-        prefix += options.prefix + "/";
-    }
-
-    var controllers = fs.readdirSync(folder);
-
-    controllers.forEach(function (file) {
-        var controllerModule = require(folder + file.split('.')[0]);
-        var controller = new controllerModule.controller();
-        var routeParam = controller.name;
-        //console.log('controller : ' + routeParam);
-
-        if (options.defaultPage) {
-            if (controller.name === options.defaultPage.controller 
-                && controller[options.defaultPage.action] != undefined) {
-                app.get('/', controller[options.defaultPage.action]);
-                //console.log('route : / created')
-            }
-        }
-
-        if (controller.index) {
-            app.get(prefix + routeParam, controller.index);
-            //console.log('route : ' + prefix + routeParam + ' created');
-        }
-
-        for (var action in controller) {
-            if (typeof controller[action] === 'function' 
-                && (action.length > 0 && action[0] != "_")) {
-                app.get(prefix + routeParam + '/' + action, controller[action]);
-                //console.log('route : ' + prefix + routeParam + '/' + action + ' created');
-            }
-        }
-    });
-//}
-    res.send('test');
-});
-
-
+htmlMapRoute.map(app, { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage });
+htmlMapRoute.map(app, { path: __dirname + '/app/api/', prefix: 'api' });
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
