@@ -46,8 +46,9 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
         ];
 
     //var fs = require('fs');
-for (var i in optionss) {
-    var options = optionss[i];
+//for (var i in optionss) {
+app.get('/', function (req, res) {
+    var options = { path: __dirname + '/app/api/', prefix: 'api' };
     var folder = options.path;
     var prefix = '/';
 
@@ -84,7 +85,12 @@ for (var i in optionss) {
             }
         }
     });
-}
+//}
+    res.send('test');
+});
+
+
+
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
