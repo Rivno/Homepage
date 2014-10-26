@@ -40,10 +40,12 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
 
 
 
-    var options = { path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage };
+    var optionss = [{ path: __dirname + '/app/controllers/', defaultPage: configuration.defaultPage },
+    { path: __dirname + '/app/api/', prefix: 'api' }];
 
     //var fs = require('fs');
-
+for (var i in optionss) {
+    var options = optionss[i];
     var folder = options.path;
     var prefix = '/';
 
@@ -80,7 +82,7 @@ app.use(serveStatic('./app/public', {'index': ['default.html', 'default.htm']}))
             }
         }
     });
-
+}
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
