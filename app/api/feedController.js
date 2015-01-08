@@ -62,7 +62,7 @@ exports.controller = function() {
 				//console.log("error");
 			});
 			resp.addListener('end', function () {
-				/*simplexml.parse(body, function (e, parsed) {
+				simplexml.parse(body, function (e, parsed) {
 					var data = null;
 
 					if (parsed) {					
@@ -146,54 +146,6 @@ exports.controller = function() {
 								res.json({message: "error"});
 							}
 						});
-					}
-				});*/
-				
-				var parseString = xml2js.parseString;
-				parseString(body, function (err, result) {
-					if (result) {		
-						if (result['rdf:RDF']) {
-							result = result['rdf:RDF'];
-							result.channel = result.channel[0];
-						}
-		
-						var channel = result.channel;
-						var data = { 
-							data: {
-								Id: req.query.url,
-								MaxItems: 5,
-								Line: 1,
-								Column: 1,
-								Title: channel.title,
-								Link: channel.link,
-								Description: channel.description,
-								Items: null
-							}
-						 }
-
-						var items = [];
-
-						var xmlItems = channel.item;
-						if (channel.item == undefined) {
-							xmlItems = result.item;
-						}
-
-						for (var i = 0; i < 5 && i < xmlItems.length; i++) {
-							var item = xmlItems[i];
-							
-							items.push({
-							 	Title: item.title,
-							 	Link: item.link,
-							 	Description: item.description,
-							 	Content: item["content:encoded"]
-							 });
-						}
-
-						data.data.Items = items;
-						res.json(data);
-					}
-					else {
-						res.json({message: "error"});
 					}
 				});
 			});
