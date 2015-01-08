@@ -98,7 +98,6 @@ exports.controller = function() {
 						res.json(data);
 					}
 					else {
-						res.json({message: "xml2js"});
 						var parseString = xml2js.parseString;
 						parseString(body, function (err, result) {
 							if (result) {		
