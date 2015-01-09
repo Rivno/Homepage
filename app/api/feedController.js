@@ -107,6 +107,7 @@ exports.controller = function() {
 								}
 				
 								var channel = result.channel;
+								if (channel) {
 								var data = { 
 									data: {
 										Id: req.query.url,
@@ -140,6 +141,11 @@ exports.controller = function() {
 
 								data.data.Items = items;
 								res.json(data);
+								}
+								else {
+								res.json({message: "error"});	
+								}
+								}
 							}
 							else {
 								res.json({message: "error"});
