@@ -108,43 +108,42 @@ exports.controller = function() {
 				
 								var channel = result.channel;
 								if (channel) {
-								var data = { 
-									data: {
-										Id: req.query.url,
-										MaxItems: 5,
-										Line: 1,
-										Column: 1,
-										Title: channel.title,
-										Link: channel.link,
-										Description: channel.description,
-										Items: null
+									var data = { 
+										data: {
+											Id: req.query.url,
+											MaxItems: 5,
+											Line: 1,
+											Column: 1,
+											Title: channel.title,
+											Link: channel.link,
+											Description: channel.description,
+											Items: null
+										}
+									 }
+	
+									var items = [];
+	
+									var xmlItems = channel.item;
+									if (channel.item == undefined) {
+										xmlItems = result.item;
 									}
-								 }
-
-								var items = [];
-
-								var xmlItems = channel.item;
-								if (channel.item == undefined) {
-									xmlItems = result.item;
-								}
-
-								for (var i = 0; i < 5 && i < xmlItems.length; i++) {
-									var item = xmlItems[i];
-									
-									items.push({
-									 	Title: item.title,
-									 	Link: item.link,
-									 	Description: item.description,
-									 	Content: item["content:encoded"]
-									 });
-								}
-
-								data.data.Items = items;
-								res.json(data);
+	
+									for (var i = 0; i < 5 && i < xmlItems.length; i++) {
+										var item = xmlItems[i];
+										
+										items.push({
+										 	Title: item.title,
+										 	Link: item.link,
+										 	Description: item.description,
+										 	Content: item["content:encoded"]
+										 });
+									}
+	
+									data.data.Items = items;
+									res.json(data);
 								}
 								else {
-								res.json({message: "error"});	
-								}
+									res.json({message: "error"});	
 								}
 							}
 							else {
