@@ -80,7 +80,7 @@ function module() {
     }
 
     var updateFeed = function () {
-        $.ajax({ url: "/api/feed/read", data: { url: self.id } })
+        $.ajax({ url: "/api/feed/read", data: { url: self.id }, timemout: 3000 })
             .done(function (data) {
                 self.title(data.data.Title);
                 self.items.removeAll();
