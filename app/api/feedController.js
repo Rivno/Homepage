@@ -1,14 +1,16 @@
 var http = require("http");
 var simplexml = require("xml-simple");
 var xml2js = require("xml2js");
+var mongojs = require("mongojs");
 
 exports.controller = function() {
     this.name = "feed";
 
-    this.listModule = function(req, res) {
+	var databaseUrl = 'localhost:27017/homepage';
+	var collections = ['module']
+	var db = mongojs.connect(databaseUrl, collections);
 
-    	var data = {
-    		ListModule: [
+	var initlist = [
     			{
     				Url: "http://www.dragonball-multiverse.com/flux.rss.php?lang=fr",
     				Column: 1,
@@ -44,9 +46,56 @@ exports.controller = function() {
     				Column: 3,
     				Row: 2
     			}
-    		]};
+    		]; 
 
-        res.json(data);
+    db.module.remove({});
+	for (var mod in initlist) {
+		var initModule = initlist[mod];
+
+		db.module.insert({
+    		userId: 1, 
+    		url: initModule.Url,
+    		column: initModule.Column,
+    		row: initModule.Row
+    	});
+	}  	    
+
+    this.addRSSModule = function(req, res) {
+//http://localhost:1337/api/feed/addRSSModule?userId=1&url=http%3A%2F%2Fwww.gamespot.com%2Ffeeds%2Fnews%2F&column=2&row=3
+
+    	var userId = parseInt(req.query.userId);
+    	var urlRSS = unescape(req.query.url);
+    	var column = parseInt(req.query.column);
+    	var row = parseInt(req.query.row);
+
+    	db.module.insert({
+    		userId: userId, 
+    		url: urlRSS,
+    		column: column,
+    		row: row
+    	});
+
+        res.json({isOk: true});
+    };
+
+    this.listModule = function(req, res) {
+
+    	var userId = parseInt(req.query.userId);
+        console.log(userId);
+
+    	db.module.find({userId: userId}).toArray(function (err, listModule) {
+            
+            var data = { listModules: undefined, error: undefined};
+
+            if (listModule != null) {
+                data.listModule = listModule;    
+            }
+            else {
+                data.error = err;
+            }
+
+            res.json(data);     
+        });
     };
 
     this.read = function (req, res) {

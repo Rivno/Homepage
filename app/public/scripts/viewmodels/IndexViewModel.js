@@ -72,9 +72,9 @@ function module() {
     self.maxItems = ko.observable();
 
     self.init = function (object) {
-        self.id(object.Url);
-        self.column(object.Column);
-        self.row(object.Row);
+        self.id(object.url);
+        self.column(object.column);
+        self.row(object.row);
 
         updateFeed();
     }
@@ -174,9 +174,9 @@ function portalViewModel() {
     self.init = function (object) {
         self.isInitializing(true);
 
-        for (var item in object.ListModule) {
+        for (var item in object.listModule) {
             var mod = new module();
-            mod.init(object.ListModule[item]);
+            mod.init(object.listModule[item]);
             self.modules.push(mod);
         }
 

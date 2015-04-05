@@ -58,7 +58,7 @@
     <script type="text/javascript">
 	    var indexViewModel = new portalViewModel();
 	    $(document).ready(function () {
-	    	$.ajax({ url: "/api/feed/listModule" })
+	    	$.ajax({ url: "/api/feed/listModule", data: { userId: 1 } })
 	    		.done(function (data) {
 	    			indexViewModel.init(data);
 	        		ko.applyBindings(indexViewModel, document.getElementById("portal"));

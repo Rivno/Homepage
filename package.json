@@ -2,7 +2,7 @@
   "name": "homepage",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node bin/www"
   },
   "dependencies": {
     "express": "~4.4.5",
@@ -19,7 +19,8 @@
     "path": "*",
     "ejs-locals": "*",
     "xml-simple": "*",
-    "xml2js": "*"
+    "xml2js": "*",
+    "mongojs": "*"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
