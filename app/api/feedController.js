@@ -25,7 +25,7 @@ exports.controller = function() {
     				Row: 3
     			},
     			{
-    				Url: "http://rss.feedsportal.com/c/808/f/413796/index.rss",
+    				Url: "http://www.jeuxvideo.com/rss/rss.xml",
     				Column: 2,
     				Row: 1
     			},
@@ -40,7 +40,7 @@ exports.controller = function() {
     				Row: 1
     			},
     			{
-    				Url: "http://lemonde.feedsportal.com/c/205/f/672611/index.rss",
+    				Url: "http://www.lemonde.fr/rss/une.xml",
     				Column: 3,
     				Row: 2
     			}
