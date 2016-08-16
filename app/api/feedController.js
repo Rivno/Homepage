@@ -15,7 +15,7 @@ exports.controller = function() {
     				Row: 2
     			},
     			{
-    				Url: "http://www.mangastream.com/rss",
+    				Url: "http://mangastream.com/rss",
     				Column: 1,
     				Row: 1
     			},
