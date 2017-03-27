@@ -30,7 +30,7 @@ exports.controller = function() {
     				Row: 1
     			},
     			{
-    				Url: "http://www.gamekult.com/feeds/actu.html",
+    				Url: "https://www.gamekult.com/feed.xml",
     				Column: 2,
     				Row: 2
     			},
