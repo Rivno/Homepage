@@ -56,7 +56,7 @@ exports.controller = function() {
         
         var protocol = http;
         
-        if (req.query.url.startsWith("https")) {
+        if (req.query.url.toString().startsWith("https")) {
             protocol = https;
         }
 
