@@ -3,6 +3,13 @@ var https = require("https");
 var simplexml = require("xml-simple");
 var xml2js = require("xml2js");
 
+if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function(searchString, position){
+      position = position || 0;
+      return this.substr(position, searchString.length) === searchString;
+  };
+}
+
 exports.controller = function() {
     this.name = "feed";
 
@@ -56,7 +63,7 @@ exports.controller = function() {
         
         var protocol = http;
         
-        if (req.query.url.toString().startsWith("https")) {
+        if (req.query.url.startsWith("https")) {
             protocol = https;
         }
 
