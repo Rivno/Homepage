@@ -1,4 +1,5 @@
 var http = require("http");
+var https = require("https");
 var simplexml = require("xml-simple");
 var xml2js = require("xml2js");
 
@@ -52,8 +53,14 @@ exports.controller = function() {
     this.read = function (req, res) {
 		
 		var body = "";
+        
+        var protocol = http;
+        
+        if (req.query.url.startsWith("https")) {
+            protocol = https;
+        }
 
-		http.get( req.query.url, function (resp) {
+		protocol.get( req.query.url, function (resp) {
 			resp.setEncoding("utf8");
 			resp.on('data', function (d) {
 				body += d;
