@@ -28,7 +28,7 @@
                         <div class="box-item">
                             <div class="item-header">
                                 <label data-bind="css: { triangle: true } "></label>
-                                <a data-bind="text: title"></a>
+                                <a data-bind="html: title"></a>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                     <div class="box-item">
                         <div class="item-header">
                             <label data-bind="click:expandItem, css: { triangle: !expand(), triangleExpand: expand } "></label>
-                            <a data-bind="click: click, text: title, attr: { href: link, title: title, alt: title }"></a>
+                            <a data-bind="click: click, html: title, attr: { href: link, title: title, alt: title }"></a>
                         </div>
                         <div data-bind="visible: expand">
                             <!-- ko if:expand -->
@@ -67,7 +67,7 @@
                         <div class="box-item">
                             <div>
                                 <label data-bind="css: { triangle: true } "></label>
-                                <a data-bind="text: title, attr: { href: link }"></a>
+                                <a data-bind="html: title, attr: { href: link }"></a>
                             </div>
                         </div>
                     </div>
