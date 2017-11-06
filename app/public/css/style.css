@@ -50,8 +50,7 @@ a:visited {
 }
 
 body {
-    /*background-color: #D1F9F9;*/
-    background-color: #532f6d;
+    background-color: #D1F9F9;
     padding-top:40px   
 }
 
@@ -116,13 +115,18 @@ body {
 .body-content {
     /*padding-top:15px;*/
     background-color: #FFFFFF;
-    border-top: 1px solid #dcdcdc;
-    border-bottom: 1px solid #dcdcdc;
+    /*border-top: 1px solid #dcdcdc;*/
+    /*border-bottom: 1px solid #dcdcdc;*/
 }
 
 .footer-content {
     padding:15px;    
     color:white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #532f6d;
 }
 
 .box {
