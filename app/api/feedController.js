@@ -23,7 +23,7 @@ exports.controller = function() {
     				Row: 2
     			},
     			{
-    				Url: "http://readms.net/rss",
+    				Url: "https://readms.net/rss",
     				Column: 1,
     				Row: 1
     			},
