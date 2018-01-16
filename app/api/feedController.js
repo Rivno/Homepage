@@ -42,6 +42,11 @@ exports.controller = function() {
     				Column: 2,
     				Row: 2
     			},
+                {
+                    Url: "https://www.gamespot.com/feeds/news/",
+                    Column: 2,
+                    Row: 3
+                },
     			{
     				Url: "http://feeds.feedburner.com/Koreus-articles",
     				Column: 3,
