@@ -51,7 +51,12 @@ exports.controller = function() {
     				Url: "http://www.lemonde.fr/rss/une.xml",
     				Column: 3,
     				Row: 2
-    			}
+    			},
+                {
+                    Url: "http://rss.cnn.com/rss/edition_world.rss",
+                    Column: 3,
+                    Row: 3
+                }
     		]};
 
         res.json(data);
