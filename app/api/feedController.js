@@ -53,7 +53,7 @@ exports.controller = function() {
     				Row: 1
     			},
     			{
-    				Url: "http://www.lemonde.fr/rss/une.xml",
+    				Url: "https://www.lemonde.fr/rss/une.xml",
     				Column: 3,
     				Row: 2
     			},
