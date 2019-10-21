@@ -90,8 +90,8 @@ exports.controller = function() {
 					var data = null;
 
 					if (parsed) {					
-						var channel = parsed.channel;
-
+						var channel = parsed.channel || parsed;
+                        
 						var data = { 
 							data: {
 								Id: req.query.url,
@@ -106,9 +106,10 @@ exports.controller = function() {
 						 }
 
 						var items = [];
+                        var chItems = channel.item || channel.entry;
 
-						for (var i = 0; i < 5 && i < channel.item.length; i++) {
-							var item = channel.item[i];
+						for (var i = 0; i < 5 && i < chItems.length; i++) {
+							var item = chItems[i];
 
 							items.push({
 							 	Title: item.title,
@@ -130,7 +131,8 @@ exports.controller = function() {
 									result.channel = result.channel[0];
 								}
 				
-								var channel = result.channel;
+								var channel = result.channel || result;
+                                
 								if (channel) {
 									var data = { 
 										data: {
@@ -147,10 +149,7 @@ exports.controller = function() {
 	
 									var items = [];
 	
-									var xmlItems = channel.item;
-									if (channel.item == undefined) {
-										xmlItems = result.item;
-									}
+									var xmlItems = channel.item || result.item || channel.entry || result.entry;
 	
 									for (var i = 0; i < 5 && i < xmlItems.length; i++) {
 										var item = xmlItems[i];
