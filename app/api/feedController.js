@@ -28,7 +28,7 @@ exports.controller = function() {
     				Row: 1
     			},
     			{
-    				Url: "http://feeds.feedburner.com/Spi0nCom",
+    				Url: "https://www.theverge.com/rss/index.xml",
     				Column: 1,
     				Row: 3
     			},
