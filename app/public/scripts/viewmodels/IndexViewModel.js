@@ -45,7 +45,7 @@ function moduleItem() {
         self.title(object.Title);
         self.link(object.Link);
         self.description(object.Description);
-        self.content(object.Content);
+        self.content(typeof object.Content === "object" ? object.Content["#"] : object.Content);
     }
 
     self.click = function () {
