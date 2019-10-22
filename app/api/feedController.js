@@ -28,7 +28,7 @@ exports.controller = function() {
     				Row: 1
     			},
     			{
-    				Url: "https://www.theverge.com/rss/index.xml",
+    				Url: "http://www.horriblesubs.info/rss.php?res=1080",
     				Column: 1,
     				Row: 3
     			},
@@ -48,7 +48,7 @@ exports.controller = function() {
                     Row: 3
                 },
     			{
-    				Url: "http://feeds.feedburner.com/Koreus-articles",
+    				Url: "https://www.theverge.com/rss/index.xml",
     				Column: 3,
     				Row: 1
     			},
