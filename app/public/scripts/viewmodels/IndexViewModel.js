@@ -43,7 +43,11 @@ function moduleItem() {
 
     self.init = function (object) {
         self.title(object.Title);
-        self.link(object.Link);
+        var link = object.Link;
+        if (link['@']) {
+            link = link['@'].href;
+        }
+        self.link(link);
         self.description(object.Description);
         self.content(typeof object.Content === "object" ? object.Content["#"] : object.Content);
     }
