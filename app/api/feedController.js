@@ -18,7 +18,7 @@ exports.controller = function() {
     	var data = {
     		ListModule: [
     			{
-    				Url: "http://www.dragonball-multiverse.com/flux.rss.php?lang=fr",
+    				Url: "http://feeds.feedburner.com/jster",
     				Column: 1,
     				Row: 2
     			},
