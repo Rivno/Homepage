@@ -176,7 +176,9 @@ exports.controller = function() {
 					}
 				});
 			});
-		});
+		}).on('error', (e) => {
+          console.error("Got error:", e.message);
+        });
 
 		
     };
