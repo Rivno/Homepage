@@ -23,7 +23,7 @@ exports.controller = function() {
     				Row: 2
     			},
     			{
-    				Url: "https://readms.net/rss",
+    				Url: "https://mangadex.org/rss/follows/2YUk6ENMzvxsTu8HPBRXe4QZbStym9K3",
     				Column: 1,
     				Row: 1
     			},
