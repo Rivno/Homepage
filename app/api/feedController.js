@@ -149,7 +149,7 @@ exports.controller = function() {
 	
 									var items = [];
 	
-									var xmlItems = channel.item || result.item || channel.entry || result.entry;
+									var xmlItems = channel.item || result.item || channel.entry || result.entry || [];
 	
 									for (var i = 0; i < 5 && i < xmlItems.length; i++) {
 										var item = xmlItems[i];
