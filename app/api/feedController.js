@@ -14,7 +14,7 @@ var moduleList = [
         {
             Url: "http://feeds.feedburner.com/jster",
             request: {
-                protocol: 'http',
+                protocol: 'http:',
                 host: 'feeds.feedburner.com',
                 path: '/jster',
                 headers: {
@@ -27,7 +27,7 @@ var moduleList = [
         {
             Url: "https://mangadex.org/rss/follows/2YUk6ENMzvxsTu8HPBRXe4QZbStym9K3",
             request: {
-                protocol: 'https',
+                protocol: 'https:',
                 host: 'mangadex.org',
                 path: '/rss/follows/2YUk6ENMzvxsTu8HPBRXe4QZbStym9K3',
                 headers: {
@@ -40,7 +40,7 @@ var moduleList = [
         {
             Url: "http://www.horriblesubs.info/rss.php?res=1080",
             request: {
-                protocol: 'http',
+                protocol: 'http:',
                 host: 'www.horriblesubs.info',
                 path: '/rss.php?res=1080',
                 headers: {
@@ -53,7 +53,7 @@ var moduleList = [
         {
             Url: "http://www.jeuxvideo.com/rss/rss.xml",
             request: {
-                protocol: 'http',
+                protocol: 'http:',
                 host: 'www.jeuxvideo.com',
                 path: '/rss/rss.xml',
                 headers: {
@@ -66,7 +66,7 @@ var moduleList = [
         {
             Url: "https://www.gamekult.com/feed.xml",
             request: {
-                protocol: 'https',
+                protocol: 'https:',
                 host: 'www.gamekult.com',
                 path: '/feed.xml',
                 headers: {
@@ -79,7 +79,7 @@ var moduleList = [
         {
             Url: "https://www.gamespot.com/feeds/news/",
             request: {
-                protocol: 'https',
+                protocol: 'https:',
                 host: 'www.gamespot.com',
                 path: '/feeds/news/',
                 headers: {
@@ -92,7 +92,7 @@ var moduleList = [
         {
             Url: "https://www.theverge.com/rss/index.xml",
             request: {
-                protocol: 'https',
+                protocol: 'https:',
                 host: 'www.theverge.com',
                 path: '/rss/index.xml',
                 headers: {
@@ -105,7 +105,7 @@ var moduleList = [
         {
             Url: "https://www.lemonde.fr/rss/une.xml",
             request: {
-                protocol: 'https',
+                protocol: 'https:',
                 host: 'www.lemonde.fr',
                 path: '/rss/une.xml',
                 headers: {
@@ -118,7 +118,7 @@ var moduleList = [
         {
             Url: "http://rss.cnn.com/rss/edition_world.rss",
             request: {
-                protocol: 'http',
+                protocol: 'http:',
                 host: 'rss.cnn.com',
                 path: '/rss/edition_world.rss',
                 headers: {
