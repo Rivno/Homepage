@@ -51,9 +51,9 @@ var moduleList = [
             Row: 3
         },
         {
-            Url: "http://www.jeuxvideo.com/rss/rss.xml",
+            Url: "https://www.jeuxvideo.com/rss/rss.xml",
             request: {
-                protocol: 'http:',
+                protocol: 'https:',
                 host: 'www.jeuxvideo.com',
                 path: '/rss/rss.xml',
                 headers: {
