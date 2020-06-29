@@ -10,10 +10,7 @@ if (!String.prototype.startsWith) {
   };
 }
 
-exports.controller = function() {
-    this.name = "feed";
-    
-    this.moduleList = [
+var moduleList = [
         {
             Url: "http://feeds.feedburner.com/jster",
             request: {
@@ -133,15 +130,18 @@ exports.controller = function() {
         }
     ];
 
+exports.controller = function() {
+    this.name = "feed";
+    
     this.listModule = function(req, res) {
-        res.json({ ListModule: this.moduleList });
+        res.json({ ListModule: moduleList });
     };
 
     this.read = function (req, res) {
 		
 		var body = "";
         let currentModule;
-        for (mod of this.moduleList) {
+        for (mod of moduleList) {
             if (mod.Url === req.query.url) {
                 currentModule = mod;
                 break;
