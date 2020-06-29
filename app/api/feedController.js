@@ -58,6 +58,7 @@ var moduleList = [
                 path: '/rss/rss.xml',
                 headers: {
                     'Content-Type': 'application/xml',
+                    'Accept': 'application/xml',
                 },
             },
             Column: 2,
