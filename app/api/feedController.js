@@ -162,7 +162,7 @@ exports.controller = function() {
 				body += d;
 			});
 			resp.addListener('error', function () {
-				//console.log("error");
+				res.json({message: "request error"});
 			});
 			resp.addListener('end', function () {
 				simplexml.parse(body, function (e, parsed) {
@@ -248,18 +248,19 @@ exports.controller = function() {
 									res.json(data);
 								}
 								else {
-									res.json({message: "error"});	
+									res.json({message: "parsing error"});	
 								}
 							}
 							else {
-								res.json({message: "error"});
+								res.json({message: "parsing error"});
 							}
 						});
 					}
 				});
 			});
 		}).on('error', (e) => {
-          console.error("Got error:", e.message);
+            res.json({message: "request error"});
+            console.error("Got error:", e.message);
         });
 
 		
