@@ -22,7 +22,7 @@ var moduleList = [
                 },
             },
             Column: 1,
-            Row: 2
+            Row: 3
         },
         {
             Url: "https://mangadex.org/rss/follows/2YUk6ENMzvxsTu8HPBRXe4QZbStym9K3",
@@ -38,17 +38,17 @@ var moduleList = [
             Row: 1
         },
         {
-            Url: "http://www.horriblesubs.info/rss.php?res=1080",
+            Url: "https://www.dragonball-multiverse.com/flux.rss.php?lang=fr",
             request: {
-                protocol: 'http:',
-                host: 'www.horriblesubs.info',
-                path: '/rss.php?res=1080',
+                protocol: 'https:',
+                host: 'www.dragonball-multiverse.com',
+                path: '/flux.rss.php?lang=fr',
                 headers: {
                     'Content-Type': 'application/xml',
                 },
             },
             Column: 1,
-            Row: 3
+            Row: 2
         },
         {
             Url: "https://www.jeuxvideo.com/rss/rss.xml",
