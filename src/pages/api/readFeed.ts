@@ -2,6 +2,8 @@
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { FEED_URL_TYPE, MAP_URL } from '@/helpers/feedContanst';
+
 type Data = {
   data: any;
 };
@@ -11,7 +13,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   try {
-    const result = await axios.get(req.query.url as string, {
+    const result = await axios.get(MAP_URL[req.query.url as FEED_URL_TYPE], {
       headers: {
         'Content-Type': 'application/xml',
         'Access-Control-Allow-Origin': '*',

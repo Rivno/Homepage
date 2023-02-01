@@ -3,13 +3,14 @@
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
+import { FEED_URL_TYPE } from '@/helpers/feedContanst';
 import { readFeed } from '@/helpers/feedReader';
 
 import { FeedItem } from './feedItem';
 
 import styles from './feedRSS.module.css';
 
-export const FeedRSS = ({ url }: { url: string }) => {
+export const FeedRSS = ({ url }: { url: FEED_URL_TYPE }) => {
   const {
     isLoading,
     isError,
@@ -32,7 +33,6 @@ export const FeedRSS = ({ url }: { url: string }) => {
     return <div>isLoading</div>;
   }
 
-  console.log(feed?.items);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
