@@ -1,7 +1,0 @@
-{
-  "name": "Homepage",
-  "defaultPage": {
-  	"controller": "home",
-  	"action": "index"
-  }
-}
