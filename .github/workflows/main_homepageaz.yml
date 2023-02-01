@@ -34,7 +34,7 @@ jobs:
           yarn build
 
       - name: Zip artifact for deployment
-        run: zip -r release.zip package.json package-lock.json yarn.lock next.config.js public .next .deployment deploy.cmd
+        run: zip -r release.zip package.json package-lock.json yarn.lock next.config.js public .next .deployment deploy.cmd web.config server.js
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
