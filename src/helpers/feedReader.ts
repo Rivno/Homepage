@@ -1,6 +1,8 @@
 import axios from 'axios';
 import Parser from 'rss-parser';
 
+import { FEED_URL_TYPE } from './feedContanst';
+
 export type RSS_ITEM = {
   title: string;
   link: string;
@@ -14,7 +16,7 @@ export type RSS_RESULT = {
   items: RSS_ITEM[];
 };
 
-export const readFeed = async (feedUrl: string) => {
+export const readFeed = async (feedUrl: FEED_URL_TYPE) => {
   try {
     const params = new URLSearchParams({ url: feedUrl });
     const result = await axios.get('/api/readFeed', {
