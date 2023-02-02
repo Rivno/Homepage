@@ -3,7 +3,7 @@
 }
 
 .header {
-  background: #323233;
+  background: var(--color-background-secondary);
   border-bottom: 1px solid #dcdcdc;
   font-size: 1.3rem;
   font-weight: bold;
@@ -11,6 +11,8 @@
   line-height: 2.4rem;
   padding: 0 1rem;
   cursor: pointer;
+  display: grid;
+  align-items: center;
 }
 
 .header h2 {
@@ -18,6 +20,10 @@
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.25rem;
+}
+
+.skeleton .header h2 {
+  display: flex;
 }
 
 .content {
@@ -47,7 +53,7 @@
   height: 0;
   border-top: var(--triangle-side) solid transparent;
   border-bottom: var(--triangle-side) solid transparent;
-  border-left: var(--triangle-side) solid white;
+  border-left: var(--triangle-side) solid var(--color-text);
   transition: transform 600ms;
 }
 

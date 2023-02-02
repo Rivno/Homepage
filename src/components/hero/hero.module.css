@@ -1,7 +1,7 @@
 .container {
   background: url('/galaxy.png');
-  background-color: #532f6d;
-  color: white;
+  background-color: var(--color-background-alter);
+  color: var(--color-text-white);
   height: 175px;
   width: 100vw;
   display: grid;

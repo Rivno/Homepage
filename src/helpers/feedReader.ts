@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Parser from 'rss-parser';
 
-import { FEED_URL_TYPE } from './feedContanst';
+import { FEED_URL_TYPE } from './feedConstant';
 
 export type RSS_ITEM = {
   title: string;
