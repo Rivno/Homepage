@@ -3,10 +3,11 @@
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
-import { FEED_URL_TYPE } from '@/helpers/feedContanst';
+import { FEED_URL_TYPE } from '@/helpers/feedConstant';
 import { readFeed } from '@/helpers/feedReader';
 
 import { FeedItem } from './feedItem';
+import { SkeletonFeedRSS } from './feedRSS.skeleton';
 
 import styles from './feedRSS.module.css';
 
@@ -30,7 +31,7 @@ export const FeedRSS = ({ url }: { url: FEED_URL_TYPE }) => {
   }, [feed]);
 
   if (isLoading) {
-    return <div>isLoading</div>;
+    return <SkeletonFeedRSS />;
   }
 
   return (

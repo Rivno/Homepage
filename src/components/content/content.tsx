@@ -1,4 +1,4 @@
-import { FEED_URL } from '@/helpers/feedContanst';
+import { FEED_URL } from '@/helpers/feedConstant';
 
 import { FeedRSS } from '../feedRSS';
 

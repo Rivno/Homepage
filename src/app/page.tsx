@@ -1,7 +1,6 @@
+import { Clock } from '@/components/clock';
 import { Content } from '@/components/content';
 import { Hero } from '@/components/hero';
-
-import { Clock } from './clock';
 
 export default function Home() {
   return (

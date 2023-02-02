@@ -2,7 +2,7 @@
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { FEED_URL_TYPE, MAP_URL } from '@/helpers/feedContanst';
+import { FEED_URL_TYPE, MAP_URL } from '@/helpers/feedConstant';
 
 type Data = {
   data: any;
