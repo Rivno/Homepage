@@ -2,8 +2,8 @@ import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { ReactQuery } from '@/components/reactQuery';
 
-import './globals.css';
 import styles from './layout.module.css';
+import '../globals.css';
 
 export default function RootLayout({
   children,

@@ -1,9 +1,9 @@
-import { CommonMeta } from '../commonMeta';
+import { CommonMeta } from '../../commonMeta';
 
 export default function Head() {
   return (
     <>
-      <title>Contact - Homepage</title>
+      <title>CV - Homepage</title>
       <meta name="description" content="Contact - Rivno homepage" />
       <CommonMeta />
     </>

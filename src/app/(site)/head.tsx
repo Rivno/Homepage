@@ -1,4 +1,4 @@
-import { CommonMeta } from './commonMeta';
+import { CommonMeta } from '../commonMeta';
 
 export default function Head() {
   return (
