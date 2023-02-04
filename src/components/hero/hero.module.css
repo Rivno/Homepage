@@ -8,11 +8,17 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.container > div:only-child {
+  grid-row: 1 / 3;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     background-repeat: round;
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }

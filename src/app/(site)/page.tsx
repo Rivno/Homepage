@@ -1,5 +1,6 @@
 import { Clock } from '@/components/clock';
 import { Content } from '@/components/content';
+import { CurrentDay } from '@/components/currentDay';
 import { Hero } from '@/components/hero';
 
 export default function Home() {
@@ -9,13 +10,7 @@ export default function Home() {
         <div>
           Hi, Rivno <Clock />
         </div>
-        <div>
-          {new Date().toLocaleDateString(undefined, {
-            weekday: 'short',
-            day: 'numeric',
-            month: 'long',
-          })}
-        </div>
+        <CurrentDay />
       </Hero>
       <Content />
     </>
