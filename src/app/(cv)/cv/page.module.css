@@ -8,7 +8,7 @@
 
 .page {
   color: hsl(0 0% 85%);
-  background-color: hsl(0 0% 15%);
+  background-color: hsl(0 0% 20%);
   padding: 20px 15px;
   font-size: 2em;
   width: 800px;
@@ -48,6 +48,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.journey {
+  display: flex;
+}
+
 .now {
   display: grid;
   align-items: center;
@@ -74,6 +78,16 @@
   grid-template-areas: 'content logo';
 }
 
+.experience_last {
+  color: var(--border-color);
+  position: absolute;
+  bottom: -3px;
+  right: 57%;
+  z-index: 2;
+  font-size: 0.9em;
+  font-weight: 800;
+}
+
 .experience_logo {
   grid-area: logo;
   padding: 10px 0;
@@ -83,8 +97,8 @@
   grid-area: content;
   position: relative;
   padding: 10px;
-  padding-left: calc(10% - 10px);
-  background-color: hsl(0 0% 15%);
+  padding-left: calc(10% - 20px);
+  background-color: hsl(0 0% 20%);
   background-clip: padding-box; /* !importanté */
   border: var(--border-width) solid transparent; /* !importanté */
   border-right: none;
@@ -104,7 +118,8 @@
   display: grid;
   grid-template-columns: 1fr 100px;
   grid-template-areas: '. stack';
-  gap: 10px;
+  gap: 20px;
+  align-items: center;
 }
 
 .experience_content::before {

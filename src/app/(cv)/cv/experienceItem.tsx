@@ -1,12 +1,20 @@
 import Image from 'next/image';
 
 import { Experience } from './experience';
+import { TechItem } from './techItem';
 
 import styles from './page.module.css';
 
-export const ExperienceItem = ({ experience }: { experience: Experience }) => (
+export const ExperienceItem = ({
+  experience,
+  isLast = false,
+}: {
+  experience: Experience;
+  isLast?: boolean;
+}) => (
   <div className={styles.experience}>
     <div className={styles.experience_logo}>
+      <div>{experience.company}</div>
       <Image
         src={experience.logo}
         alt={`logo ${experience.company}`}
@@ -26,6 +34,7 @@ export const ExperienceItem = ({ experience }: { experience: Experience }) => (
           })}
         </div>
       ) : null}
+      <div className={styles.experience_last}>{isLast ? 'END' : null}</div>
     </div>
     <div className={styles.experience_content}>
       <div>
@@ -34,7 +43,9 @@ export const ExperienceItem = ({ experience }: { experience: Experience }) => (
         <div>{experience.description}</div>
       </div>
       <div className={styles.experience_stack}>
-        {experience.stack.join(' - ')}
+        {experience.stack.map((tech) => (
+          <TechItem key={tech} tech={tech} />
+        ))}
       </div>
     </div>
   </div>

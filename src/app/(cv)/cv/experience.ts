@@ -1,20 +1,20 @@
 import { StaticImageData } from 'next/image';
 
-import logoAxa from '../../../../public/cv/companies/axa.png';
+import logoAxa from '../../../../public/cv/companies/axa.svg';
 import logoBnp from '../../../../public/cv/companies/bnp.png';
 import logoC2s from '../../../../public/cv/companies/c2s.png';
-import logoCgi from '../../../../public/cv/companies/cgi.png';
+import logoCgi from '../../../../public/cv/companies/cgi.svg';
 import logoDcube from '../../../../public/cv/companies/dcube.png';
-import logoDigitas from '../../../../public/cv/companies/digitas.jpg';
-import logoEssilor from '../../../../public/cv/companies/essilor.png';
-import logoIorga from '../../../../public/cv/companies/iorga.png';
-import logoIziwork from '../../../../public/cv/companies/iziwork.png';
-import logoKering from '../../../../public/cv/companies/kering.png';
-import logoMeetic from '../../../../public/cv/companies/meetic.png';
-import logoMnt from '../../../../public/cv/companies/mnt.png';
+import logoDigitas from '../../../../public/cv/companies/digitas.svg';
+import logoEssilor from '../../../../public/cv/companies/essilor.svg';
+import logoIorga from '../../../../public/cv/companies/iorga.svg';
+import logoIziwork from '../../../../public/cv/companies/iziwork.svg';
+import logoKering from '../../../../public/cv/companies/kering.svg';
+import logoMeetic from '../../../../public/cv/companies/meetic.svg';
+import logoMnt from '../../../../public/cv/companies/mnt.svg';
 import logoSewwan from '../../../../public/cv/companies/sewan.jpg';
 import logoSodexo from '../../../../public/cv/companies/sodexo.png';
-import logoStoreFactory from '../../../../public/cv/companies/store_factory.png';
+import logoStoreFactory from '../../../../public/cv/companies/store-factory.png';
 import logoWynd from '../../../../public/cv/companies/wynd.svg';
 
 export type Experience = {
@@ -75,14 +75,7 @@ export const experience: Experience[] = [
     company: 'SEWAN',
     logo: logoSewwan,
     description: 'Adding functionnality to B2B administration dashboard',
-    stack: [
-      'GraphQL',
-      'JavaScript',
-      'ReactJS',
-      'NodeJS',
-      'CSS',
-      'styled-components',
-    ],
+    stack: ['GraphQL', 'JavaScript', 'ReactJS', 'NodeJS', 'CSS'],
   },
   {
     // Logo de iziwork
@@ -104,7 +97,7 @@ export const experience: Experience[] = [
     logo: logoIziwork,
     description:
       "Creating and maintaining React components for the company's Design-system",
-    stack: ['JavaScript', 'ReactJS', 'CSS', 'TypeScript', 'styled-components'],
+    stack: ['JavaScript', 'ReactJS', 'CSS', 'TypeScript'],
   },
   {
     // Logo de Meetic
@@ -130,7 +123,7 @@ export const experience: Experience[] = [
     logo: logoMeetic,
     description:
       'Working on the dating site of Meetic group, available in 11 language and on 2 platform for the JS Team',
-    stack: ['JavaScript', 'ReactJS', 'CSS', 'TypeScript', 'styled-components'],
+    stack: ['JavaScript', 'ReactJS', 'CSS', 'TypeScript'],
   },
   {
     // Logo de Kering
@@ -168,10 +161,9 @@ export const experience: Experience[] = [
       'NodeJS',
       'TypeScript',
       'NextJS',
-      'styled-components',
       'NestJS',
-      'docker',
-      'Apache Kafka',
+      'Docker',
+      'Kafka',
     ],
   },
   {
@@ -203,15 +195,7 @@ export const experience: Experience[] = [
     logo: logoWynd,
     description:
       "Application d'encaissement/gestion de commande/gestion de client pour caisse enregistreuse",
-    stack: [
-      'JavaScript',
-      'ReactJS',
-      'NodeJS',
-      'CSS',
-      'TypeScript',
-      'NextJS',
-      'styled-components',
-    ],
+    stack: ['JavaScript', 'ReactJS', 'NodeJS', 'CSS', 'TypeScript', 'NextJS'],
   },
   {
     // Logo de BNP Paribas Asset Management
@@ -237,15 +221,7 @@ export const experience: Experience[] = [
     logo: logoBnp,
     description:
       "Intranet de consultation des differents type de score d'entreprise/instrument/issuer à destination des gérants",
-    stack: [
-      'JavaScript',
-      'CSS',
-      'ReactJS',
-      'NodeJS',
-      'NextJS',
-      'styled-components',
-      '.NET Core',
-    ],
+    stack: ['JavaScript', 'CSS', 'ReactJS', 'NodeJS', 'NextJS', '.NET Core'],
   },
   {
     //     Fullstack developerFullstack developer
@@ -283,7 +259,7 @@ export const experience: Experience[] = [
       'SignalR',
       'Microsoft Azure',
       '.NET Core',
-      'docker',
+      'Docker',
     ],
   },
   {
@@ -315,7 +291,7 @@ export const experience: Experience[] = [
     logo: logoMnt,
     description:
       "Application publique d'actualité et de gestion de compte pour les collectivités",
-    stack: ['JavaScript', 'ReactJS', 'NodeJS', 'CSS', 'NextJS', 'docker'],
+    stack: ['JavaScript', 'ReactJS', 'NodeJS', 'CSS', 'NextJS', 'Docker'],
   },
   {
     // Logo de AXA
