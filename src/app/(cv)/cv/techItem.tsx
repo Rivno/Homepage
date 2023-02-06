@@ -1,13 +1,13 @@
-import Image from 'next/image';
-
 import { getTechLogo } from './technology';
 
+import styles from './techItem.module.css';
+
 export const TechItem = ({ tech }: { tech: string }) => {
-  const logo = getTechLogo(tech);
+  const Logo = getTechLogo(tech);
   return (
-    <span key={tech}>
+    <span key={tech} className={styles.container}>
       {tech}
-      {logo ? <Image src={logo} alt={`logo ${tech}`} width={24} /> : null}
+      {Logo ? <Logo className={styles.icon} /> : null}
     </span>
   );
 };
