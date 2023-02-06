@@ -1,0 +1,14 @@
+.button {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  padding: 10px;
+  background-color: hsl(201 56% 50%);
+  border-radius: 8px;
+}
+
+@media print {
+  .button {
+    display: none;
+  }
+}

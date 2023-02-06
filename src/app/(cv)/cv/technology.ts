@@ -15,13 +15,11 @@ import logoCss from '../../../../public/cv/tech/css.svg';
 
 const MAP_TECH: Record<string, any> = {
   azure: logoAzure,
-  css: logoCss,
   docker: logoDocker,
   graphql: logoGraphql,
   javascript: logoJs,
   kafka: logoKafka,
   nestjs: logoNestJs,
-  nextjs: logoNextJs,
   nodejs: logoNodeJs,
   reactjs: logoReact,
   rust: logoRust,
