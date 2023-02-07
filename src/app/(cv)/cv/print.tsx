@@ -27,7 +27,6 @@ export const PrintToPdf = ({ id }: { id: string }) => {
         filename: 'abienne_cv.pdf',
         html2canvas: {
           scale: 1,
-          width: 800,
           onclone: (element: any) => {
             const svgElements = Array.from(element.querySelectorAll('svg'));
             svgElements.forEach((s: any) => {
