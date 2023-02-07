@@ -47,11 +47,17 @@ export const AdditionalPage = ({
       )}
     </div>
     <div className={styles.page_footer}>
-      <span>
-        <TechItem tech="ReactJS" /> - <TechItem tech="Typescript" /> -{' '}
-        <TechItem tech="NextJS" /> - <TechItem tech="NodeJS" /> -{' '}
-        <TechItem tech="Rust" /> - <TechItem tech="C#" />
-      </span>
+      <TechItem tech="ReactJS" />
+      <span> - </span>
+      <TechItem tech="Typescript" />
+      <span> - </span>
+      <TechItem tech="NextJS" />
+      <span> - </span>
+      <TechItem tech="NodeJS" />
+      <span> - </span>
+      <TechItem tech="Rust" />
+      <span> - </span>
+      <TechItem tech="C#" />
       <span className={styles.page_counter}>
         {page + 1}/{nbPages + 1}
       </span>

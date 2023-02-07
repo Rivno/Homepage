@@ -1,0 +1,70 @@
+.header {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 150px auto auto 150px;
+  align-items: flex-start;
+}
+
+.transport,
+.language,
+.qr_title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.qrcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.name {
+  font-size: 3em;
+  line-height: 50px;
+}
+
+.name:first-letter,
+.lastname:first-letter {
+  color: hsl(201 56% 50%);
+}
+
+.lastname {
+  font-size: 2.5em;
+  line-height: 50px;
+}
+
+.tech {
+  font-size: 0.75em;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.col_span_2 {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo_mcps {
+  background-color: white;
+}

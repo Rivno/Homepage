@@ -11,7 +11,9 @@ import { Roles } from './roles';
 
 import styles from './page.module.css';
 
-const PageBreak = () => <div className={styles.page_break} />;
+const PageBreak = () => (
+  <div className={classNames(styles.page_break, 'pagebreak')} />
+);
 
 const Separator = () => <div className={styles.separator} />;
 

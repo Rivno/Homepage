@@ -1,67 +1,67 @@
 import Image from 'next/image';
 
-import logoGithub from '../../../../public/cv/companies/github.svg';
-import logoLinkedin from '../../../../public/cv/companies/linkedin.svg';
-import flagEn from '../../../../public/cv/lang/en.svg';
-import flagFr from '../../../../public/cv/lang/fr.svg';
+import logoMcps from '../../../../public/cv/certif/mcps.png';
+import LogoGithub from '../../../../public/cv/companies/github.svg';
+import LogoLinkedin from '../../../../public/cv/companies/linkedin.svg';
+import FlagEn from '../../../../public/cv/lang/en.svg';
+import FlagFr from '../../../../public/cv/lang/fr.svg';
 import qrCodeGithub from '../../../../public/cv/qrcode/github.png';
 import qrCodeLinkedin from '../../../../public/cv/qrcode/linkedin.png';
-import logoCar from '../../../../public/cv/transport/car.svg';
-import logoDiver from '../../../../public/cv/transport/diver.svg';
-import logoMoto from '../../../../public/cv/transport/moto.svg';
-import logoSnowboarder from '../../../../public/cv/transport/snowboarder.svg';
+import LogoCar from '../../../../public/cv/transport/car.svg';
+import LogoDiver from '../../../../public/cv/transport/diver.svg';
+import LogoMoto from '../../../../public/cv/transport/moto.svg';
+import LogoSnowboarder from '../../../../public/cv/transport/snowboarder.svg';
 
 import { TechItem } from './techItem';
 
-import styles from './page.module.css';
+import styles from './header.module.css';
+
 export const Header = () => (
   <div className={styles.header}>
-    <div>
-      <div>
-        {/* <Image src={logoLinkedin} alt="logo linkedin" width={24} /> */}
+    <div className={styles.qrcode}>
+      <div className={styles.qr_title}>
+        <LogoLinkedin className={styles.icon} />
         Linkedin
       </div>
       <Image src={qrCodeLinkedin} alt="qrcode linkedin" width={150} />
     </div>
-    <div>
-      <div>ALLAN</div>
-      <div>BIENNE</div>
-      <div>
-        {/* <Image src={logoCar} alt="logo car" width={24} />
-        <Image src={logoMoto} alt="logo moto" width={24} />
-        <Image src={logoSnowboarder} alt="logo snowboarder" width={24} />
-        <Image src={logoDiver} alt="logo diver" width={24} /> */}
+    <div className={styles.info}>
+      <div className={styles.fullname}>
+        <div className={styles.name}>ALLAN</div>
+        <div className={styles.lastname}>BIENNE</div>
       </div>
-      <div>
-        {/* <Image src={flagFr} alt="flag fr" width={24} /> -{' '}
-        <Image src={flagEn} alt="flag en" width={24} /> */}
+      <div className={styles.transport}>
+        <LogoCar className={styles.icon} />
+        <LogoMoto className={styles.icon} />
+        <LogoSnowboarder className={styles.icon} />
+        <LogoDiver className={styles.icon} />
       </div>
     </div>
-    <div>
-      <div>
-        <TechItem tech="ReactJS" />
+    <div className={styles.tech}>
+      <TechItem tech="ReactJS" />
+      <TechItem tech="NodeJS" />
+      <TechItem tech="Typescript" />
+      <TechItem tech="Rust" />
+      <TechItem tech="NextJS" />
+      <TechItem tech="C#" />
+      <div className={styles.col_span_2}>
+        <Image
+          src={logoMcps}
+          alt="logo mcps"
+          className={styles.logo_mcps}
+          width={60}
+        />
+        <span>- 10657589</span>
       </div>
-      <div>
-        <TechItem tech="Typescript" />
+      <div className={styles.language}>
+        <FlagFr className={styles.icon} />
+        <FlagEn className={styles.icon} />
       </div>
-      <div>
-        <TechItem tech="NextJS" />
-      </div>
-      <div>
-        <TechItem tech="NodeJS" />
-      </div>
-      <div>
-        <TechItem tech="Rust" />
-      </div>
-      <div>
-        <TechItem tech="C#" />
-      </div>
-      <div>MCPS - 10657589</div>
     </div>
-    <div>
-      <div>
+    <div className={styles.qrcode}>
+      <div className={styles.qr_title}>
         Github
-        {/* <Image src={logoGithub} alt="logo github" width={24} /> */}
+        <LogoGithub className={styles.icon} />
       </div>
       <Image src={qrCodeGithub} alt="qrcode github" width={150} />
     </div>
