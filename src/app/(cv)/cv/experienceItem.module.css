@@ -33,6 +33,15 @@
   padding: 10px 0;
 }
 
+.white_bg {
+  background-color: hsl(0 0% 85%);
+  margin: 0 -3px;
+  padding: 3px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .company {
   position: absolute;
   left: 160px;
@@ -53,12 +62,53 @@
   font-size: 0.75em;
 }
 
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.project_info,
+.team_size {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project_description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9em;
+}
+
+.separator:not(:last-child) {
+  height: 1px;
+  background-color: hsl(255 0% 100% / 30%);
+  height: 1px;
+  background-color: hsl(255 0% 100% / 30%);
+  width: calc(100% - 140px);
+}
+
+.experience:nth-child(2n) .separator:not(:last-child) {
+  margin-left: 120px;
+}
+
+.project_title {
+  font-size: 1.15em;
+  font-weight: 800;
+}
+
+.project_role {
+  color: hsl(201 56% 50%);
+}
+
 .experience_project {
   display: grid;
   grid-template-columns: 1fr 100px;
   grid-template-areas: '. stack';
   gap: 20px;
   align-items: center;
+  white-space: pre-wrap;
 }
 
 .experience:nth-child(2n) .experience_project {
@@ -76,17 +126,9 @@
   border: var(--border-width) solid transparent; /* !importanté */
   border-right: none;
   border-radius: 10% / 50% 0 0 50%;
-  /* padding: 10px;
-  border: var(--border-width) solid transparent;
-  border-image: linear-gradient(
-    90deg,
-    var(--border-color) 50%,
-    transparent 50%
-  );
-  border-image-slice: 1;
-  border-left: var(--border-width) solid var(--border-color);
-  border-right: none;
-  border-radius: 10% / 50% 0 0 50%; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .experience_content::before {
@@ -105,13 +147,6 @@
 }
 
 .experience:nth-child(2n) .experience_content {
-  /* border-image: linear-gradient(
-    90deg,
-    transparent 50%,
-    var(--border-color) 50%
-  );
-  border-image-slice: 1;
-  border-right: var(--border-width) solid var(--border-color); */
   border-left: none;
   padding-left: 0;
   border-radius: 10% / 0 50% 50% 0;
@@ -125,6 +160,15 @@
 .experience_stack {
   grid-area: stack;
   font-size: 0.75em;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  gap: 5px;
+
+  /* display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  align-items: center; */
 }
 
 .experience:not(:first-child) {
@@ -132,11 +176,11 @@
 }
 
 .experience:first-child .experience_content::before {
-  background: linear-gradient(20deg, var(--border-color) 40%, transparent 40%);
+  background: linear-gradient(30deg, var(--border-color) 40%, transparent 40%);
 }
 
 .experience:last-child:not([data-islast='true']) .experience_content::before {
-  background: linear-gradient(55deg, transparent 60%, var(--border-color) 60%);
+  background: linear-gradient(60deg, transparent 60%, var(--border-color) 60%);
 }
 
 .experience:last-child[data-islast='true'] .experience_content::before {

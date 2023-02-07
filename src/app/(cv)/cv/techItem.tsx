@@ -6,8 +6,8 @@ export const TechItem = ({ tech }: { tech: string }) => {
   const Logo = getTechLogo(tech);
   return (
     <span key={tech} className={styles.container}>
-      {tech}
       {Logo ? <Logo className={styles.icon} /> : null}
+      {tech}
     </span>
   );
 };

@@ -22,6 +22,7 @@ export type Experience = {
   dateEnd?: Date;
   company: string;
   isSvg?: boolean;
+  shouldAddBG?: boolean;
   logo: StaticImageData;
   projects: Project[];
 };
@@ -29,79 +30,49 @@ export type Experience = {
 export type Project = {
   title: string;
   role: string;
+  teamSize: number;
   description: string;
+  language: 'en' | 'fr';
   stack: string[];
 };
 
 export const experience: Experience[] = [
   {
-    // Tech lead frontTech lead front
-    // Sodexo · FreelanceSodexo · Freelance
-    // sept. 2022 - aujourd’hui · 6 moissept. 2022 - aujourd’hui · 6 mois
-    // Remote · À distanceRemote · À distance
-    // Full remote - Full english
-    // Project Bite:
-    // Application to order food handle by Sodexo
-    // - 1 project in ReactJS/Capacitor that generate app for iOS, android and web
-
-    // Task:
-    // - Technical management for the frontend part of the project
-    // - Challenge teammate to make them grow
-    // - Managing/solving tech debt issue
-    // - Handle complex developmentFull remote - Full english Project Bite: Application to order food handle by Sodexo - 1 project in ReactJS/Capacitor that generate app for iOS, android and web Task: - Technical management for the frontend part of the project - Challenge teammate to make them grow - Managing/solving tech debt issue - Handle complex development
-    // Compétences : Capacitor · JavaScript · React.js · CSS · TypeScriptCompétences : Capacitor · JavaScript · React.js · CSS · TypeScript
-
     dateStart: new Date('09/01/2022'),
     dateEnd: new Date('01/27/2023'),
     company: 'Sodexo',
+    shouldAddBG: true,
     logo: logoSodexo,
     projects: [
       {
-        title: 'Sodexo',
+        title: 'BITE - MyWay',
         role: 'Tech lead front',
-        description: 'Application to order food handle by Sodexo',
-        stack: ['Capacitor', 'JavaScript', 'ReactJS', 'CSS', 'TypeScript'],
+        teamSize: 15,
+        language: 'en',
+        description: `Mobile application to access services provides by Sodexo facilities, such as meals, service requests, events, hospitality, bus lines ...
+Full international team`,
+        stack: ['JavaScript', 'ReactJS', 'TypeScript', 'CSS', 'Capacitor'],
       },
     ],
   },
   {
-    // Logo de SEWAN GROUPE
-    // Front DeveloperFront Developer
-    // SEWAN GROUPE · FreelanceSEWAN GROUPE · Freelance
-    // nov. 2021 - sept. 2022 · 11 moisnov. 2021 - sept. 2022 · 11 mois
-    // RemoteRemote
-    // Full remote
-    // Adding functionnality to B2B administration dashboard
-    // - 1 design-system library in React
-    // - 1 web application in React
-    // - 1 Graphql server in Node.jsFull remote Adding functionnality to B2B administration dashboard - 1 design-system library in React - 1 web application in React - 1 Graphql server in Node.js
-    // Compétences : GraphQL · JavaScript · React.js · Node.js · CSS · styled-componentsCompétences : GraphQL · JavaScript · React.js · Node.js · CSS · styled-components
-
     dateStart: new Date('11/01/2021'),
     dateEnd: new Date('08/30/2022'),
     company: 'SEWAN',
     logo: logoSewan,
     projects: [
       {
-        title: 'SEWAN',
+        title: 'Sophia',
         role: 'Developer front',
-        description: 'Adding functionnality to B2B administration dashboard',
+        teamSize: 5,
+        language: 'fr',
+        description: `B2B dashboard to handle communication services,
+such as internet provider, landlines and mobile lines`,
         stack: ['GraphQL', 'JavaScript', 'ReactJS', 'NodeJS', 'CSS'],
       },
     ],
   },
   {
-    // Logo de iziwork
-    // Front DeveloperFront Developer
-    // iziwork · Freelanceiziwork · Freelance
-    // août 2021 - nov. 2021 · 4 moisaoût 2021 - nov. 2021 · 4 mois
-    // Full remote
-    // Creating and maintaining React components for the company's Design-system
-    // - 1 design-system library in React
-    // - 1 web application in ReactFull remote Creating and maintaining React components for the company's Design-system - 1 design-system library in React - 1 web application in React
-    // Compétences : JavaScript · React.js · CSS · TypeScript · styled-componentsCompétences : JavaScript · React.js · CSS · TypeScript · styled-components
-    // tences : JavaScript · React.js · CSS · TypeScript · styled-componentsCompétences : JavaScript · React.js · CSS · TypeScript · styled-components
-
     dateStart: new Date('08/01/2021'),
     dateEnd: new Date('11/01/2021'),
     company: 'Iziwork',
@@ -109,30 +80,17 @@ export const experience: Experience[] = [
     logo: logoIziwork,
     projects: [
       {
-        title: 'Iziwork',
+        title: 'Iziwork design-system',
         role: 'Developer front',
+        teamSize: 5,
+        language: 'fr',
         description:
-          "Creating and maintaining React components for the company's Design-system",
-        stack: ['JavaScript', 'ReactJS', 'CSS', 'TypeScript'],
+          "Creating and maintaining React components for the company's Design-system, use on customer portal to handle temparary workers",
+        stack: ['JavaScript', 'ReactJS', 'TypeScript', 'CSS'],
       },
     ],
   },
   {
-    // Logo de Meetic
-    // Front DeveloperFront Developer
-    // Meetic · FreelanceMeetic · Freelance
-    // sept. 2020 - mars 2021 · 7 moissept. 2020 - mars 2021 · 7 mois
-    // Full remote
-    // Working on the dating site of Meetic group, available in 11 language and on 2 platform for the JS Team
-    // - 1 webfront for web desktop in angular 1.6 & React
-    // - 1 webfront for web mobile in angular 1.6 & React
-    // - 1 shared ui library in React
-
-    // Task :
-    // - Technical review and merge of team works
-    // - Development of new feature and solving bugFull remote Working on the dating site of Meetic group, available in 11 language and on 2 platform for the JS Team - 1 webfront for web desktop in angular 1.6 & React - 1 webfront for web mobile in angular 1.6 & React - 1 shared ui library in React Task : - Technical review and merge of team works - Development of new feature and solving bug
-    // Compé
-
     dateStart: new Date('09/01/2020'),
     dateEnd: new Date('03/01/2021'),
     company: 'Meetic',
@@ -140,35 +98,16 @@ export const experience: Experience[] = [
     logo: logoMeetic,
     projects: [
       {
-        title: 'Meetic',
+        title: 'Main website',
         role: 'Developer front',
-        description:
-          'Working on the dating site of Meetic group, available in 11 language and on 2 platform for the JS Team',
-        stack: ['JavaScript', 'ReactJS', 'CSS', 'TypeScript'],
+        teamSize: 4,
+        language: 'en',
+        description: 'E-Dating portal to find your partner in life',
+        stack: ['JavaScript', 'ReactJS', 'TypeScript', 'CSS'],
       },
     ],
   },
   {
-    // Logo de Kering
-    // Technical LeadTechnical Lead
-    // Kering · FreelanceKering · Freelance
-    // nov. 2019 - juin 2020 · 8 moisnov. 2019 - juin 2020 · 8 mois
-    // Ville de Paris, Île-de-France, FranceVille de Paris, Île-de-France, France
-    // Application for managing message between system of kering/kering or kering/partner
-    // - 1 webfront in NextJS (React)
-    // - 1 webapi in NestJS
-    // - 4 job server in nodeJS
-    // - ~40 nodeJS module (npm package)
-
-    // Task :
-    // - Technical management of a team of 3 front dev (3 in remote)
-    // - Technical review and merge of team works
-    // - Development of blocking technical task
-    // - Add and Edit of the project architecture
-    // - Managing jenkins pipelines
-    // - Managing docker configurationApplication for managing message between system of kering/kering or kering/partner - 1 webfront in NextJS (React) - 1 webapi in NestJS - 4 job server in nodeJS - ~40 nodeJS module (npm package) Task : - Technical management of a team of 3 front dev (3 in remote) - Technical review and merge of team works - Development of blocking technical task - Add and Edit of the project architecture - Managing jenkins pipelines - Managing docker configuration
-    // Compétences : JavaScript · React.js · Node.js · TypeScript · Next.js · styled-components · NestJS · docker · Apache KafkaCompétences : JavaScript · React.js · Node.js · TypeScript · Next.js · styled-components · NestJS · docker · Apache Kafka
-
     dateStart: new Date('11/01/2019'),
     dateEnd: new Date('06/01/2020'),
     company: 'Kering',
@@ -176,45 +115,27 @@ export const experience: Experience[] = [
     logo: logoKering,
     projects: [
       {
-        title: 'Kering',
+        title: 'Facade-kering',
         role: 'Tech Lead back',
+        teamSize: 3,
+        language: 'en',
         description:
-          'Application for managing message between system of kering/kering or kering/partner',
+          "Application handling communications between Kering's apps and partner's apps, validating and transforming messages format",
         stack: [
           'JavaScript',
-          'CSS',
           'ReactJS',
           'NodeJS',
           'TypeScript',
-          'NextJS',
           'NestJS',
           'Docker',
           'Kafka',
+          'CSS',
+          'NextJS',
         ],
       },
     ],
   },
   {
-    // Logo de Anycommerce
-    // Tech LeadTech Lead
-    // Wynd · FreelanceWynd · Freelance
-    // mars 2019 - sept. 2019 · 7 moismars 2019 - sept. 2019 · 7 mois
-    // ParisParis
-    // Tech-lead – Application d'encaissement/gestion de commande/gestion de client pour caisse enregistreuse
-    // - 1 front web SPA en React
-    // - ~12 module en React (package npm)
-    // - 1 server de socket en NodeJS/Socket.io
-    // - 1 server de socket en NodeJS/Socket.io/NextJS
-
-    // Tache :
-    // - Gestion technique d'une équipe de 8 dev front (3 sur place, 5 en remote dont 4 russes)
-    // - review technique et merge du travail de l’équipe
-    // - Développement des points technique bloquant
-    // - Ajout/Modification de l'architecture
-    // - Gestion des pipelines gitlab
-    // - review technique des US du product ownerTech-lead – Application d'encaissement/gestion de commande/gestion de client pour caisse enregistreuse - 1 front web SPA en React - ~12 module en React (package npm) - 1 server de socket en NodeJS/Socket.io - 1 server de socket en NodeJS/Socket.io/NextJS Tache : - Gestion technique d'une équipe de 8 dev front (3 sur place, 5 en remote dont 4 russes) - review technique et merge du travail de l’équipe - Développement des points technique bloquant - Ajout/Modification de l'architecture - Gestion des pipelines gitlab - review technique des US du product owner
-    // Compétences : JavaScript · React.js · Node.js · CSS · TypeScript · Next.js · styled-componentsCompétences : JavaScript · React.js · Node.js · CSS · TypeScript · Next.js · styled-components
-
     dateStart: new Date('03/01/2019'),
     dateEnd: new Date('09/01/2019'),
     company: 'Wynd',
@@ -222,52 +143,42 @@ export const experience: Experience[] = [
     logo: logoWynd,
     projects: [
       {
-        title: 'Wynd',
+        title: 'SAM',
         role: 'Tech Lead',
-        description:
-          "Application d'encaissement/gestion de commande/gestion de client pour caisse enregistreuse",
+        teamSize: 8,
+        language: 'en',
+        description: `Cash desk application,
+handling all process of store (shift, catalog, POS).
+International team half of them in remote (Russia),
+the rest on-site`,
         stack: [
           'JavaScript',
           'ReactJS',
           'NodeJS',
-          'CSS',
           'TypeScript',
+          'CSS',
           'NextJS',
         ],
       },
     ],
   },
   {
-    // Logo de BNP Paribas Asset Management
-    // Tech lead frontendTech lead frontend
-    // BNP Paribas Asset Management · FreelanceBNP Paribas Asset Management · Freelance
-    // août 2018 - déc. 2018 · 5 moisaoût 2018 - déc. 2018 · 5 mois
-    // ParisParis
-    // Tech-lead – Intranet de consultation des differents type de score d'entreprise/instrument/issuer à destination des gérants
-    // - 2 front web en NodeJS, Express, NextJS, React
-    // - 1 projet de package npm
-
-    // Tache :
-    // - Mise en place de l’architecture applicative front
-    // - Développement front
-    // - Mise en place du déploiement continu VSTSTech-lead – Intranet de consultation des differents type de score d'entreprise/instrument/issuer à destination des gérants - 2 front web en NodeJS, Express, NextJS, React - 1 projet de package npm Tache : - Mise en place de l’architecture applicative front - Développement front - Mise en place du déploiement continu VSTS
-    // Compétences : JavaScript · React.js · Node.js · Next.js · styled-components · Redux.js · .NET CoreCompétences : JavaScript · React.js · Node.js · Next.js · styled-components · Redux.js · .NET Core
-
     dateStart: new Date('08/01/2018'),
     dateEnd: new Date('12/01/2018'),
     company: 'BNP',
     logo: logoBnp,
     projects: [
       {
-        title: 'BNP',
+        title: 'Sense',
         role: 'Tech Lead front',
-        description:
-          "Intranet de consultation des differents type de score d'entreprise/instrument/issuer à destination des gérants",
+        teamSize: 4,
+        language: 'en',
+        description: 'Application to handle performance KPI of assets',
         stack: [
           'JavaScript',
-          'CSS',
           'ReactJS',
           'NodeJS',
+          'CSS',
           'NextJS',
           '.NET Core',
         ],
@@ -275,24 +186,6 @@ export const experience: Experience[] = [
     ],
   },
   {
-    //     Fullstack developerFullstack developer
-    // DigitasLBi France · FreelanceDigitasLBi France · Freelance
-    // août 2017 - juin 2018 · 11 moisaoût 2017 - juin 2018 · 11 mois
-    // ParisParis
-    // Tech-lead – Application publique de téléconsultation pour AXA ( www.bonjourdocteur.com )
-    // - 2 front web en NodeJS, Express, NextJS, React
-    // - 1 api metier en NodeJS, Express
-    // - 1 api de téléconsultation en .Net core 2
-
-    // Tache :
-    // - Mise en place de l’architecture applicative
-    // - Développement front/back
-    // - Développement/configuration Twilio (taskrouter, programmable video)
-    // - Mise en place du déploiement continu VSTS/Azure
-    // - Déploiement Blue/Green VSTS/Azure
-    // - Création de template de déploiement ARM AzureTech-lead – Application publique de téléconsultation pour AXA ( www.bonjourdocteur.com ) - 2 front web en NodeJS, Express, NextJS, React - 1 api metier en NodeJS, Express - 1 api de téléconsultation en .Net core 2 Tache : - Mise en place de l’architecture applicative - Développement front/back - Développement/configuration Twilio (taskrouter, programmable video) - Mise en place du déploiement continu VSTS/Azure - Déploiement Blue/Green VSTS/Azure - Création de template de déploiement ARM Azure
-    // Compétences : JavaScript · React.js · Node.js · Next.js · SignalR · Microsoft Azure · Redux.js · .NET Core · dockerCompétences : JavaScript · React.js · Node.js · Next.js · SignalR · Microsoft Azure · Redux.js · .NET Core · docker
-
     dateStart: new Date('08/01/2017'),
     dateEnd: new Date('06/01/2018'),
     company: 'Digitas',
@@ -300,62 +193,35 @@ export const experience: Experience[] = [
     logo: logoDigitas,
     projects: [
       {
-        title: 'Digitas',
-        role: 'Tech Lead front',
-        description:
-          'Application publique de téléconsultation pour AXA ( www.bonjourdocteur.com )',
-        stack: [
-          'JavaScript',
-          'CSS',
-          'ReactJS',
-          'NodeJS',
-          'NextJS',
-          'SignalR',
-          'Azure',
-          '.NET Core',
-          'Docker',
-        ],
+        title: 'Ethel - chat bot',
+        role: 'Developer',
+        teamSize: 1,
+        language: 'fr',
+        description: 'Chat bot application',
+        stack: ['JavaScript', 'NodeJS'],
       },
       {
-        title: 'Digitas2',
+        title: 'AXA - BonjourDocteur',
         role: 'Tech Lead front',
-        description:
-          'Application publique de téléconsultation pour AXA ( www.bonjourdocteur.com )',
+        teamSize: 4,
+        language: 'fr',
+        description: `Online consultation application connecting customers
+and AXA doctors`,
         stack: [
           'JavaScript',
-          'CSS',
           'ReactJS',
           'NodeJS',
-          'NextJS',
           'SignalR',
           'Azure',
-          '.NET Core',
           'Docker',
+          'CSS',
+          'NextJS',
+          '.NET Core',
         ],
       },
     ],
   },
   {
-    // Logo de MNT - Mutuelle Nationale Territoriale
-    // Front developerFront developer
-    // MNT - Mutuelle Nationale Territoriale · FreelanceMNT - Mutuelle Nationale Territoriale · Freelance
-    // janv. 2017 - juil. 2017 · 7 moisjanv. 2017 - juil. 2017 · 7 mois
-    // Région de Paris, FranceRégion de Paris, France
-    // Tech-lead front – Application publique d’actualité et de gestion de compte pour les collectivités
-
-    // - Mise en place de l’architecture isomorphic NextJS/ReactJS/Redux
-    // - Développement front
-    // - Réfèrent ReactJS
-    // _____________________________________________________________________________________
-
-    // Développeur front – Application de gestion et traitement des documents dématérialisé
-
-    // - Développement front
-    // - Refonte de l’existant et mise en place de Redux
-    // - Respect du flux d’évènement ReactJS
-    // - Réfèrent ReactJSTech-lead front – Application publique d’actualité et de gestion de compte pour les collectivités - Mise en place de l’architecture isomorphic NextJS/ReactJS/Redux - Développement front - Réfèrent ReactJS _____________________________________________________________________________________ Développeur front – Application de gestion et traitement des documents dématérialisé - Développement front - Refonte de l’existant et mise en place de Redux - Respect du flux d’évènement ReactJS - Réfèrent ReactJS
-    // Compétences : JavaScript · React.js · Node.js · CSS · Next.js · Redux.js · dockerCompétences : JavaScript · React.js · Node.js · CSS · Next.js · Redux.js · docker
-
     dateStart: new Date('01/01/2017'),
     dateEnd: new Date('07/01/2017'),
     company: 'MNT',
@@ -363,28 +229,25 @@ export const experience: Experience[] = [
     logo: logoMnt,
     projects: [
       {
-        title: 'MNT',
+        title: 'Espace collectivités',
         role: 'Developer front',
-        description:
-          "Application publique d'actualité et de gestion de compte pour les collectivités",
-        stack: ['JavaScript', 'ReactJS', 'NodeJS', 'CSS', 'NextJS', 'Docker'],
+        teamSize: 5,
+        language: 'fr',
+        description: `Customer portal for cities referent personnel,
+providing news and account information`,
+        stack: ['JavaScript', 'ReactJS', 'NodeJS', 'Docker', 'CSS', 'NextJS'],
+      },
+      {
+        title: "Prev'air",
+        role: 'Developer front',
+        teamSize: 5,
+        language: 'fr',
+        description: 'Application to handle e-documents',
+        stack: ['JavaScript', 'ReactJS', 'NodeJS', 'Docker', 'CSS', 'NextJS'],
       },
     ],
   },
   {
-    // Logo de AXA
-    // Front developerFront developer
-    // AXA · FreelanceAXA · Freelance
-    // févr. 2016 - nov. 2016 · 10 moisfévr. 2016 - nov. 2016 · 10 mois
-    // NanterreNanterre
-    // Refonte de l'espace client AXA et convergence des portails assurances et banque.
-
-    // - Développement front
-    // - Chiffrage
-    // - Analyse technique
-    // - Réfèrent d'équipe .NET (projet WCF)Refonte de l'espace client AXA et convergence des portails assurances et banque. - Développement front - Chiffrage - Analyse technique - Réfèrent d'équipe .NET (projet WCF)
-    // Compétences : JavaScript · CSS · jQueryCompétences : JavaScript · CSS · jQuery
-
     dateStart: new Date('02/01/2016'),
     dateEnd: new Date('11/01/2016'),
     company: 'AXA',
@@ -392,69 +255,42 @@ export const experience: Experience[] = [
     logo: logoAxa,
     projects: [
       {
-        title: 'AXA',
+        title: 'Espace client',
         role: 'Developer front',
-        description:
-          "Refonte de l'espace client AXA et convergence des portails assurances et banque.",
+        teamSize: 20,
+        language: 'fr',
+        description: 'Customer portal for banking and insurance services',
         stack: ['JavaScript', 'CSS', 'jQuery'],
       },
     ],
   },
   {
-    // Logo de C2S Bouygues
-    // Technical leaderTechnical leader
-    // C2S Groupe Bouygues · FreelanceC2S Groupe Bouygues · Freelance
-    // nov. 2015 - févr. 2016 · 4 moisnov. 2015 - févr. 2016 · 4 mois
-    // GuyancourtGuyancourt
-    // Projet: Ecopolis
-
-    // Développement d'une application mobile pour les usagers (tout le monde) et de son back office de gestion pour le client
-
-    // - Analyse
-    // - Architecture
-    // - Développement des fonctionnalités front et back
-    // - Optimisation
-    // - Encadrement de l'équipe (une personne en remote à Tour, une autre sur place)Projet: Ecopolis Développement d'une application mobile pour les usagers (tout le monde) et de son back office de gestion pour le client - Analyse - Architecture - Développement des fonctionnalités front et back - Optimisation - Encadrement de l'équipe (une personne en remote à Tour, une autre sur place)
-    // Compétences : JavaScript · CSS · C# · .NET · Microsoft Azure · ASP.NET MVCCompétences : JavaScript · CSS · C# · .NET · Microsoft Azure · ASP.NET MVC
-
     dateStart: new Date('11/01/2015'),
     dateEnd: new Date('02/01/2016'),
     company: 'C2S',
+    shouldAddBG: true,
     logo: logoC2s,
     projects: [
       {
-        title: 'C2S',
+        title: 'ECOPOLIS',
         role: 'Tech Lead',
-        description:
-          "Développement d'une application mobile pour les usagers (tout le monde) et de son back office de gestion pour le client",
+        teamSize: 2,
+        language: 'fr',
+        description: `Mobile application to declare damaged structures in the street, and find local services,
+such as glass bins or recycling center`,
         stack: [
           'JavaScript',
+          'Azure',
+          'CSS',
           'Cordova',
           'Angular',
-          'CSS',
           'C#',
-          'Azure',
           'ASP.NET MVC',
         ],
       },
     ],
   },
   {
-    // Logo de Essilor
-    // Web developerWeb developer
-    // Essilor Ltd · FreelanceEssilor Ltd · Freelance
-    // janv. 2015 - avr. 2015 · 4 moisjanv. 2015 - avr. 2015 · 4 mois
-    // Région de Paris, FranceRégion de Paris, France
-    // Projet: CVS
-
-    // Migration d’une application de calcul de fabrication de verre optique de Microsoft Access vers site web .NET Nancy
-
-    // - Analyse
-    // - Développement des fonctionnalités front et back
-    // - Optimisation
-    // - Force de proposition sur ergonomie & designProjet: CVS Migration d’une application de calcul de fabrication de verre optique de Microsoft Access vers site web .NET Nancy - Analyse - Développement des fonctionnalités front et back - Optimisation - Force de proposition sur ergonomie & design
-    // Compétences : JavaScript · CSS · C# · .NETCompétences : JavaScript · CSS · C# · .NET
-
     dateStart: new Date('01/01/2015'),
     dateEnd: new Date('04/01/2015'),
     company: 'Essilor',
@@ -462,106 +298,43 @@ export const experience: Experience[] = [
     logo: logoEssilor,
     projects: [
       {
-        title: 'Essilor',
+        title: 'CVS',
         role: 'Audit / Developer',
-        description:
-          "Migration d'une application de calcul de fabrication de verre optique de Microsoft Access vers site web .NET Nancy",
+        teamSize: 1,
+        language: 'fr',
+        description: `Audit of current stack, and migrating to said stack an
+application done in Microsoft Access to help opticians
+draw and cut optical lens`,
         stack: ['JavaScript', 'CSS', 'C#', '.Net Nancy'],
       },
     ],
   },
   {
-    // Logo de dcube
-    // Technical leaderTechnical leader
-    // DCube : Gold Partner & membre de l' Azure Circle de Microsoft · CDIDCube : Gold Partner & membre de l' Azure Circle de Microsoft · CDI
-    // sept. 2013 - sept. 2014 · 1 an 1 moissept. 2013 - sept. 2014 · 1 an 1 mois
-    // Région de Paris, FranceRégion de Paris, France
-    // Client : Mutuelle Saint-Christophe
-    // Projet : Prism v2
-
-    // Migration de l'éxistant en ASP.NET MVC 4 - application de souscription/gestion des contrats.
-
-    // - Création et Modification de l'architecture applicative
-    // - Mutualisation et Optimisation du code
-    // - Développement des fonctionnalités front et back
-    // - Force de proposition sur ergonomie & design
-    // - Référent technique pour l’équipe (C#/CSS/HTML/Javascript)
-
-    // ___________________________________________________________
-
-    // Client : Mutuelle Saint-Christophe
-    // Projet : Prism
-
-    // Développement de nouvelle fonctionnalité, revue technique et optimisation de l'existant.Client : Mutuelle Saint-Christophe Projet : Prism v2 Migration de l'éxistant en ASP.NET MVC 4 - application de souscription/gestion des contrats. - Création et Modification de l'architecture applicative - Mutualisation et Optimisation du code - Développement des fonctionnalités front et back - Force de proposition sur ergonomie & design - Référent technique pour l’équipe (C#/CSS/HTML/Javascript) ___________________________________________________________ Client : Mutuelle Saint-Christophe Projet : Prism Développement de nouvelle fonctionnalité, revue technique et optimisation de l'existant.
-    // Compétences : JavaScript · CSS · C# · .NET · ASP.NET MVCCompétences : JavaScript · CSS · C# · .NET · ASP.NET MVC
-
     dateStart: new Date('09/01/2013'),
     dateEnd: new Date('09/01/2014'),
     company: 'DCube',
     logo: logoDcube,
     projects: [
       {
-        title: 'DCube',
+        title: 'MSC - Prism v2',
         role: 'Tech Lead',
-        description:
-          "Migration de l'éxistant en ASP.NET MVC 4 - application de souscription/gestion des contrats.",
+        teamSize: 4,
+        language: 'fr',
+        description: 'Version 2 of previous project',
         stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
       {
-        title: 'DCube2',
+        title: 'MSC - Prism',
         role: 'Tech Lead',
+        teamSize: 2,
+        language: 'fr',
         description:
-          "Migration de l'éxistant en ASP.NET MVC 4 - application de souscription/gestion des contrats.",
+          'Auditing and developing application in Microsoft Dynamics to handle customers data',
         stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
     ],
   },
   {
-    // Logo de IORGA Group
-    // Software engineerSoftware engineer
-    // IORGA · CDIIORGA · CDI
-    // avr. 2010 - août 2013 · 3 ans 5 moisavr. 2010 - août 2013 · 3 ans 5 mois
-    // Levallois-PerretLevallois-Perret
-    // Projet : Windows Phone 8 - iORGA DayOff
-
-    // Application de gestion et saisie des congés sur windows phone 8
-
-    // - Création de l'architecture applicative et développement
-    // - Ergonomie & Design
-    // ___________________________________________________________
-
-    // Client : ACCIOD
-    // Projet: KP-One
-
-    // Réalisation d’une application de gestion des budgets/ressources IT d’entreprise
-
-    // - Création et Modification de l'architecture applicative
-    // - Upgrade technologie
-    // - Mutualisation et Optimisation du code
-    // - Développement des fonctionnalités front et back
-    // - Force de proposition sur ergonomie & design
-    // - Référent technique pour l’équipe (C#/CSS/HTML/Javascript)
-    // ___________________________________________________________
-
-    // Client : FFTT - Fédération Française de Tennis de Table
-    // Projet : SPIDDv2
-
-    // Réalisation de la version 2 de l'application SPIDD.
-
-    // - Modification de l'architecture applicative
-    // - Optimisation et développement des fonctionnalités
-    // - Correction des retours clients
-    // ___________________________________________________________
-
-    // Client : Glaxo Smith Kline
-    // Projet : LUBIE
-
-    // Migration et fusion de 2 application de gestion de réfrigérant de matériaux biologiques
-
-    // - Création et Modification de l'architecture applicative
-    // - Optimisation et développement des fonctionnalités front et backProjet : Windows Phone 8 - iORGA DayOff Application de gestion et saisie des congés sur windows phone 8 - Création de l'architecture applicative et développement - Ergonomie & Design ___________________________________________________________ Client : ACCIOD Projet: KP-One Réalisation d’une application de gestion des budgets/ressources IT d’entreprise - Création et Modification de l'architecture applicative - Upgrade technologie - Mutualisation et Optimisation du code - Développement des fonctionnalités front et back - Force de proposition sur ergonomie & design - Référent technique pour l’équipe (C#/CSS/HTML/Javascript) ___________________________________________________________ Client : FFTT - Fédération Française de Tennis de Table Projet : SPIDDv2 Réalisation de la version 2 de l'application SPIDD. - Modification de l'architecture applicative - Optimisation et développement des fonctionnalités - Correction des retours clients ___________________________________________________________ Client : Glaxo Smith Kline Projet : LUBIE Migration et fusion de 2 application de gestion de réfrigérant de matériaux biologiques - Création et Modification de l'architecture applicative - Optimisation et développement des fonctionnalités front et back
-    // Compétences : JavaScript · CSS · C# · .NET · ASP.NET MVCCompétences : JavaScript · CSS · C# · .NET · ASP.NET MVC
-
     dateStart: new Date('04/01/2010'),
     dateEnd: new Date('08/01/2013'),
     company: 'IORGA',
@@ -569,103 +342,68 @@ export const experience: Experience[] = [
     logo: logoIorga,
     projects: [
       {
-        title: 'IORGA',
+        title: 'iORGA DayOff',
         role: 'Developer',
-        description:
-          "Réalisation d'une application de gestion des budgets/ressources IT d'entreprise",
-        stack: ['JavaScript', 'CSS', 'C#', 'WPF', 'ASP.NET MVC'],
+        teamSize: 1,
+        language: 'fr',
+        description: 'Mobile application to declare days off',
+        stack: ['Windows Phone', 'C#'],
       },
       {
-        title: 'IORGA2',
+        title: 'ACCIOD - KP-One',
         role: 'Developer',
-        description:
-          "Réalisation d'une application de gestion des budgets/ressources IT d'entreprise",
-        stack: ['JavaScript', 'CSS', 'C#', 'WPF', 'ASP.NET MVC'],
+        teamSize: 4,
+        language: 'fr',
+        description: 'Customer portal to manage IT budget and resources',
+        stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
       {
-        title: 'IORGA3',
+        title: 'FFTT - SPIDDv2',
         role: 'Developer',
-        description:
-          "Réalisation d'une application de gestion des budgets/ressources IT d'entreprise",
-        stack: ['JavaScript', 'CSS', 'C#', 'WPF', 'ASP.NET MVC'],
+        teamSize: 2,
+        language: 'fr',
+        description: 'Version 2 of FFTT tournament application use by referee',
+        stack: ['C#', 'WPF'],
       },
       {
-        title: 'IORGA4',
+        title: 'Glaxo Smith Kline - LUBIE',
         role: 'Developer',
-        description:
-          "Réalisation d'une application de gestion des budgets/ressources IT d'entreprise",
-        stack: ['JavaScript', 'CSS', 'C#', 'WPF', 'ASP.NET MVC'],
+        teamSize: 3,
+        language: 'fr',
+        description: `Migration and merge of 2 application handling and
+optimizing of biological material freezer`,
+        stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
       {
-        title: 'IORGA5',
+        title: 'CITES - CETE-CITES',
         role: 'Developer',
-        description:
-          "Réalisation d'une application de gestion des budgets/ressources IT d'entreprise",
-        stack: ['JavaScript', 'CSS', 'C#', 'WPF', 'ASP.NET MVC'],
+        teamSize: 6,
+        language: 'fr',
+        description: `Application to handle import, export and use certificate
+for endangered flora and fauna`,
+        stack: ['Java', 'JavaScript', 'CSS'],
       },
     ],
   },
   {
-    // Logo de Store Factory
-    // Web developerWeb developer
-    // Store Factory · StageStore Factory · Stage
-    // juil. 2009 - sept. 2009 · 3 moisjuil. 2009 - sept. 2009 · 3 mois
-    // ParisParis
-    // Client : STORE-FACTORY
-
-    // Conception de service pour le compte de Store Factory, fournisseur et hébergeur de site d'e-commerce.
-
-    // - Mise en place d'une solution d'OpenID (connexion via orange/Facebook/Google/Autre) - PHP
-    // - Mise en place d'un système d'aide a la saisie de formulaire (annuaire inversé / OpenID) - PHP
-    // - Mise en place d'interface pour la gestion des services ci-dessus - FLEX
-    // - Réalisation d'un module de statistique pour le Back Office - FLEX
-    // - Mise en place d'une solution de versionning (SVN) pour l'ensemble de la sociétéClient : STORE-FACTORY Conception de service pour le compte de Store Factory, fournisseur et hébergeur de site d'e-commerce. - Mise en place d'une solution d'OpenID (connexion via orange/Facebook/Google/Autre) - PHP - Mise en place d'un système d'aide a la saisie de formulaire (annuaire inversé / OpenID) - PHP - Mise en place d'interface pour la gestion des services ci-dessus - FLEX - Réalisation d'un module de statistique pour le Back Office - FLEX - Mise en place d'une solution de versionning (SVN) pour l'ensemble de la société
-    // Compétences : JavaScript · CSSCompétences : JavaScript · CSS
-
     dateStart: new Date('07/01/2009'),
     dateEnd: new Date('09/01/2009'),
     company: 'Store Factory',
+    shouldAddBG: true,
     logo: logoStoreFactory,
     projects: [
       {
         title: 'Store Factory',
         role: 'Developer',
+        teamSize: 3,
+        language: 'fr',
         description:
-          "Conception de service pour le compte de Store Factory, fournisseur et hébergeur de site d'e-commerce.",
+          'Customer portal to help them generate / manage their e-commerce website',
         stack: ['JavaScript', 'CSS', 'PHP', 'FLEX'],
       },
     ],
   },
   {
-    // Logo de Logica
-    // Software EngineerSoftware Engineer
-    // Logica · CDILogica · CDI
-    // avr. 2007 - sept. 2008 · 1 an 6 moisavr. 2007 - sept. 2008 · 1 an 6 mois
-    // ParisParis
-    // Client : AXA Re
-    // Projet : Petrus/La Tour
-
-    // Migration d'application en VB en C# WinForm
-
-    // - Développement des fonctionnalités
-    // ___________________________________________________________
-
-    // Client : Quatrem
-    // Projet : Espace Client
-
-    // Conception d'une site web de visualisation de compte et mouvement banquaire pour Quatrem
-
-    // - Développement des fonctionnalités
-    // - Test d'implementation en NHibernate et Ado.net
-    // ___________________________________________________________
-
-    // Client : GROUPAMA
-    // Projet : ACCAPULCO
-
-    // Conception de batch et d'écran pour le système ACCAPULCO de GROUPAMA
-
-    // - Développement des fonctionnalitésClient : AXA Re Projet : Petrus/La Tour Migration d'application en VB en C# WinForm - Développement des fonctionnalités ___________________________________________________________ Client : Quatrem Projet : Espace Client Conception d'une site web de visualisation de compte et mouvement banquaire pour Quatrem - Développement des fonctionnalités - Test d'implementation en NHibernate et Ado.net ___________________________________________________________ Client : GROUPAMA Projet : ACCAPULCO Conception de batch et d'écran pour le système ACCAPULCO de GROUPAMA - Développement des fonctionnalités
-    // Compétences : C# · .NET
     dateStart: new Date('04/01/2007'),
     dateEnd: new Date('09/01/2008'),
     company: 'Logica',
@@ -673,22 +411,31 @@ export const experience: Experience[] = [
     logo: logoCgi,
     projects: [
       {
-        title: 'Logica',
+        title: 'AXA Re - Pretrus/La Tour',
         role: 'Developer',
-        description: "Migration d'application en VB en C# WinForm",
-        stack: ['C#', 'WinForm', 'ASP.NET', 'CSS', 'COBOL'],
+        teamSize: 12,
+        language: 'fr',
+        description:
+          'Migrating application handling different process of AXA Re',
+        stack: ['C#', 'WinForm'],
       },
       {
-        title: 'Logica2',
+        title: 'Quatrem - Customer portal',
         role: 'Developer',
-        description: "Migration d'application en VB en C# WinForm",
-        stack: ['C#', 'WinForm', 'ASP.NET', 'CSS', 'COBOL'],
+        teamSize: 2,
+        language: 'fr',
+        description:
+          'Customer portal to access account and monetary information',
+        stack: ['C#', 'ASP.NET', 'CSS'],
       },
       {
-        title: 'Logica3',
+        title: 'Groupama - ACCAPULCO',
         role: 'Developer',
-        description: "Migration d'application en VB en C# WinForm",
-        stack: ['C#', 'WinForm', 'ASP.NET', 'CSS', 'COBOL'],
+        teamSize: 5,
+        language: 'fr',
+        description:
+          'Mainframe application handling different process of Groupama',
+        stack: ['COBOL'],
       },
     ],
   },
