@@ -32,6 +32,7 @@ export const ExperienceItem = ({
               src={experience.logo}
               alt={`logo ${experience.company}`}
               width={75}
+              unoptimized
             />
           )}
         </div>

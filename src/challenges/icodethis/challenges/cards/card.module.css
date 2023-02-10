@@ -1,0 +1,45 @@
+.container {
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  max-width: 360px;
+  color: hsl(0 0% 60%);
+  font-size: 16px;
+  box-shadow: 0 0 6px 3px hsl(0deg 0% 90%);
+  cursor: pointer;
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+  outline: none;
+}
+
+.container:hover,
+.container:focus,
+.container:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 9px 6px hsl(0deg 0% 90%);
+}
+
+.container > img {
+  border-radius: 4px;
+  object-fit: none;
+  width: 100%;
+  height: 224px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: hsl(0 0% 20%);
+}
+
+.title > h2 {
+  font-size: 22px;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+
+.title > span {
+  font-size: 26px;
+  font-weight: 500;
+}

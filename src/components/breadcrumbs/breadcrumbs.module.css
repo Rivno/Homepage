@@ -1,0 +1,15 @@
+.container {
+  margin: 15px;
+  list-style: none;
+  display: inline-flex;
+  gap: 5px;
+}
+
+.container li {
+  display: flex;
+  gap: 5px;
+}
+
+.container li:not(:first-child)::before {
+  content: '>';
+}

@@ -1,0 +1,13 @@
+.challenge_content {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background-color: hsl(218 36% 96%);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .challenge_content {
+    margin: 0 50px;
+  }
+}

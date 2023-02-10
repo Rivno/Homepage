@@ -1,0 +1,22 @@
+.container {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  display: grid;
+  /* grid-template-rows: repeat(3, minmax(0, 1fr)); */
+  grid-auto-flow: row;
+  gap: var(--padding);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding);
+  min-width: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: column;
+  }
+}

@@ -1,5 +1,5 @@
 import { Clock } from '@/components/clock';
-import { Content } from '@/components/content';
+import { ContentRSS } from '@/components/contentRSS';
 import { CurrentDay } from '@/components/currentDay';
 import { Hero } from '@/components/hero';
 
@@ -12,7 +12,7 @@ export default function Home() {
         </div>
         <CurrentDay />
       </Hero>
-      <Content />
+      <ContentRSS />
     </>
   );
 }
