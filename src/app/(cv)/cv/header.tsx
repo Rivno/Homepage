@@ -23,7 +23,12 @@ export const Header = () => (
         <LogoLinkedin className={styles.icon} />
         Linkedin
       </div>
-      <Image src={qrCodeLinkedin} alt="qrcode linkedin" width={150} />
+      <Image
+        src={qrCodeLinkedin}
+        alt="qrcode linkedin"
+        width={150}
+        unoptimized
+      />
     </div>
     <div className={styles.info}>
       <div className={styles.fullname}>
@@ -50,6 +55,7 @@ export const Header = () => (
           alt="logo mcps"
           className={styles.logo_mcps}
           width={60}
+          unoptimized
         />
         <span>- 10657589</span>
       </div>
@@ -63,7 +69,7 @@ export const Header = () => (
         Github
         <LogoGithub className={styles.icon} />
       </div>
-      <Image src={qrCodeGithub} alt="qrcode github" width={150} />
+      <Image src={qrCodeGithub} alt="qrcode github" width={150} unoptimized />
     </div>
   </div>
 );

@@ -17,6 +17,9 @@ export const Navbar = () => (
             Gmail
           </Link>
         </li>
+        <li>
+          <Link href="/challenge">Challenge</Link>
+        </li>
       </ul>
       <ul style={{ marginRight: 0 }} className="nav navbar-nav navbar-right">
         <li>
