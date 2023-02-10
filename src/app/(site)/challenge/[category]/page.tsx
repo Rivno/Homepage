@@ -28,3 +28,11 @@ export default function Category({
     </>
   );
 }
+
+export async function generateStaticParams() {
+  const categories = Object.keys(CATEGORIES);
+
+  return categories.map((category) => ({
+    category,
+  }));
+}

@@ -7,7 +7,6 @@ export type CHALLENGE = {
 export const challenges: Record<string, CHALLENGE> = {};
 
 for (const compoment in challengeComponents) {
-  console.log(compoment);
   challenges[compoment] = {
     Component: (challengeComponents as Record<string, () => JSX.Element>)[
       compoment

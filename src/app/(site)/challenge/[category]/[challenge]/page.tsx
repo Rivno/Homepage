@@ -32,3 +32,18 @@ export default function Challenge({
     </>
   );
 }
+
+export async function generateStaticParams() {
+  const paramsList = [];
+  for (const category in CATEGORIES) {
+    for (const challenge in CATEGORIES[category as CATEGORIES_TYPE]
+      .challenges) {
+      paramsList.push({
+        category,
+        challenge,
+      });
+    }
+  }
+
+  return paramsList;
+}
