@@ -1,0 +1,10 @@
+.container {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.container:hover,
+.container:focus,
+.container:active {
+  text-decoration: underline;
+}

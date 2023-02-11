@@ -1,0 +1,39 @@
+.container {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 30rem;
+  background-color: var(--color-background-secondary);
+  transition: color 200ms ease, border-color 200ms ease, box-shadow 200ms ease,
+    transform 350ms ease-in-out;
+}
+
+.container:hover,
+.container:focus,
+.container:active {
+  color: var(--color-primary-focus);
+  border-color: var(--color-primary-focus);
+}
+
+.container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 2rem var(--color-primary-focus);
+}
+
+.container h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.container div,
+.container p {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
