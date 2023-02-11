@@ -10,6 +10,19 @@ export default function Category({
 }: {
   params: { category: CATEGORIES_TYPE };
 }) {
+  const { challenges } = CATEGORIES[params.category];
+  const challengesKeys = Object.keys(challenges);
+  const sortChallenges = challengesKeys.sort((a, b) => {
+    if (challenges[a].number < challenges[b].number) {
+      return -1;
+    }
+    if (challenges[a].number > challenges[b].number) {
+      return 1;
+    }
+
+    return 0;
+  });
+
   return (
     <>
       <Hero>
@@ -18,9 +31,11 @@ export default function Category({
       <Breadcrumbs items={[{ label: 'Challenges', path: '/challenge' }]} />
       <Content>
         <ul>
-          {Object.keys(CATEGORIES[params.category].challenges).map((key) => (
+          {sortChallenges.map((key) => (
             <li key={key}>
-              <Link href={`/challenge/${params.category}/${key}`}>{key}</Link>
+              <Link href={`/challenge/${params.category}/${key}`}>
+                {challenges[key].number} - {key}
+              </Link>
             </li>
           ))}
         </ul>

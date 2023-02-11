@@ -1,1 +1,1 @@
-export * from './cards';
+export { challenge as Cards } from './cards';
