@@ -2,9 +2,7 @@ import { Card } from './card';
 
 import styles from './cards.module.css';
 
-// challenge 100
-
-export const Cards = () => (
+const Cards = () => (
   <div className={styles.container}>
     <Card
       title={'Leaf - Non Profit Environmental'}
@@ -31,10 +29,12 @@ export const Cards = () => (
       image={{ posX: -435, posY: -628 }}
     />
     <Card
-      title={'Picel Lite - Free Bootstrap \n4 UI KIT'}
+      title={'Pixel Lite - Free Bootstrap \n4 UI KIT'}
       price={0}
       description={'Free and clean Bootstrap 4 UI Kit'}
       image={{ posX: -822, posY: -628 }}
     />
   </div>
 );
+
+export const challenge = { Component: Cards, number: 100 };

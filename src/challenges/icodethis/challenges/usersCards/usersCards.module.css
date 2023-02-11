@@ -1,0 +1,148 @@
+.container {
+  position: relative;
+  padding: 80px 60px 40px;
+  background-color: white;
+  border-radius: 8px;
+  color: hsl(0 0% 20%);
+  font-size: 12px;
+  box-shadow: 0 9px 15px 6px hsl(230 79% 92%);
+  outline: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 400px;
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+}
+
+.container:hover,
+.container:focus,
+.container:focus-within,
+.container:active {
+  transform: scale(1.05);
+  box-shadow: 0 9px 15px 6px hsl(230 79% 82%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.container h2 {
+  color: hsl(226 33% 23%);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container p {
+  color: hsl(225 30% 25%);
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.images {
+  --container-width: 175px;
+  border-radius: 50%;
+  border: 2px solid hsl(224 29% 82%);
+  position: relative;
+  width: var(--container-width);
+  height: var(--container-width);
+  transition: transform 350ms ease-in-out;
+  margin-bottom: 20px;
+}
+
+.container:focus-within .images,
+.container:hover .images {
+  transform: rotate(73deg);
+}
+
+.container:focus-within .images > img,
+.container:hover .images > img {
+  transform: rotate(-73deg);
+}
+
+.images > img {
+  --image-width: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid hsl(224 29% 82%);
+  position: absolute;
+  width: var(--image-width);
+  height: var(--image-width);
+  transition: transform 350ms ease-in-out;
+}
+
+.images > img:nth-child(1) {
+  top: calc(var(--image-width) * -0.5);
+  left: calc(50% - var(--image-width) / 2);
+}
+
+.images > img:nth-child(2) {
+  top: calc(var(--container-width) * 0.1);
+  left: calc(var(--image-width) * -0.45);
+}
+
+.images > img:nth-child(3) {
+  bottom: calc(var(--container-width) * -0.1);
+  left: calc(var(--image-width) * -0.05);
+}
+
+.images > img:nth-child(4) {
+  bottom: calc(var(--container-width) * -0.1);
+  right: calc(var(--image-width) * -0.05);
+}
+
+.images > img:nth-child(5) {
+  top: calc(var(--container-width) * 0.1);
+  right: calc(var(--image-width) * -0.45);
+}
+
+.container::before,
+.container::after {
+  content: '';
+  position: absolute;
+  background-color: hsl(240 60% 98%);
+  border-radius: 50%;
+}
+
+.container::before {
+  --width: 100px;
+  left: calc(var(--width) * -0.5);
+  bottom: 20%;
+  width: var(--width);
+  height: var(--width);
+}
+
+.container::after {
+  --width: 400px;
+  top: calc(var(--width) * -0.5);
+  right: calc(var(--width) * -0.75);
+  width: var(--width);
+  height: var(--width);
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  background-color: hsl(229 78% 67%);
+  color: white;
+  box-shadow: 0 9px 15px 6px hsl(230 79% 92%);
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+}
+
+.button:active {
+  box-shadow: 0 9px 15px 6px hsl(230 79% 62%);
+}
+
+.button:focus {
+  outline: 3px dashed hsl(201deg 56% 70%);
+  outline-offset: 3px;
+}

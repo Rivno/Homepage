@@ -15,12 +15,19 @@ export const Journey = () => (
         <div className={styles.start}>31/01/1986</div>
         <LogoPacifier className={styles.big_svg} />
         <div className={styles.iut_start}>2005</div>
-        <Image src={logoIUT} alt="logo IUT" width={75} className={styles.iut} />
+        <Image
+          src={logoIUT}
+          alt="logo IUT"
+          width={75}
+          unoptimized
+          className={styles.iut}
+        />
         <div className={styles.supinfo_start}>2007</div>
         <Image
           src={logoSupinfo}
           alt="logo supinfo"
           width={75}
+          unoptimized
           className={styles.supinfo}
         />
         <div className={styles.pro_start}>2010</div>
