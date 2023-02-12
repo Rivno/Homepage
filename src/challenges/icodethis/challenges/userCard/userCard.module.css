@@ -1,0 +1,105 @@
+.container {
+  position: relative;
+  background-color: white;
+  border-radius: 16px;
+  color: hsl(0 0% 20%);
+  font-size: 12px;
+  outline: none;
+  max-width: 400px;
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  border-radius: 16px;
+  inset: 0 5%;
+  box-shadow: 0 20px 0 0 hsl(213deg 67% 94%);
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 75px auto;
+  grid-template-rows: 75px auto auto 50px;
+  align-items: center;
+  gap: 10px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: white;
+  color: hsl(225 30% 25%);
+  font-weight: 500;
+  z-index: 1;
+}
+
+.inner > *:nth-child(n + 2) {
+  grid-column: 2;
+}
+
+.indicator,
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.indicator {
+  margin-bottom: 20px;
+}
+
+.indicator > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.indicator svg {
+  width: 20px;
+  height: 20px;
+}
+
+.identity h2 {
+  color: hsl(226 33% 23%);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.inner img {
+  --image-width: 75px;
+  object-fit: cover;
+  border: 8px solid hsl(224 29% 90%);
+  border-radius: 50%;
+  width: var(--image-width);
+  height: var(--image-width);
+  transition: transform 350ms ease-in-out;
+}
+
+.inner p {
+  line-height: 20px;
+}
+
+.button {
+  cursor: pointer;
+  width: fit-content;
+  color: hsl(0 0% 20%);
+  border-radius: 4px;
+  padding: 10px 5px;
+  border: 2px solid hsl(225 30% 82%);
+  background-color: transparent;
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  box-shadow: inset 0 0 30px hsl(224 29% 90%); /* only inset is needed */
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:focus {
+  outline: 3px dashed hsl(224 29% 90%);
+  outline-offset: 3px;
+}
