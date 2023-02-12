@@ -1,0 +1,26 @@
+.container {
+  z-index: 1;
+  display: grid;
+  grid-auto-flow: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  padding: 1rem;
+  background-color: var(--color-background-alter);
+  /* color: COLOR_PALETTE.light; */
+  border-bottom-left-radius: 6px;
+}
+
+.container label {
+  display: inline-flex;
+  gap: 0.5rem;
+  place-items: center;
+  font-weight: 600;
+  min-width: 55px;
+  justify-content: right;
+}
+
+.container input[type='checkbox'] {
+  margin: 0;
+}
