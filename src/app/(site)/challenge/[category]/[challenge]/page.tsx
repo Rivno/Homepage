@@ -11,7 +11,7 @@ export default function Challenge({
   params: { category: CATEGORIES_TYPE; challenge: string };
 }) {
   const { Component } =
-    CATEGORIES[params.category].challenges[params.challenge];
+    CATEGORIES[params.category]?.challenges[params.challenge] || {};
 
   return (
     <>
@@ -27,23 +27,8 @@ export default function Challenge({
         ]}
       />
       <Content className={styles.challenge_content}>
-        <Component />
+        {Component ? <Component /> : null}
       </Content>
     </>
   );
-}
-
-export async function generateStaticParams() {
-  const paramsList = [];
-  for (const category in CATEGORIES) {
-    for (const challenge in CATEGORIES[category as CATEGORIES_TYPE]
-      .challenges) {
-      paramsList.push({
-        category,
-        challenge,
-      });
-    }
-  }
-
-  return paramsList;
 }
