@@ -9,7 +9,6 @@ logos.set('github', LogoGithub);
 
 export function SignInButton({ provider }: { provider: ClientSafeProvider }) {
   const Logo = logos.get(provider.name.toLowerCase());
-  console.log('logo', provider.name, Logo);
 
   return (
     <div key={provider.name}>
