@@ -6,7 +6,7 @@ import { Sidebar } from '@/components/byakko/sidebar';
 import './globals.css';
 import styles from './layout.module.css';
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;

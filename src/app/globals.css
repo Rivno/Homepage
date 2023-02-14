@@ -4,6 +4,24 @@
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
 
+.eva_01 {
+  --white: hsl(0, 0%, 100%);
+  --yellow-light: hsl(45, 91%, 91%);
+  --yellow: hsl(42, 93%, 57%);
+  --yellow-dark: hsl(25, 59%, 52%);
+  --green-ligth: hsl(133, 94%, 93%);
+  --green: hsl(86, 63%, 60%);
+  --green-dark: hsl(147, 28%, 36%);
+  --blue-light: hsl(189, 60%, 93%);
+  --blue: hsl(225, 48%, 76%);
+  --blue-dark: hsl(222, 36%, 50%);
+  --purple-light: hsl(294, 95%, 92%);
+  --purple: hsl(276, 42%, 63%);
+  --purple-dark: hsl(292, 39%, 30%);
+  --grey: hsl(240, 4%, 40%);
+  --black: hsl(0, 0%, 0%);
+}
+
 :root {
   --color-background-primary: hsl(0 0% 100%);
   --color-background-secondary: hsl(0 0% 94%);

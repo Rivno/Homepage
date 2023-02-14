@@ -10,7 +10,7 @@ export default function Category({
 }: {
   params: { category: CATEGORIES_TYPE };
 }) {
-  const { challenges } = CATEGORIES[params.category];
+  const { challenges } = CATEGORIES[params.category] || { challenges: {} };
   const challengesKeys = Object.keys(challenges);
   const sortChallenges = challengesKeys.sort((a, b) => {
     if (challenges[a].number < challenges[b].number) {
@@ -42,12 +42,4 @@ export default function Category({
       </Content>
     </>
   );
-}
-
-export async function generateStaticParams() {
-  const categories = Object.keys(CATEGORIES);
-
-  return categories.map((category) => ({
-    category,
-  }));
 }
