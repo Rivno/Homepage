@@ -17,6 +17,9 @@ export const authOptions: NextAuthOptions = {
       return allowedUser.includes(String(user.id));
     },
   },
+  pages: {
+    signIn: '/auth',
+  },
 };
 
 export default NextAuth(authOptions);
