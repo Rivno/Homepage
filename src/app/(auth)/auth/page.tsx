@@ -8,6 +8,9 @@ import { SignInButton } from './signinButton';
 
 import styles from './page.module.css';
 
+const REGEX_FUCK_AZURE =
+  /^\/\/pipe\/([{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?)/;
+
 export default async function SignIn({
   searchParams,
 }: {
@@ -19,8 +22,13 @@ export default async function SignIn({
   // Note: Make sure not to redirect to the same page
   // To avoid an infinite loop!
   if (session) {
-    const url = new URL(searchParams.callbackUrl);
-    redirect(url.pathname || '/');
+    let pathname = '/';
+
+    if (searchParams.callbackUrl) {
+      const url = new URL(searchParams.callbackUrl);
+      pathname = url.pathname.replace(REGEX_FUCK_AZURE, '');
+    }
+    redirect(pathname);
   }
 
   const providers = await getProviders();
