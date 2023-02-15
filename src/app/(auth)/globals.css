@@ -1,0 +1,89 @@
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+.eva_01 {
+  --white: hsl(0, 0%, 100%);
+  --yellow-light: hsl(45, 91%, 91%);
+  --yellow: hsl(42, 93%, 57%);
+  --yellow-dark: hsl(25, 59%, 52%);
+  --green-ligth: hsl(133, 94%, 93%);
+  --green: hsl(86, 63%, 60%);
+  --green-dark: hsl(147, 28%, 36%);
+  --blue-light: hsl(189, 60%, 93%);
+  --blue: hsl(225, 48%, 76%);
+  --blue-dark: hsl(222, 36%, 50%);
+  --purple-light: hsl(294, 95%, 92%);
+  --purple: hsl(276, 42%, 63%);
+  --purple-dark: hsl(292, 39%, 30%);
+  --grey: hsl(240, 4%, 40%);
+  --black: hsl(0, 0%, 0%);
+}
+
+:root {
+  --color-background-primary: hsl(0 0% 100%);
+  --color-background-secondary: hsl(0 0% 94%);
+  --color-background-alter: hsl(275 40% 31%);
+  --color-primary: hsl(201 56% 50%);
+  --color-primary-focus: hsl(201 86% 80%);
+  --color-text: hsl(0 0% 12%);
+  --color-text-white: hsl(0 0% 85%);
+
+  --color-background-navbar: hsl(0 0% 12%);
+
+  --purple: hsl(322 36% 66%);
+  --yellow: hsl(64 19% 73%);
+  --green: hsl(161 38% 55%);
+
+  --color-secondary: hsl(201 56% 50%);
+  --color-tertiary: hsl(275 50% 75%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary: hsl(0 0% 12%);
+    --color-background-secondary: hsl(240 1% 20%);
+    --color-primary: hsl(201 86% 80%);
+    --color-primary-focus: hsl(201 56% 50%);
+    --color-text: hsl(0 0% 85%);
+    --color-secondary: hsl(201 86% 80%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: clamp(10px, 1.25vmin, 20px);
+  font-family: Menlo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text);
+  background: hsl(222, 36%, 15%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

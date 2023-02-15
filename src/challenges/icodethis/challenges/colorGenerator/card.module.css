@@ -1,0 +1,40 @@
+.container {
+  padding: 5px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 360px;
+  color: hsl(0 0% 60%);
+  font-size: 16px;
+  box-shadow: 0 0 6px 3px hsl(0deg 0% 90%);
+  cursor: pointer;
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+}
+
+.container:hover,
+.container:focus {
+  transform: scale(1.05) translateY(-20px);
+  box-shadow: 0 10px 9px 3px hsl(0deg 0% 65%);
+  color: hsl(0 0% 30%);
+}
+
+.container > div:first-child {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+}
+.container > div:last-child {
+  padding: 10px 0;
+}
+
+.container:focus {
+  outline: 3px dashed hsl(201deg 56% 80%);
+  outline-offset: 3px;
+}

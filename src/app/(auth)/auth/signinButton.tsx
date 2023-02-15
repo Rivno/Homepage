@@ -13,9 +13,7 @@ export function SignInButton({ provider }: { provider: ClientSafeProvider }) {
   return (
     <div key={provider.name}>
       <button onClick={() => signIn(provider.id)}>
-        <span>
-          <Logo />
-        </span>
+        <Logo />
         <span>Sign in with {provider.name}</span>
       </button>
     </div>

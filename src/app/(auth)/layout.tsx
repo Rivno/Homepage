@@ -1,5 +1,5 @@
+import './globals.css';
 import styles from './layout.module.css';
-import '../globals.css';
 
 export default async function RootLayout({
   children,
