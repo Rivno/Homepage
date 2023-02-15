@@ -1,4 +1,20 @@
 .container {
+  --white: hsl(0, 0%, 100%);
+  --yellow-light: hsl(45, 91%, 91%);
+  --yellow: hsl(42, 93%, 57%);
+  --yellow-dark: hsl(25, 59%, 52%);
+  --green-ligth: hsl(133, 94%, 93%);
+  --green: hsl(86, 63%, 60%);
+  --green-dark: hsl(147, 28%, 36%);
+  --blue-light: hsl(189, 60%, 93%);
+  --blue: hsl(225, 48%, 76%);
+  --blue-dark: hsl(222, 36%, 50%);
+  --purple-light: hsl(294, 95%, 92%);
+  --purple: hsl(276, 42%, 63%);
+  --purple-dark: hsl(292, 39%, 30%);
+  --grey: hsl(240, 4%, 40%);
+  --black: hsl(0, 0%, 0%);
+
   display: grid;
   height: 100vh;
   height: 100dvh;
@@ -7,9 +23,67 @@
 }
 
 .panel {
-  background-color: white;
+  background-color: var(--blue-light);
   border-radius: 8px;
-  padding: 50px;
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel .header,
+.panel .footer {
+  position: absolute;
+  inset: 0;
+  overflow-x: clip;
+  height: 100px;
+}
+
+.panel .header {
+  bottom: initial;
+  background: linear-gradient(var(--purple), var(--purple-dark));
+  border-bottom: 1px solid var(--black);
+  box-shadow: 5px 5px 5px var(--yellow);
+}
+
+.header::before,
+.footer::before {
+  width: calc(52% - 1px);
+  height: 34px;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: -34px;
+  left: -2%;
+  background: var(--purple-dark);
+  transform: skewX(-33deg);
+  border: 1px solid var(--black);
+  border-top: none;
+  box-shadow: 5px 5px 5px var(--yellow);
+}
+
+.panel .footer {
+  top: initial;
+  background: linear-gradient(to top, var(--green), var(--green-dark));
+  border-top: 1px solid var(--black);
+  box-shadow: -5px -5px 5px var(--yellow);
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -34px;
+  right: -2%;
+  background: var(--green-dark);
+  transform: skewX(-33deg);
+  border: 1px solid var(--black);
+  border-bottom: none;
+  box-shadow: -5px -5px 5px var(--yellow);
 }
 
 .panel button {
@@ -17,28 +91,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 18px;
   gap: 10px;
   padding: 10px;
   color: var(--color-text);
   background: var(--color-background-primary);
   border: none;
   border-radius: 8px;
-  box-shadow: 0 9px 15px 6px hsl(230 79% 92%);
+  box-shadow: 0 0 15px 3px var(--purple-light);
   transition: box-shadow 200ms ease, transform 350ms ease-in-out;
 }
 
 .panel button:active {
-  box-shadow: 0 9px 15px 6px hsl(230 79% 62%);
+  box-shadow: 0 0px 15px 6px var(--purple-dark);
+  transform: scale(0.97);
 }
 
-.panel button:active,
 .panel button:focus,
 .panel button:hover {
-  outline: 3px dashed hsl(201deg 56% 70%);
+  outline: 3px dashed var(--yellow);
   outline-offset: 3px;
 }
 
 .panel button svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }

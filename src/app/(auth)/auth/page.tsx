@@ -14,7 +14,7 @@ const REGEX_FUCK_AZURE =
 export default async function SignIn({
   searchParams,
 }: {
-  searchParams: { callbackUrl: string };
+  searchParams: { callbackUrl: string; noRedirect: boolean };
 }) {
   const session = await getServerSession(authOptions);
 
@@ -28,7 +28,10 @@ export default async function SignIn({
       const url = new URL(searchParams.callbackUrl);
       pathname = url.pathname.replace(REGEX_FUCK_AZURE, '');
     }
-    redirect(pathname);
+
+    if (!searchParams.noRedirect) {
+      redirect(pathname);
+    }
   }
 
   const providers = await getProviders();
@@ -36,6 +39,7 @@ export default async function SignIn({
   return (
     <div className={styles.container}>
       <div className={styles.panel}>
+        <div className={styles.header} />
         {providers !== null ? (
           Object.values(providers).map((provider) => (
             <SignInButton key={provider.name} provider={provider} />
@@ -43,6 +47,7 @@ export default async function SignIn({
         ) : (
           <div>Uh Oh! Providers ?</div>
         )}
+        <div className={styles.footer} />
       </div>
     </div>
   );
