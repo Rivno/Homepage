@@ -1,11 +1,19 @@
-import { getServerSession } from 'next-auth/next';
+'use client';
+
+// import { getServerSession } from 'next-auth/next';
+import { useSession } from 'next-auth/react';
 
 import { SignIn, SignOut } from './actions';
 
 import styles from './auth.module.css';
 
-export async function Auth() {
-  const session = await getServerSession();
+export function Auth() {
+  // const session = await getServerSession();
+  const { data: session, status } = useSession();
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.container}>

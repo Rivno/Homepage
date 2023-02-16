@@ -29,11 +29,11 @@
 }
 
 .avatar {
-  border-radius: 2rem;
-  height: 2.8rem;
+  border-radius: 50%;
   width: 2.8rem;
+  aspect-ratio: 1 / 1;
   background-color: var(--color-text-white);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
