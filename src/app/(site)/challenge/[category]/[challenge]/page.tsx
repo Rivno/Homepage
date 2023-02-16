@@ -32,3 +32,13 @@ export default function Challenge({
     </>
   );
 }
+
+export async function generateStaticParams({ params: { category } }: any) {
+  const challenges = Object.keys(
+    CATEGORIES[category as CATEGORIES_TYPE].challenges
+  );
+
+  return challenges.map((challenge) => ({
+    challenge,
+  }));
+}

@@ -4,3 +4,4 @@ export * from './usersCards';
 export * from './userCard';
 export * from './userProfiles';
 export * from './colorGenerator';
+export * from './features';

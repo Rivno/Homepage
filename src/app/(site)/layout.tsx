@@ -1,3 +1,4 @@
+import { AuthContext } from '@/components/auth/authContext';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { ReactQuery } from '@/components/reactQuery';
@@ -5,7 +6,7 @@ import { ReactQuery } from '@/components/reactQuery';
 import styles from './layout.module.css';
 import '../globals.css';
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -18,13 +19,15 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <ReactQuery>
-          <Navbar />
-          <div className={styles.main_content}>
-            <main>{children}</main>
-            <Footer />
-          </div>
-        </ReactQuery>
+        <AuthContext>
+          <ReactQuery>
+            <Navbar />
+            <div className={styles.main_content}>
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </ReactQuery>
+        </AuthContext>
       </body>
     </html>
   );
