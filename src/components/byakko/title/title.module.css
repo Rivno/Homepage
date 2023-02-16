@@ -2,16 +2,12 @@
   margin: 0;
   line-height: 4rem;
   font-size: 6rem;
-  color: var(--color-primary);
 }
 
-.container a {
-  color: var(--color-secondary);
-  text-decoration: none;
+.container > span {
+  display: inline-block;
 }
 
-.container a:hover,
-.container a:focus,
-.container a:active {
-  text-decoration: underline;
+.container > span:first-letter {
+  color: var(--purple);
 }

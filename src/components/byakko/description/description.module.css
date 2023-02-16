@@ -2,14 +2,3 @@
   line-height: 1.5;
   font-size: 1.8rem;
 }
-
-.container a {
-  color: var(--color-secondary);
-  text-decoration: none;
-}
-
-.container a:hover,
-.container a:focus,
-.container a:active {
-  text-decoration: underline;
-}
