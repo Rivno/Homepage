@@ -13,20 +13,18 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script src="/scripts/theme-mode.js" />
-      </head>
+      <head>{/* <script src="/scripts/theme-mode.js" /> */}</head>
       <body>
         <div className={styles.container}>
-          <Sidebar />
-
-          <FrontContextSettings />
-
           <div className={styles.scroll_content}>
             <main>{children}</main>
 
             <Footer />
           </div>
+
+          <Sidebar />
+
+          <FrontContextSettings />
         </div>
       </body>
     </html>

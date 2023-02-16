@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import Image from 'next/image';
+import React from 'react';
 
 import FlagEn from '../../../../public/cv/lang/en.svg';
 import FlagFr from '../../../../public/cv/lang/fr.svg';
@@ -55,8 +56,8 @@ export const ExperienceItem = ({
       </div>
       <div className={styles.experience_content}>
         {experience.projects.map((project) => (
-          <>
-            <div key={project.title} className={styles.experience_project}>
+          <React.Fragment key={project.title}>
+            <div className={styles.experience_project}>
               <div className={styles.project_description}>
                 <div className={styles.project_title}>{project.title}</div>
                 <div className={styles.project_info}>
@@ -82,7 +83,7 @@ export const ExperienceItem = ({
               </div>
             </div>
             <div className={styles.separator} />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

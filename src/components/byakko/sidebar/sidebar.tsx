@@ -11,29 +11,24 @@ export const Sidebar = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.sidebar}>
-        <SidebarLink href="/" currentPath={pathname}>
-          Home
-        </SidebarLink>
-        <SidebarLink href="/steps" currentPath={pathname}>
-          Steps
-        </SidebarLink>
-        <SidebarLink href="/article" currentPath={pathname}>
-          Article
-        </SidebarLink>
-        <SidebarLink href="/design" currentPath={pathname}>
-          Design
-        </SidebarLink>
-        <SidebarLink href="/stack" currentPath={pathname}>
-          Stack
-        </SidebarLink>
-        <SidebarLink href="/about-me" currentPath={pathname}>
-          About me
-        </SidebarLink>
-        <SidebarLink href="/contact" currentPath={pathname}>
-          Contact
-        </SidebarLink>
-      </div>
+      <SidebarLink href="/" currentPath={pathname}>
+        Home
+      </SidebarLink>
+      <SidebarLink href="/challenge" currentPath={pathname}>
+        Challenge
+      </SidebarLink>
+      <SidebarLink href="/article" currentPath={pathname}>
+        Articles
+      </SidebarLink>
+      <SidebarLink href="/design" currentPath={pathname}>
+        Palette
+      </SidebarLink>
+      <SidebarLink href="/cv" currentPath={pathname}>
+        CV
+      </SidebarLink>
+      <SidebarLink href="/contact" currentPath={pathname}>
+        Contact
+      </SidebarLink>
     </div>
   );
 };

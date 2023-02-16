@@ -1,5 +1,3 @@
-import { Link } from '../link';
-
 export const TECH_WORD = [
   {
     value: 'reactjs',
@@ -39,9 +37,9 @@ export const getHighlightTechName = (text: string) => {
       );
     }
     resultArr.push(
-      <Link href={TECH_WORD_DICT[match.toLowerCase()]} key={i++}>
+      <a href={TECH_WORD_DICT[match.toLowerCase()]} key={i++}>
         {match}
-      </Link>
+      </a>
     );
     resultOffset = offset + match.length;
   });

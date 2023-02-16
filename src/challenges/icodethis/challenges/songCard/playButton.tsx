@@ -43,7 +43,7 @@ export const PlayButton = ({ containerId }: { containerId: string }) => {
   useEffect(() => {
     // @ts-ignore
     ref.current = document.getElementById(containerId);
-  }, []);
+  }, [containerId]);
 
   return <button className={styles.btn_circle} onClick={play} />;
 };
