@@ -10,9 +10,9 @@ import styles from './navbar.module.css';
 export const Navbar = () => (
   <header className={styles.container}>
     <div className="navbar-header">
-      <a href="/" className="navbar-brand">
+      <Link href="/" className="navbar-brand">
         Homepage
-      </a>
+      </Link>
     </div>
     <div className={styles.content}>
       <ul className="nav navbar-nav">
