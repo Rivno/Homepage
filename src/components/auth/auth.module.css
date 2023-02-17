@@ -30,7 +30,7 @@
 
 .avatar {
   border-radius: 50%;
-  width: 2.8rem;
+  width: 2rem;
   aspect-ratio: 1 / 1;
   background-color: var(--color-text-white);
   background-size: contain;

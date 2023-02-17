@@ -17,7 +17,7 @@
 .container::before {
   content: '';
   position: absolute;
-  left: -21px;
+  left: -24px;
   bottom: -1px;
   top: 0;
   width: calc(52% - 1px);

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
+import { AuthContext } from '@/components/auth/authContext';
 import { Footer } from '@/components/byakko/footer';
 import { FrontContextSettings } from '@/components/byakko/frontContextSettings';
 import { Sidebar } from '@/components/byakko/sidebar';
@@ -15,17 +16,19 @@ export default async function RootLayout({
     <html lang="en">
       <head>{/* <script src="/scripts/theme-mode.js" /> */}</head>
       <body>
-        <div className={styles.container}>
-          <div className={styles.scroll_content}>
-            <main>{children}</main>
+        <AuthContext>
+          <div className={styles.container}>
+            <div className={styles.scroll_content}>
+              <main>{children}</main>
 
-            <Footer />
+              <Footer />
+            </div>
+
+            <Sidebar />
+
+            <FrontContextSettings />
           </div>
-
-          <Sidebar />
-
-          <FrontContextSettings />
-        </div>
+        </AuthContext>
       </body>
     </html>
   );
