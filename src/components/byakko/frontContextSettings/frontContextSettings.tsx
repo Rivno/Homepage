@@ -3,7 +3,7 @@
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import { SkeletonCheckbbox } from '../skeleton';
+import Auth from '@/components/auth';
 
 import styles from './frontContextSettings.module.css';
 
@@ -55,21 +55,7 @@ export const FrontContextSettings = () => {
 
   return (
     <div className={styles.container}>
-      <select value="en" onChange={onLocaleChange}>
-        {LOCALES_LIST.map((locale) => (
-          <option value={locale} key={locale}>
-            {locale}
-          </option>
-        ))}
-      </select>
-      <label>
-        {darkTheme !== undefined ? (
-          <input type="checkbox" checked={darkTheme} onChange={handleToggle} />
-        ) : (
-          <SkeletonCheckbbox />
-        )}
-        <span>Dark</span>
-      </label>
+      <Auth />
     </div>
   );
 };

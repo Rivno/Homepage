@@ -1,20 +1,19 @@
 .container {
   position: relative;
   grid-area: sidebar;
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
-  padding: 5rem 1rem;
+  padding-top: 3rem;
   overflow-y: clip;
   font-size: 1rem;
-  width: 80px;
+  width: 24px;
   background: linear-gradient(90deg, var(--purple), var(--purple-dark));
   border-right: 1px solid var(--black);
   box-shadow: 5px 5px 5px var(--yellow);
+  transition: width 500ms ease;
 }
 
 .container::before {
-  height: calc(52% - 1px);
+  height: calc(32% - 1px);
   width: 44px;
   content: '';
   position: absolute;
@@ -27,10 +26,75 @@
   box-shadow: 5px 5px 5px var(--yellow);
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  position: relative;
+  right: -24px;
+}
+
+.expanded_button {
+  position: absolute;
+  top: 350px;
+  right: -24px;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+.container[aria-expanded='true'] {
+  width: 120px;
+}
+
+.container[aria-expanded='true'] .expanded_button {
+  transform: rotateY(180deg);
+}
+
+.container[aria-expanded='true'] .link > span {
+  opacity: 1;
+}
+
+.container[aria-expanded='true'] .link:focus::before,
+.container[aria-expanded='true'] .link:hover::before {
+  right: initial;
+  left: -10px;
+}
+
+.expanded_button svg {
+  width: 28px;
+  height: 28px;
+}
+
+.expanded_button:focus,
+.expanded_button:hover {
+  color: var(--green);
+}
+
 .link {
   color: var(--blue-light);
   position: relative;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+}
+
+.link > span {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.link > svg {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
 }
 
 .link[aria-current='page'] {
@@ -40,6 +104,7 @@
 .link:focus,
 .link:hover {
   color: var(--green);
+  text-decoration: none;
 }
 
 .link:focus::before,
@@ -47,8 +112,18 @@
   content: '';
   position: absolute;
   width: 4px;
-  left: -10px;
+  right: 35px;
   top: 0;
   bottom: 0;
   background-color: var(--green);
+}
+
+.link[aria-current='page']::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  background-color: var(--yellow);
 }
