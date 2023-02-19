@@ -1,3 +1,5 @@
+import preview from '../../../../../public/challenges/100.png';
+
 import { Card } from './card';
 
 import styles from './cards.module.css';
@@ -37,4 +39,4 @@ const Cards = () => (
   </div>
 );
 
-export const challenge = { Component: Cards, number: 100 };
+export const challenge = { Component: Cards, number: 100, preview };

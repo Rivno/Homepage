@@ -99,7 +99,9 @@ export const ColorGeneratorClient = () => {
         ))}
       </div>
       <div className={styles.generator}>
-        <button className={styles.button}>Generate palette</button>
+        <button className={styles.button} onClick={generateNewPalette}>
+          Generate palette
+        </button>
         <p>{'Or just press "Spacebar" to generate new palettes.'}</p>
       </div>
       <p className={styles.instructions}>

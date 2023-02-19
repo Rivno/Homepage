@@ -76,3 +76,25 @@
   border-bottom: none;
   box-shadow: -5px -5px 5px var(--yellow);
 }
+
+.expanded_button {
+  position: absolute;
+  left: -24px;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+.expanded_button svg {
+  width: 28px;
+  height: 28px;
+}
+
+.expanded_button:focus,
+.expanded_button:hover {
+  color: var(--blue-dark);
+}

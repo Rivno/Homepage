@@ -3,12 +3,14 @@ import { CHALLENGE, CHALLENGE_MODULE } from './type';
 
 export const challenges: Record<string, CHALLENGE> = {};
 
-for (const compoment in challengeComponents) {
-  challenges[compoment] = {
-    number: (challengeComponents as unknown as CHALLENGE_MODULE)[compoment]
+for (const component in challengeComponents) {
+  challenges[component] = {
+    number: (challengeComponents as unknown as CHALLENGE_MODULE)[component]
       .number,
-    Component: (challengeComponents as unknown as CHALLENGE_MODULE)[compoment]
+    Component: (challengeComponents as unknown as CHALLENGE_MODULE)[component]
       .Component,
+    preview: (challengeComponents as unknown as CHALLENGE_MODULE)[component]
+      .preview,
   };
 }
 

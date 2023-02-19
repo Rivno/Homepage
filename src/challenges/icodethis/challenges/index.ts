@@ -6,3 +6,5 @@ export * from './userProfiles';
 export * from './colorGenerator';
 export * from './features';
 export * from './kanban';
+export * from './pricingTable2';
+export * from './projectCard';

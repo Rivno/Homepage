@@ -1,9 +1,12 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { CATEGORIES, CATEGORIES_TYPE } from '@/challenges';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Content } from '@/components/content';
 import { Hero } from '@/components/hero';
+
+import styles from './page.module.css';
 
 export default function Category({
   params,
@@ -29,17 +32,25 @@ export default function Category({
         <div>Challenge - {params.category}</div>
       </Hero>
       <Breadcrumbs items={[{ label: 'Challenges', path: '/challenge' }]} />
-      <Content>
-        <ul>
-          {sortChallenges.map((key) => (
-            <li key={key}>
-              <Link href={`/challenge/${params.category}/${key}`}>
-                {challenges[key].number} - {key}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Content>
+      <div className={styles.cards}>
+        {sortChallenges.map((key) => (
+          <Link
+            key={key}
+            href={`/challenge/${params.category}/${key}`}
+            className={styles.card}
+          >
+            <span className={styles.inner}>
+              <Image
+                src={challenges[key].preview}
+                alt={`preview ${key}`}
+                width={400}
+                height={225}
+              />
+              <span>{key}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
     </>
   );
 }
