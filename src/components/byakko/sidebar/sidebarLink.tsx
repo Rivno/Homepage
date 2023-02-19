@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRef } from 'react';
 
 import styles from './sidebar.module.css';
 
@@ -10,12 +11,22 @@ export const SidebarLink = ({
   href: string;
   currentPath: string | null;
   children: React.ReactNode;
-}) => (
-  <Link
-    className={styles.link}
-    href={href}
-    {...(href === currentPath ? { 'aria-current': 'page' } : {})}
-  >
-    {children}
-  </Link>
-);
+}) => {
+  const ref = useRef<HTMLAnchorElement>(null);
+
+  const onClick = () => {
+    ref.current?.blur();
+  };
+
+  return (
+    <Link
+      className={styles.link}
+      href={href}
+      ref={ref}
+      onClick={onClick}
+      {...(href === currentPath ? { 'aria-current': 'page' } : {})}
+    >
+      {children}
+    </Link>
+  );
+};

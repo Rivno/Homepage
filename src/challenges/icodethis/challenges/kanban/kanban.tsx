@@ -1,3 +1,5 @@
+import preview from '../../../../../public/challenges/107.png';
+
 import { Task } from './task';
 
 import styles from './kanban.module.css';
@@ -60,4 +62,4 @@ function Kanban() {
   );
 }
 
-export const challenge = { Component: Kanban, number: 107 };
+export const challenge = { Component: Kanban, number: 107, preview };

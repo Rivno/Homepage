@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import SvgDoubleArrow from '@/icons/double_arrow.svg';
 import SvgHome from '@/icons/home.svg';
@@ -19,8 +19,27 @@ export const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const onExpandedClick = () => setIsExpanded((v) => !v);
 
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = useCallback((event: any) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      setIsExpanded(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [handleClickOutside]);
+
   return (
-    <div className={styles.container} aria-expanded={isExpanded}>
+    <div
+      className={styles.container}
+      ref={wrapperRef}
+      aria-expanded={isExpanded}
+    >
       <div className={styles.content}>
         <SidebarLink href="/" currentPath={pathname}>
           <span>Home</span>

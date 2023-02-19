@@ -1,3 +1,4 @@
+import preview from '../../../../../public/challenges/103.png';
 import { profiles } from '../images';
 
 import { Profile } from './profile';
@@ -59,4 +60,4 @@ const UserProfiles = () => (
   </div>
 );
 
-export const challenge = { Component: UserProfiles, number: 103 };
+export const challenge = { Component: UserProfiles, number: 103, preview };

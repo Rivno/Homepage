@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import preview from '../../../../../public/challenges/101.png';
+
 import styles from './usersCards.module.css';
 
 const UsersCards = () => (
@@ -47,4 +49,4 @@ const UsersCards = () => (
   </div>
 );
 
-export const challenge = { Component: UsersCards, number: 101 };
+export const challenge = { Component: UsersCards, number: 101, preview };

@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import preview from '../../../../../public/challenges/99.png';
+
 import { PlayButton } from './playButton';
 
 import styles from './songCard.module.css';
@@ -23,4 +25,4 @@ const SongCard = () => {
   );
 };
 
-export const challenge = { Component: SongCard, number: 99 };
+export const challenge = { Component: SongCard, number: 99, preview };

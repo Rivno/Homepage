@@ -1,3 +1,5 @@
+import preview from '../../../../../public/challenges/106.png';
+
 import styles from './features.module.css';
 
 const Features = () => {
@@ -233,4 +235,4 @@ const Features = () => {
   );
 };
 
-export const challenge = { Component: Features, number: 106 };
+export const challenge = { Component: Features, number: 106, preview };
