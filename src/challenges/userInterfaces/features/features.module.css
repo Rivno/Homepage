@@ -1,0 +1,173 @@
+.container {
+  flex: 1;
+  background-color: hsl(228, 74%, 21%);
+  color: hsl(225, 43%, 80%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  --logo_size: 75px;
+  --feature_gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  overflow: auto;
+  position: relative;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.content > h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.circle {
+  --diameter: 200px;
+  position: absolute;
+  border: 2px solid hsl(220, 18%, 97%);
+  border-radius: 50%;
+  width: var(--diameter);
+  height: var(--diameter);
+}
+
+.circle:first-child {
+  --diameter: 300px;
+  top: calc(0px - var(--diameter) * 0.5);
+  left: calc(50% - var(--diameter) * 0.5);
+}
+
+.circle:last-child {
+  --diameter: 200px;
+  bottom: calc(0px - var(--diameter) * 0.33);
+  left: 70%;
+}
+
+.circle::before,
+.circle::after {
+  content: '';
+  border: 2px solid;
+  position: absolute;
+  border-radius: 50%;
+  width: var(--diameter);
+  height: var(--diameter);
+}
+
+.circle::before {
+  border-color: hsl(215, 74%, 53%);
+  left: calc(var(--diameter) * 0.05);
+  top: calc(var(--diameter) * -0.1);
+}
+
+.circle::after {
+  border-color: hsl(333, 69%, 53%);
+  left: calc(var(--diameter) * 0.25);
+  top: calc(var(--diameter) * 0.1);
+}
+
+.content > h1 {
+  margin-left: calc(var(--feature_gap) + var(--logo_size));
+}
+
+.features {
+  --gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: calc(var(--logo_size) / 2 + var(--feature_gap) / 2) auto;
+  gap: var(--feature_gap);
+}
+
+.feature:nth-child(1) {
+  --count: 3px;
+}
+
+.feature:nth-child(2) {
+  --count: 5px;
+}
+
+.feature:nth-child(3) {
+  --count: 2px;
+}
+
+.feature:nth-child(4) {
+  --count: 0px;
+}
+
+.feature:nth-child(5) {
+  --count: 4px;
+}
+
+.feature:nth-child(6) {
+  --count: 1px;
+}
+
+.feature > div:not(:first-child) {
+  grid-column: 2;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.feature > div:last-child {
+  justify-content: start;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.feature > div:first-child {
+  border-radius: 50%;
+  background-color: hsl(227, 48%, 33%);
+  position: relative;
+  width: var(--logo_size);
+  height: var(--logo_size);
+  grid-row: span 2;
+  overflow: hidden;
+}
+
+.feature > div:first-child::before,
+.feature > div:first-child::after {
+  content: '';
+  position: absolute;
+  border: 2px solid hsl(228, 74%, 21%);
+  border-radius: 50%;
+  width: var(--logo_size);
+  height: var(--logo_size);
+}
+
+.feature > div:first-child::before {
+  left: calc(7px + var(--count));
+  bottom: calc(5px + var(--count));
+}
+
+.feature > div:first-child::after {
+  left: calc(0px - var(--count));
+  bottom: calc(12px - var(--count));
+}
+
+.feature > div:first-child > svg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 20px;
+  top: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 1080px;
+  }
+
+  .feature {
+    max-width: min(calc(50% - var(--gap) / 2), 480px);
+  }
+}

@@ -1,22 +1,22 @@
-import { StaticImageData } from 'next/image';
+import { CHALLENGE, CHALLENGE_MODULE } from './type';
+import * as challengeComponents from './userInterfaces';
 
-import previewICodeThis from '../../public/challenges/user_interface.png';
+export const challenges: Record<string, CHALLENGE> = {};
 
-import { challenges as iCodeThisChallenges } from './icodethis';
-import { CHALLENGE } from './icodethis/type';
+for (const component in challengeComponents) {
+  const challenge = (challengeComponents as unknown as CHALLENGE_MODULE)[
+    component
+  ];
+  challenges[component] = challenge;
+}
 
-export type CATEGORY = {
-  challenges: Record<string, CHALLENGE>;
-  preview: StaticImageData;
-  title: string;
-};
-
-export const CATEGORIES: Record<string, CATEGORY> = {
-  iCodeThis: {
-    challenges: iCodeThisChallenges,
-    preview: previewICodeThis,
-    title: 'User Interface',
-  },
-};
-
-export type CATEGORIES_TYPE = keyof typeof CATEGORIES;
+// 99 song card
+// 98 search
+// 97 newsletter
+// 96 music player
+// 95 mega menu
+// 94 followers
+// 93 faq
+// 92 blog header
+// 91 app card
+// 90 app list

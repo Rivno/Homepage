@@ -18,13 +18,22 @@ export const SidebarLink = ({
     ref.current?.blur();
   };
 
+  let isCurrentPath = false;
+
+  if (
+    (href === '/' && currentPath === '/') ||
+    (href !== '/' && currentPath?.startsWith(href))
+  ) {
+    isCurrentPath = true;
+  }
+
   return (
     <Link
       className={styles.link}
       href={href}
       ref={ref}
       onClick={onClick}
-      {...(href === currentPath ? { 'aria-current': 'page' } : {})}
+      {...(isCurrentPath ? { 'aria-current': 'page' } : {})}
     >
       {children}
     </Link>

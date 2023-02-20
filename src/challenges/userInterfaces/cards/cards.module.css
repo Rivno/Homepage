@@ -1,0 +1,19 @@
+.container {
+  flex: 1;
+  padding: 30px;
+  background-color: hsl(228, 45%, 98%);
+  color: hsl(224, 9%, 40%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: calc(390px * 3);
+}
