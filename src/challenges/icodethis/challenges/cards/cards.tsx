@@ -39,4 +39,9 @@ const Cards = () => (
   </div>
 );
 
-export const challenge = { Component: Cards, number: 100, preview };
+export const challenge = {
+  Component: Cards,
+  number: 100,
+  preview,
+  title: 'Cards',
+};

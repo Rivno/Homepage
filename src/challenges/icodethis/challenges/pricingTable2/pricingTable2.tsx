@@ -6,4 +6,9 @@ const PricingTable2 = () => {
   return <PricingTable2Client />;
 };
 
-export const challenge = { Component: PricingTable2, number: 108, preview };
+export const challenge = {
+  Component: PricingTable2,
+  number: 108,
+  preview,
+  title: 'Pricing Table',
+};

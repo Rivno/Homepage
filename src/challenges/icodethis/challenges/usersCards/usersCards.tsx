@@ -49,4 +49,9 @@ const UsersCards = () => (
   </div>
 );
 
-export const challenge = { Component: UsersCards, number: 101, preview };
+export const challenge = {
+  Component: UsersCards,
+  number: 101,
+  preview,
+  title: 'Users Cards',
+};

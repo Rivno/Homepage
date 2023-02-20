@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import { CATEGORIES, CATEGORIES_TYPE } from '@/challenges';
 import { Breadcrumbs } from '@/components/breadcrumbs';
-import { Content } from '@/components/content';
 import { Hero } from '@/components/hero';
 
 import styles from './page.module.css';
@@ -42,11 +41,12 @@ export default function Category({
             <span className={styles.inner}>
               <Image
                 src={challenges[key].preview}
-                alt={`preview ${key}`}
+                alt={`preview ${challenges[key].title}`}
+                placeholder="blur"
                 width={400}
                 height={225}
               />
-              <span>{key}</span>
+              <span>{challenges[key].title}</span>
             </span>
           </Link>
         ))}

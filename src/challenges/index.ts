@@ -1,9 +1,22 @@
-import { challenges as iCodeThisChallenges } from './icodethis';
+import { StaticImageData } from 'next/image';
 
-export const CATEGORIES = {
+import previewICodeThis from '../../public/challenges/user_interface.png';
+
+import { challenges as iCodeThisChallenges } from './icodethis';
+import { CHALLENGE } from './icodethis/type';
+
+export type CATEGORY = {
+  challenges: Record<string, CHALLENGE>;
+  preview: StaticImageData;
+  title: string;
+};
+
+export const CATEGORIES: Record<string, CATEGORY> = {
   iCodeThis: {
     challenges: iCodeThisChallenges,
+    preview: previewICodeThis,
+    title: 'User Interface',
   },
-} as const;
+};
 
 export type CATEGORIES_TYPE = keyof typeof CATEGORIES;

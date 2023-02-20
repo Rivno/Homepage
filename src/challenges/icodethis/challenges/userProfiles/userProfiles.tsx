@@ -60,4 +60,9 @@ const UserProfiles = () => (
   </div>
 );
 
-export const challenge = { Component: UserProfiles, number: 103, preview };
+export const challenge = {
+  Component: UserProfiles,
+  number: 103,
+  preview,
+  title: 'User Profiles',
+};
