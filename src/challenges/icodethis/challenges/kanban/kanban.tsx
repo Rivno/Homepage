@@ -62,4 +62,9 @@ function Kanban() {
   );
 }
 
-export const challenge = { Component: Kanban, number: 107, preview };
+export const challenge = {
+  Component: Kanban,
+  number: 107,
+  preview,
+  title: 'Kanban',
+};

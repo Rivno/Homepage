@@ -235,4 +235,9 @@ const Features = () => {
   );
 };
 
-export const challenge = { Component: Features, number: 106, preview };
+export const challenge = {
+  Component: Features,
+  number: 106,
+  preview,
+  title: 'Features',
+};

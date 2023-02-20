@@ -25,4 +25,9 @@ const SongCard = () => {
   );
 };
 
-export const challenge = { Component: SongCard, number: 99, preview };
+export const challenge = {
+  Component: SongCard,
+  number: 99,
+  preview,
+  title: 'Song Card',
+};

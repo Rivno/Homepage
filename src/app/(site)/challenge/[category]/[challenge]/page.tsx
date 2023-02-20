@@ -23,7 +23,10 @@ export default function Challenge({
       <Breadcrumbs
         items={[
           { label: 'Challenges', path: '/challenge' },
-          { label: params.category, path: `/challenge/${params.category}` },
+          {
+            label: CATEGORIES[params.category]?.title,
+            path: `/challenge/${params.category}`,
+          },
         ]}
       />
       <Content className={styles.challenge_content}>

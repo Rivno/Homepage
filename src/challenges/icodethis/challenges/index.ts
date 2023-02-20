@@ -8,3 +8,4 @@ export * from './features';
 export * from './kanban';
 export * from './pricingTable2';
 export * from './projectCard';
+export * from './incidentHistory';

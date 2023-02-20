@@ -67,4 +67,9 @@ function ProjectCard() {
   );
 }
 
-export const challenge = { Component: ProjectCard, number: 109, preview };
+export const challenge = {
+  Component: ProjectCard,
+  number: 109,
+  preview,
+  title: 'Project Card',
+};
