@@ -1,0 +1,98 @@
+.container {
+  flex: 1;
+  padding: 30px;
+  background-color: hsl(0, 0%, 92%);
+  color: hsl(200, 8%, 45%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 30px 20px;
+  box-shadow: 0 0 6px 3px hsl(0deg 0% 90%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content > h2 {
+  color: #273195;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.content::before {
+  content: '';
+  background: linear-gradient(
+    to right,
+    hsl(292, 100%, 61%),
+    hsl(207, 93%, 60%)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: hsl(200, 8%, 45%);
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+  justify-content: center;
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: inset 0 0 30px hsl(224 29% 90%); /* only inset is needed */
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:focus {
+  outline: 3px dashed hsl(224 29% 90%);
+  outline-offset: 3px;
+}
+
+.plus_sign {
+  --thick: 4px;
+  --length: 30px;
+  display: inline-block;
+  background: hsl(200, 8%, 45%);
+  height: var(--thick);
+  position: relative;
+  border-radius: 4px;
+  width: var(--length);
+}
+
+.plus_sign::before {
+  background: hsl(200, 8%, 45%);
+  content: '';
+  height: var(--length);
+  left: calc(var(--length) * 0.5 - var(--thick) * 0.5);
+  position: absolute;
+  border-radius: 4px;
+  top: calc(var(--length) * -0.5 - var(--thick) * -0.5);
+  width: var(--thick);
+}

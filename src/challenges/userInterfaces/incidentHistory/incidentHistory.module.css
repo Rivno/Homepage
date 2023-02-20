@@ -1,0 +1,45 @@
+.container {
+  flex: 1;
+  padding: 30px;
+  background-color: hsl(228, 45%, 98%);
+  color: hsl(224, 9%, 40%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px;
+}
+
+.content {
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: hsl(224, 52%, 12%);
+}
+
+.title h1 {
+  font-size: 42px;
+}
+
+.title .tag {
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 32px;
+  vertical-align: text-bottom;
+  margin-left: 20px;
+  background-color: hsl(224, 52%, 12%);
+  color: hsl(0, 0%, 100%);
+}
+
+.incidents {
+  display: flex;
+  flex-direction: column;
+}

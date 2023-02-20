@@ -9,14 +9,11 @@ export interface AuthContextProps {
 }
 
 async function getSession(cookie: string): Promise<Session> {
-  const response = await fetch(
-    `${process.env.LOCAL_AUTH_URL}/api/auth/session`,
-    {
-      headers: {
-        cookie,
-      },
-    }
-  );
+  const response = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/session`, {
+    headers: {
+      cookie,
+    },
+  });
 
   const session = await response.json();
 
