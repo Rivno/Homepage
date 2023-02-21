@@ -1,5 +1,5 @@
-import { Card } from '@/components/byakko/card';
-import { Grid } from '@/components/byakko/grid';
+import { Card } from './card';
+import { Grid } from './grid';
 
 export const Cards3D = () => (
   <Grid>

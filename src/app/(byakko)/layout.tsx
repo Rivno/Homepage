@@ -18,11 +18,9 @@ export default async function RootLayout({
       <body>
         <AuthContext>
           <div className={styles.container}>
-            <div className={styles.scroll_content}>
-              <main>{children}</main>
+            <main>{children}</main>
 
-              <Footer />
-            </div>
+            <Footer />
 
             <Sidebar />
 

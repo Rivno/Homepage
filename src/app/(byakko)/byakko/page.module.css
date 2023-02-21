@@ -2,3 +2,27 @@
   margin-left: -0.5rem;
   text-transform: uppercase;
 }
+
+.block1,
+.block2,
+.block3,
+.block4 {
+  padding: 50px;
+  color: var(--blue-dark);
+}
+
+.block1 {
+  background-color: var(--yellow-light);
+}
+
+.block2 {
+  background-color: var(--purple-light);
+}
+
+.block3 {
+  background-color: var(--blue-light);
+}
+
+.block4 {
+  background-color: var(--green-ligth);
+}

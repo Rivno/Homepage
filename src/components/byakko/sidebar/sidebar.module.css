@@ -1,5 +1,8 @@
 .container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   grid-area: sidebar;
   gap: 2rem;
   padding-top: 3rem;
@@ -13,7 +16,7 @@
 }
 
 .container::before {
-  height: calc(32% - 1px);
+  height: 425px;
   width: 44px;
   content: '';
   position: absolute;
@@ -49,7 +52,13 @@
 }
 
 .container[aria-expanded='true'] {
-  width: 120px;
+  width: 8rem;
+}
+
+@media screen and (min-width: 1025px) {
+  .container[aria-expanded='true'] {
+    width: 7rem;
+  }
 }
 
 .container[aria-expanded='true'] .expanded_button {
