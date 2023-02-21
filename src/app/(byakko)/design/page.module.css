@@ -23,9 +23,29 @@
 }
 
 .instructions {
-  border-radius: 100px;
+  position: relative;
+  border-radius: 16px;
+}
+
+.instructions .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
   background: linear-gradient(var(--blue), var(--blue-dark));
+  font-weight: 300;
   padding: 15px 20px;
+  z-index: 1;
+}
+
+.instructions::before {
+  content: '';
+  position: absolute;
+  border-radius: 16px;
+  inset: 0 1%;
+  box-shadow: 0 -5px 0 0 hsl(276, 42%, 63%);
 }
 
 .clipboard_alert {

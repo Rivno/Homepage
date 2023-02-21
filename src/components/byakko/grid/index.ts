@@ -1,1 +1,1 @@
-export * from './grid';
+export * from '../cards3D/grid';
