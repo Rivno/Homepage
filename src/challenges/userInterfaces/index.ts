@@ -10,3 +10,4 @@ export * from './pricingTable2';
 export * from './projectCard';
 export * from './incidentHistory';
 export * from './userSelect';
+export * from './weatherApp';

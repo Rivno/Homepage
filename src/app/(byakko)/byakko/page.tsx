@@ -1,32 +1,59 @@
-import { challenges } from '@/challenges';
-import {
-  ChallengeCard,
-  ChallengeCardList,
-} from '@/components/byakko/challenge';
+import Link from 'next/link';
+
+import { experience } from '@/app/(cv)/cv/experience';
 import { Description } from '@/components/byakko/description';
 import { PreTitle } from '@/components/byakko/preTitle';
 import { Title } from '@/components/byakko/title';
 
+import { Challenge } from './challenge';
+import { Early } from './early';
+import { Iut } from './iut';
+import { Role } from './role';
+import { Supinfo } from './supinfo';
+
 import styles from './page.module.css';
 
 export default function Home() {
-  const challengesKeys = Object.keys(challenges);
-  const sortChallenges = challengesKeys
-    .sort((a, b) => {
-      if (challenges[a].number < challenges[b].number) {
-        return 1;
-      }
-      if (challenges[a].number > challenges[b].number) {
-        return -1;
-      }
+  // const observer = new IntersectionObserver((entries) => {
+  //   for (let index = 0; index < entries.length; index += 1) {
+  //     const entry = entries[index];
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add('show');
+  //     } else {
+  //       entry.target.classList.remove('show');
+  //     }
+  //   }
+  // });
 
-      return 0;
-    })
-    .slice(0, 3)
-    .map((key) => ({
-      key,
-      challenge: challenges[key],
-    }));
+  // const hiddenElements = document.querySelectorAll('.hidden');
+
+  // for (let index = 0; index < hiddenElements.length; index += 1) {
+  //   const element = hiddenElements[index];
+  //   observer.observe(element);
+  // }
+
+  // .hidden {
+  //   opacity: 0;
+  //   filter: blur(5px);
+  //   transform: translateX(-100%);
+  //   transition: all 1s;
+  // }
+
+  // @media(prefers-reduced-motion) {
+  //   .hidden {
+  //     transition: none;
+  //   }
+  // }
+
+  // .show {
+  //   opacity: 1;
+  //   filter: blur(0);
+  //   transform: translateX(0);
+  // }
+
+  // .hidden:nth-child(x) {
+  //   transition-delay: 200ms; // and more and more
+  // }
 
   return (
     <>
@@ -37,36 +64,44 @@ export default function Home() {
         Dev expert / Tech lead on ReactJS - NodeJS - .net C#
       </Description>
 
-      <p>Discover some of my latest UI challenges</p>
-      <ChallengeCardList>
-        {sortChallenges.map((challenge) => (
-          <ChallengeCard key={challenge.key} challenge={challenge} />
-        ))}
-      </ChallengeCardList>
+      <p>
+        {
+          "The current technologies I'm interested at are ReactJS, NextJS and Rust"
+        }
+      </p>
 
-      <div className={styles.block1}>My roles</div>
+      <Challenge />
 
-      <div className={styles.block2}>Early life up to before IUT</div>
-      <div className={styles.block3}>IUT and start dev</div>
-      <div className={styles.block4}>SUPINFO and engineering</div>
+      <Role />
+      <Early />
+      <Iut />
+      <Supinfo />
 
-      <div>all xp</div>
-      <div>SODEXO</div>
-      <div>SEWAN</div>
-      <div>IZIWORK</div>
-      <div>MEETIC</div>
-      <div>KERING</div>
-      <div>WYND</div>
-      <div>BNP</div>
-      <div>DIGITAS</div>
-      <div>MNT</div>
-      <div>AXA</div>
-      <div>C2S</div>
-      <div>ESSILOR</div>
-      <div>DCUBE</div>
-      <div>IORGA</div>
-      <div>STORE FACTORY</div>
-      <div>LOGICA</div>
+      <p>
+        Since then I work fulltime as a developer, first with C# and Javascript,
+        then with ReactJS, NodeJS and Typescript. Below is the list of all my
+        previous experiences.
+      </p>
+      {experience.map((xp) => (
+        <div key={xp.company} className={styles.experience}>
+          <div>
+            <div className={styles.company}>{xp.company.toUpperCase()}</div>
+            <div className={styles.experience_content}>
+              {xp.projects.map((project) => (
+                <div key={`${xp.company}-${project.title}`}>
+                  {project.description}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+      <div>
+        <Link href="/cv">Access to my CV</Link>
+      </div>
+      <div>
+        <Link href="/contact">Contact me</Link>
+      </div>
     </>
   );
 }
