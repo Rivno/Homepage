@@ -4,6 +4,8 @@ import { Footer } from '@/components/byakko/footer';
 import { FrontContextSettings } from '@/components/byakko/frontContextSettings';
 import { Sidebar } from '@/components/byakko/sidebar';
 
+import { DetectMobile } from './detectMobile';
+
 import './globals.css';
 import styles from './layout.module.css';
 
@@ -26,6 +28,8 @@ export default async function RootLayout({
 
             <FrontContextSettings />
           </div>
+
+          <DetectMobile />
         </AuthContext>
       </body>
     </html>

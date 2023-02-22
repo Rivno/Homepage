@@ -1,9 +1,18 @@
+import Image from 'next/image';
+
+import iut from '../../../../public/iut_velizy.png';
+
 import styles from './page.module.css';
 
 export function Iut() {
   return (
-    <div className={styles.block3}>
-      <p>
+    <div
+      className={styles.block3}
+      data-scroll
+      data-scroll-animate="fade"
+      data-scroll-show
+    >
+      <p data-scroll data-scroll-animate="right" data-scroll-show>
         After the end of the common school cursus, I start my studies in
         computer science in the technical university of Velizy, for 2 years to
         get a License 2 level diploma. I got the opportunity there to start
@@ -12,6 +21,7 @@ export function Iut() {
         months internship where I will use my first development language in a
         professional environment, COBOL.
       </p>
+      <Image src={iut} alt="iut velizy" />
     </div>
   );
 }

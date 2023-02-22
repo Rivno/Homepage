@@ -3,6 +3,7 @@ import { StaticImageData } from 'next/image';
 import logoAxa from '../../../../public/cv/companies/axa.svg';
 import logoBnp from '../../../../public/cv/companies/bnp.png';
 import logoC2s from '../../../../public/cv/companies/c2s.png';
+import logoC2sAlt from '../../../../public/cv/companies/c2s_alt.png';
 import logoCgi from '../../../../public/cv/companies/cgi.svg';
 import logoDcube from '../../../../public/cv/companies/dcube.png';
 import logoDigitas from '../../../../public/cv/companies/digitas.svg';
@@ -21,9 +22,12 @@ export type Experience = {
   dateStart: Date;
   dateEnd?: Date;
   company: string;
+  description: string;
   isSvg?: boolean;
   shouldAddBG?: boolean;
+  shouldAddBGAlt?: boolean;
   logo: StaticImageData;
+  logoAlt?: StaticImageData;
   projects: Project[];
 };
 
@@ -41,7 +45,10 @@ export const experience: Experience[] = [
     dateStart: new Date('09/01/2022'),
     dateEnd: new Date('01/27/2023'),
     company: 'Sodexo',
+    description:
+      'This company provides catering, facilities management, employee benefits and personal home services to 100 million consumers daily in 53 countries.',
     shouldAddBG: true,
+    shouldAddBGAlt: false,
     logo: logoSodexo,
     projects: [
       {
@@ -59,6 +66,7 @@ Full international team`,
     dateStart: new Date('11/01/2021'),
     dateEnd: new Date('08/30/2022'),
     company: 'SEWAN',
+    description: 'One of the leaders of Telecoms BtoB in Europe.',
     logo: logoSewan,
     projects: [
       {
@@ -76,6 +84,7 @@ such as internet provider, landlines and mobile lines`,
     dateStart: new Date('08/01/2021'),
     dateEnd: new Date('11/01/2021'),
     company: 'Iziwork',
+    description: 'Company that help you handle and access temp workers.',
     isSvg: true,
     logo: logoIziwork,
     projects: [
@@ -94,6 +103,8 @@ such as internet provider, landlines and mobile lines`,
     dateStart: new Date('09/01/2020'),
     dateEnd: new Date('03/01/2021'),
     company: 'Meetic',
+    description:
+      "Europe's leading name in dating, Meetic relentlessly focused on offering the most innovative services to support singles in their search for a serious relationship.",
     isSvg: true,
     logo: logoMeetic,
     projects: [
@@ -111,6 +122,8 @@ such as internet provider, landlines and mobile lines`,
     dateStart: new Date('11/01/2019'),
     dateEnd: new Date('06/01/2020'),
     company: 'Kering',
+    description:
+      'A global Luxury group, Kering manages the development of a series of renowned Houses in Fashion, Leather Goods and Jewelry: Gucci, Saint Laurent, Bottega Veneta, Balenciaga, Alexander McQueen, Brioni, Boucheron, Pomellato, DoDo, Qeelin, as well as Kering Eyewear.',
     isSvg: true,
     logo: logoKering,
     projects: [
@@ -139,6 +152,8 @@ such as internet provider, landlines and mobile lines`,
     dateStart: new Date('03/01/2019'),
     dateEnd: new Date('09/01/2019'),
     company: 'Wynd',
+    description:
+      'Wynd platform has been thought out to answer retailers transformation stakes. It is natively omnichannel and enables you to offer all customer journeys.',
     isSvg: true,
     logo: logoWynd,
     projects: [
@@ -166,6 +181,7 @@ the rest on-site`,
     dateStart: new Date('08/01/2018'),
     dateEnd: new Date('12/01/2018'),
     company: 'BNP',
+    description: 'Bank for individuals and professionals',
     logo: logoBnp,
     projects: [
       {
@@ -189,6 +205,8 @@ the rest on-site`,
     dateStart: new Date('08/01/2017'),
     dateEnd: new Date('06/01/2018'),
     company: 'Digitas',
+    description:
+      'The premier integrated advertising agency within Publicis Groupe, connecting media, creative, data, and technology to deliver modern marketing.',
     isSvg: true,
     logo: logoDigitas,
     projects: [
@@ -225,6 +243,8 @@ and AXA doctors`,
     dateStart: new Date('01/01/2017'),
     dateEnd: new Date('07/01/2017'),
     company: 'MNT',
+    description:
+      'The territorial healthcare insurance that supports all agents',
     isSvg: true,
     logo: logoMnt,
     projects: [
@@ -251,6 +271,7 @@ providing news and account information`,
     dateStart: new Date('02/01/2016'),
     dateEnd: new Date('11/01/2016'),
     company: 'AXA',
+    description: 'Worlwide banking and insurance company',
     isSvg: true,
     logo: logoAxa,
     projects: [
@@ -268,8 +289,10 @@ providing news and account information`,
     dateStart: new Date('11/01/2015'),
     dateEnd: new Date('02/01/2016'),
     company: 'C2S',
+    description: 'C2S Bouygues is the digital company for Groupe Bouygues.',
     shouldAddBG: true,
     logo: logoC2s,
+    logoAlt: logoC2sAlt,
     projects: [
       {
         title: 'ECOPOLIS',
@@ -294,6 +317,8 @@ such as glass bins or recycling center`,
     dateStart: new Date('01/01/2015'),
     dateEnd: new Date('04/01/2015'),
     company: 'Essilor',
+    description:
+      'Essilor International is a French-based international ophthalmic optics company that designs, manufactures and markets lenses to correct or protect eyesight.',
     isSvg: true,
     logo: logoEssilor,
     projects: [
@@ -313,6 +338,7 @@ draw and cut optical lens`,
     dateStart: new Date('09/01/2013'),
     dateEnd: new Date('09/01/2014'),
     company: 'DCube',
+    description: 'Consulting company for Web and Apps',
     logo: logoDcube,
     projects: [
       {
@@ -338,6 +364,7 @@ draw and cut optical lens`,
     dateStart: new Date('04/01/2010'),
     dateEnd: new Date('08/01/2013'),
     company: 'IORGA',
+    description: 'Consulting company for IT',
     isSvg: true,
     logo: logoIorga,
     projects: [
@@ -389,6 +416,8 @@ for endangered flora and fauna`,
     dateStart: new Date('07/01/2009'),
     dateEnd: new Date('09/01/2009'),
     company: 'Store Factory',
+    description:
+      'Store Factory enable you to build and manage your e-commerce website.',
     shouldAddBG: true,
     logo: logoStoreFactory,
     projects: [
@@ -407,6 +436,7 @@ for endangered flora and fauna`,
     dateStart: new Date('04/01/2007'),
     dateEnd: new Date('09/01/2008'),
     company: 'Logica',
+    description: 'Consulting company for IT',
     isSvg: true,
     logo: logoCgi,
     projects: [
