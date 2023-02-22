@@ -1,0 +1,41 @@
+.roles {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 30px;
+  padding: 50px 0;
+  color: hsl(0 0% 20%);
+  color: var(--blue-dark);
+  background-color: var(--yellow-light);
+}
+
+.separator {
+  width: 1px;
+  background-color: hsl(0 0% 20%);
+}
+
+.role {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.roles > div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.tasks {
+  font-size: 0.75em;
+  margin: 0;
+  margin-left: 10px;
+  list-style-type: none;
+}
+.tasks > li {
+  margin-left: 10px;
+  position: relative;
+}
+.tasks > li:before {
+  content: '-';
+  position: absolute;
+  left: -15px;
+}

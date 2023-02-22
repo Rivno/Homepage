@@ -1,0 +1,206 @@
+.container {
+  flex: 1;
+  padding: 30px;
+  background-color: hsl(222, 11%, 82%);
+  color: hsl(222, 11%, 57%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 40% 45% 15%;
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+  width: 390px;
+  height: 844px;
+}
+
+.status_bar,
+.location,
+.actions {
+  color: hsl(214, 17%, 92%);
+}
+
+.status_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  line-height: 20px;
+}
+
+.status_bar > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status_bar svg {
+  width: 20px;
+  height: 20px;
+}
+
+.clock {
+  transform: translateX(-40%);
+}
+
+.battery {
+  font-size: 16px;
+}
+
+.dots {
+  display: flex;
+  gap: 2px;
+}
+
+.dots2 {
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  display: inline-block;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  border: 2px solid hsl(214, 17%, 92%);
+  background-color: transparent;
+}
+
+.dot[data-fill='true'] {
+  background-color: hsl(214, 17%, 92%);
+}
+
+.dot2 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+
+.dot2[data-current='true'] {
+  background-color: hsl(214, 17%, 92%);
+}
+
+.location {
+  position: relative;
+  z-index: 0;
+  padding: 40px 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location > img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  filter: grayscale(30%);
+}
+
+.current_temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 32px;
+}
+
+.current_temp > div:first-child {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.days {
+  padding: 50px 0;
+  display: grid;
+  justify-content: center;
+}
+
+.days svg {
+  width: 40px;
+  height: 40px;
+}
+
+.days > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.days > div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+}
+
+.actions {
+  background-color: hsl(222, 11%, 57%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+  justify-content: center;
+  transition: color 200ms ease;
+  outline: none;
+}
+
+.button:focus,
+.button:active,
+.button:hover {
+  outline: none;
+}
+
+.button:active {
+  color: hsl(214, 17%, 90%);
+}
+
+.button:active .plus_sign,
+.button:active .plus_sign::before {
+  background: hsl(214, 17%, 90%);
+}
+
+.plus_sign {
+  --thick: 4px;
+  --length: 30px;
+  display: inline-block;
+  background: hsl(214, 17%, 92%);
+  height: var(--thick);
+  position: relative;
+  border-radius: 4px;
+  width: var(--length);
+}
+
+.plus_sign::before {
+  background: hsl(214, 17%, 92%);
+  content: '';
+  height: var(--length);
+  left: calc(var(--length) * 0.5 - var(--thick) * 0.5);
+  position: absolute;
+  border-radius: 4px;
+  top: calc(var(--length) * -0.5 - var(--thick) * -0.5);
+  width: var(--thick);
+}
