@@ -69,3 +69,9 @@
   color: var(--yellow);
   font-weight: 700;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}

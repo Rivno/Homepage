@@ -2,7 +2,12 @@ import styles from './role.module.css';
 
 export function Role() {
   return (
-    <div className={styles.roles}>
+    <div
+      className={styles.roles}
+      data-scroll
+      data-scroll-animate="fade"
+      data-scroll-show
+    >
       <div>
         <div className={styles.role}>Developer Expert</div>
         <ul className={styles.tasks}>
