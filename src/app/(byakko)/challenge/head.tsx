@@ -4,7 +4,7 @@ export default function Head() {
   return (
     <>
       <title>Challenge - Homepage</title>
-      <meta name="description" content="Challenge - Rivno homepage" />
+      <meta name="description" content="Challenge - ATORA" />
       <CommonMeta />
     </>
   );

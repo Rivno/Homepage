@@ -11,3 +11,4 @@ export * from './projectCard';
 export * from './incidentHistory';
 export * from './userSelect';
 export * from './weatherApp';
+export * from './accountPopup';

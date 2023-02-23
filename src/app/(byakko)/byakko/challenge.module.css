@@ -1,0 +1,88 @@
+.container {
+  display: grid;
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container > p {
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.container > div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.more {
+  position: relative;
+  background: linear-gradient(var(--blue), var(--blue-dark));
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0 0 9px 1px hsl(0deg 0% 90%);
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+  outline: none;
+  color: var(--blue-light);
+  font-size: 20px;
+}
+
+.more:hover,
+.more:focus,
+.more:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 9px 5px hsl(0deg 0% 90%);
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.more::before {
+  content: '';
+  position: absolute;
+  border-radius: 16px;
+  inset: 0 1%;
+  box-shadow: 0 -5px 0 0 hsl(276, 42%, 63%);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+  background-color: var(--blue-dark);
+  font-weight: 300;
+  padding: 10px;
+  z-index: 1;
+}
+
+.more .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more .icon > div {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+}
+
+.more .icon > div span {
+  margin-top: -4px;
+}
+
+.more:hover .icon > div,
+.more:focus .icon > div,
+.more:active .icon > div {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}

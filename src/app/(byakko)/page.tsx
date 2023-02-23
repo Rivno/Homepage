@@ -8,18 +8,18 @@ import { Description } from '@/components/byakko/description';
 import { PreTitle } from '@/components/byakko/preTitle';
 import { Title } from '@/components/byakko/title';
 
-import FlagEn from '../../../../public/cv/lang/en.svg';
-import FlagFr from '../../../../public/cv/lang/fr.svg';
-import LogoPeople from '../../../../public/cv/school/people.svg';
+import FlagEn from '../../../public/cv/lang/en.svg';
+import FlagFr from '../../../public/cv/lang/fr.svg';
+import LogoPeople from '../../../public/cv/school/people.svg';
 
-import { Challenge } from './challenge';
-import { Early } from './early';
-import { Iut } from './iut';
-import { Role } from './role';
-import { ScrollAnimate } from './scrollAnimate';
-import { Supinfo } from './supinfo';
+import { Challenge } from './byakko/challenge';
+import { Early } from './byakko/early';
+import { Iut } from './byakko/iut';
+import { Role } from './byakko/role';
+import { ScrollAnimate } from './byakko/scrollAnimate';
+import { Supinfo } from './byakko/supinfo';
 
-import styles from './page.module.css';
+import styles from './byakko/page.module.css';
 
 export default function Home() {
   return (
@@ -126,11 +126,10 @@ export default function Home() {
             </div>
           );
         })}
-        <div>
-          <Link href="/cv">Access to my CV</Link>
-        </div>
-        <div>
-          <Link href="/contact">Contact me</Link>
+        <div className={styles.contact_block}>
+          <Link className={styles.contact} href="/contact">
+            Contact me
+          </Link>
         </div>
       </ScrollAnimate>
     </>

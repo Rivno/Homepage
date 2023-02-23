@@ -14,10 +14,11 @@
   flex-direction: column;
   justify-content: center;
   gap: 50px;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   min-height: 100%;
   padding: 20px;
+  flex: 1;
 }
 
 .content > h1 {

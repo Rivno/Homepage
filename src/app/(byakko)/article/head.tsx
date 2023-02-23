@@ -3,8 +3,8 @@ import { CommonMeta } from '@/app/commonMeta';
 export default function Head() {
   return (
     <>
-      <title>Articles - Homepage</title>
-      <meta name="description" content="Articles - Rivno homepage" />
+      <title>Articles - ATORA</title>
+      <meta name="description" content="Articles - ATORA" />
       <CommonMeta />
     </>
   );
