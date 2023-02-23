@@ -8,6 +8,8 @@ export const ContentRSS = () => (
   <div className={styles.container}>
     <div className={styles.column}>
       <FeedRSS url={FEED_URL.DBM} />
+      <FeedRSS url={FEED_URL.OP} />
+      <FeedRSS url={FEED_URL.CRUNCH} />
     </div>
     <div className={styles.column}>
       <FeedRSS url={FEED_URL.JVC} />

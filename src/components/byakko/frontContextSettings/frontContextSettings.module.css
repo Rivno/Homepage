@@ -1,26 +1,27 @@
 .container {
+  /* width: fit-content; */
   position: fixed;
   top: 0;
   right: 0;
   display: grid;
+  align-items: center;
   grid-auto-flow: column;
+  grid-gap: 10px;
   gap: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
   background: linear-gradient(var(--green), var(--green-dark));
-  border-left: 1px solid var(--black);
+  border-left: none;
   border-bottom: 1px solid var(--black);
-  box-shadow: 0 -1px 5px 5px var(--yellow);
+  box-shadow: -3px -1px 5px 5px var(--yellow);
 }
 
 .container::before {
   content: '';
   position: absolute;
-  left: -24px;
+  left: -20px;
   bottom: -1px;
   top: 0;
-  width: calc(52% - 1px);
+  width: 500px;
   background: linear-gradient(var(--green), var(--green-dark));
   transform: skewX(33deg);
   border: 1px solid var(--black);
@@ -92,6 +93,21 @@
 .expanded_button svg {
   width: 28px;
   height: 28px;
+}
+
+.container a {
+  max-height: 28px;
+}
+
+.github svg {
+  width: 28px;
+  height: 28px;
+  color: black;
+}
+
+.linkedin svg {
+  width: 32px;
+  height: 32px;
 }
 
 .expanded_button:focus,

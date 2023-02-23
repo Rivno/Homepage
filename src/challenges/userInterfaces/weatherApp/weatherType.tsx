@@ -4,15 +4,15 @@ export const weatherType: Record<string, React.ReactNode> = {
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="Weather-cloud-sun"
           transform="translate(1.000000, 0.000000)"
           stroke="#6B6C6E"
-          stroke-width="2"
+          strokeWidth="2"
         >
           <g id="Group" transform="translate(0.000000, 10.000000)">
             <path
@@ -41,15 +41,15 @@ export const weatherType: Record<string, React.ReactNode> = {
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="Weather-cloud-sun-rain"
           transform="translate(1.000000, 0.000000)"
           stroke="#6B6C6E"
-          stroke-width="2"
+          strokeWidth="2"
         >
           <g id="Group" transform="translate(0.000000, 10.000000)">
             <path
@@ -81,14 +81,14 @@ export const weatherType: Record<string, React.ReactNode> = {
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="Weather-cloud-bolt-rain"
           transform="translate(1.000000, 1.000000)"
-          stroke-width="2"
+          strokeWidth="2"
           stroke="#6B6C6E"
         >
           <g id="Group">

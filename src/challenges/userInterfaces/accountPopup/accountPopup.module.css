@@ -1,0 +1,160 @@
+.container {
+  flex: 1;
+  padding: 30px;
+  background-color: hsl(240, 30%, 92%);
+  color: hsl(240, 62%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px;
+}
+
+.content {
+  min-width: 250px;
+  position: relative;
+  padding: 10px;
+  background-color: hsl(240, 85%, 97%);
+  border-radius: 100px;
+}
+
+.content,
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.popup .name {
+  font-size: 18px;
+}
+
+.pseudo {
+  font-size: 16px;
+}
+
+.popup {
+  position: absolute;
+  padding-bottom: 10px;
+  bottom: 100%;
+  left: -40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 450ms ease;
+}
+
+.popup_content {
+  background-color: hsl(0, 0%, 100%);
+  padding: 40px 40px 30px;
+  border-radius: 10px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content:hover .popup {
+  pointer-events: initial;
+  opacity: 1;
+}
+
+.check {
+  border: 2px solid hsl(231, 33%, 96%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions {
+  position: relative;
+  margin-top: 20px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  gap: 20px;
+}
+
+.actions .button {
+  color: hsl(240, 62%, 11%);
+  justify-content: flex-start;
+}
+
+.button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.actions:before {
+  content: '';
+  position: absolute;
+  background-color: hsl(240, 33%, 95%);
+  height: 2px;
+  left: -10px;
+  right: -10px;
+  top: -30px;
+}
+
+.actions > .button:nth-child(2n) {
+  justify-content: flex-end;
+}
+
+.button {
+  background-color: transparent;
+  color: hsl(219, 86%, 57%);
+  border: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+  justify-content: center;
+  transition: color 200ms ease;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:focus,
+.button:active,
+.button:hover {
+  outline: none;
+}
+
+.button:active {
+  color: hsl(214, 17%, 90%);
+}
+
+.button:active .plus_sign,
+.button:active .plus_sign::before {
+  background: hsl(214, 17%, 90%);
+}
+
+.plus_sign {
+  --thick: 2px;
+  --length: 15px;
+  display: inline-block;
+  background: hsl(219, 86%, 57%);
+  height: var(--thick);
+  position: relative;
+  border-radius: 4px;
+  width: var(--length);
+}
+
+.plus_sign::before {
+  background: hsl(219, 86%, 57%);
+  content: '';
+  height: var(--length);
+  left: calc(var(--length) * 0.5 - var(--thick) * 0.5);
+  position: absolute;
+  border-radius: 4px;
+  top: calc(var(--length) * -0.5 - var(--thick) * -0.5);
+  width: var(--thick);
+}

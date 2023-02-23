@@ -1,8 +1,8 @@
 .container {
   position: fixed;
-  top: 0;
+  top: -325px;
   bottom: 0;
-  left: 0;
+  left: -15px;
   grid-area: sidebar;
   gap: 2rem;
   padding-top: 3rem;
@@ -12,7 +12,7 @@
   background: linear-gradient(90deg, var(--purple), var(--purple-dark));
   border-right: 1px solid var(--black);
   box-shadow: 5px 5px 5px var(--yellow);
-  transition: width 500ms ease;
+  transition: width 500ms ease, top 500ms ease, left 500ms ease;
 }
 
 .container::before {
@@ -53,6 +53,15 @@
 
 .container[aria-expanded='true'] {
   width: 8rem;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    top: 0;
+    left: 0;
+  }
 }
 
 @media screen and (min-width: 1025px) {

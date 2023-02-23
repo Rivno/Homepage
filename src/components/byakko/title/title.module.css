@@ -1,6 +1,7 @@
 .container {
   line-height: 4rem;
   font-size: 6rem;
+  margin-bottom: 50px;
 }
 
 .container > span {

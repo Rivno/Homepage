@@ -6,7 +6,7 @@ export default function Head({ params }: { params: { challenge: string } }) {
   return (
     <>
       <title>{`${title} - Homepage`}</title>
-      <meta name="description" content={`${title} - Rivno homepage`} />
+      <meta name="description" content={`${title} - ATORA`} />
       <CommonMeta />
     </>
   );
