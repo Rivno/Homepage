@@ -1,6 +1,5 @@
 .roles {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
   gap: 30px;
   padding: 50px 0;
   color: var(--blue-light);
@@ -38,4 +37,10 @@
   content: '-';
   position: absolute;
   left: -15px;
+}
+
+@media screen and (min-width: 480px) {
+  .roles {
+    grid-template-columns: 1fr auto 1fr;
+  }
 }

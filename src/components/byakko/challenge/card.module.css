@@ -3,7 +3,7 @@
   background: linear-gradient(var(--blue), var(--blue-dark));
   border-radius: 16px;
   width: 100%;
-  max-width: 400px;
+  max-width: 250px;
   box-shadow: 0 0 9px 1px hsl(0deg 0% 90%);
   transition: box-shadow 200ms ease, transform 350ms ease-in-out;
   outline: none;
@@ -42,7 +42,7 @@
 
 .card img {
   object-fit: contain;
-  max-width: 400px;
+  max-width: 250px;
   aspect-ratio: 800 / 450;
   height: auto;
   border-radius: 16px;
@@ -61,4 +61,13 @@
   font-weight: 300;
   padding-bottom: 20px;
   z-index: 1;
+}
+
+@media screen and (min-width: 480px) {
+  .card {
+    max-width: 400px;
+  }
+  .card img {
+    max-width: 400px;
+  }
 }

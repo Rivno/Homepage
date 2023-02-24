@@ -12,3 +12,4 @@ export * from './incidentHistory';
 export * from './userSelect';
 export * from './weatherApp';
 export * from './accountPopup';
+export * from './analyticsChart';

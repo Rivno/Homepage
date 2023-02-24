@@ -38,12 +38,12 @@ export function Challenge() {
       <div>
         <Link href="challenge" className={styles.more}>
           <span className={styles.inner}>
+            <span>See more</span>
             <div className={styles.icon}>
               <div>
                 <span>&#8594;</span>
               </div>
             </div>
-            <span>See more</span>
           </span>
         </Link>
       </div>

@@ -17,7 +17,7 @@ export default function Design() {
           <DesignClient />
         </div>
 
-        <Image src={eva01} alt="eva01" />
+        <Image src={eva01} alt="eva01" className={styles.eva} />
       </div>
     </div>
   );

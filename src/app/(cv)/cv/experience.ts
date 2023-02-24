@@ -36,6 +36,7 @@ export type Project = {
   role: string;
   teamSize: number;
   description: string;
+  descriptionAlt?: string;
   language: 'en' | 'fr';
   stack: string[];
 };
@@ -58,6 +59,9 @@ export const experience: Experience[] = [
         language: 'en',
         description: `Mobile application to access services provides by Sodexo facilities, such as meals, service requests, events, hospitality, bus lines ...
 Full international team`,
+        descriptionAlt: `Mobile application that allow users to log in, select their location, and access the different services provide by Sodexo on that location.
+
+          For the food part of the application, users can order and pay through the app.`,
         stack: ['JavaScript', 'ReactJS', 'TypeScript', 'CSS', 'Capacitor'],
       },
     ],
@@ -74,8 +78,11 @@ Full international team`,
         role: 'Developer front',
         teamSize: 5,
         language: 'fr',
-        description: `B2B dashboard to handle communication services,
+        description: `BtoB dashboard to handle communication services,
 such as internet provider, landlines and mobile lines`,
+        descriptionAlt: `BtoB dashboard where customer can manage their communication services, such as internet provider, landlines and mobile lines.
+          They can for example define the default ringtone, answering machine announce and all kind of settings.
+`,
         stack: ['GraphQL', 'JavaScript', 'ReactJS', 'NodeJS', 'CSS'],
       },
     ],
@@ -95,6 +102,9 @@ such as internet provider, landlines and mobile lines`,
         language: 'fr',
         description:
           "Creating and maintaining React components for the company's Design-system, use on customer portal to handle temparary workers",
+        descriptionAlt: `Creating and maintaining React components for the company's Design-system.
+
+            This design-system is then use on the different application of the company.`,
         stack: ['JavaScript', 'ReactJS', 'TypeScript', 'CSS'],
       },
     ],
@@ -134,6 +144,10 @@ such as internet provider, landlines and mobile lines`,
         language: 'en',
         description:
           "Application handling communications between Kering's apps and partner's apps, validating and transforming messages format",
+        descriptionAlt: `Kering has a lot of different application, all of them exchange messages through kafka.
+
+        The role of this project was to check all these messages, validate them and if needed transform them.
+        And then dispatch them to the correct channel.`,
         stack: [
           'JavaScript',
           'ReactJS',
@@ -190,6 +204,9 @@ the rest on-site`,
         teamSize: 4,
         language: 'en',
         description: 'Application to handle performance KPI of assets',
+        descriptionAlt: `Application to handle performance KPI of assets.
+
+        Design-system library to handle all components of this application.`,
         stack: [
           'JavaScript',
           'ReactJS',
@@ -225,6 +242,13 @@ the rest on-site`,
         language: 'fr',
         description: `Online consultation application connecting customers
 and AXA doctors`,
+        descriptionAlt: `The online consultation application of AXA connecting customers
+          and doctors.
+
+          Customer can get a slot for a consultation or do one right now, if doctors are available.
+          Triage of customer is first done by a nurse, and then a doctor take the rest of the consultation if needed.
+
+          Online consultation are handle with webrtc.`,
         stack: [
           'JavaScript',
           'ReactJS',
@@ -254,7 +278,7 @@ and AXA doctors`,
         teamSize: 5,
         language: 'fr',
         description: `Customer portal for cities referent personnel,
-providing news and account information`,
+providing news and account information.`,
         stack: ['JavaScript', 'ReactJS', 'NodeJS', 'Docker', 'CSS', 'NextJS'],
       },
       {
@@ -263,6 +287,8 @@ providing news and account information`,
         teamSize: 5,
         language: 'fr',
         description: 'Application to handle e-documents',
+        descriptionAlt:
+          'All documents receive by the compoany are scanned, this application handle them and track their status.',
         stack: ['JavaScript', 'ReactJS', 'NodeJS', 'Docker', 'CSS', 'NextJS'],
       },
     ],
@@ -280,7 +306,8 @@ providing news and account information`,
         role: 'Developer front',
         teamSize: 20,
         language: 'fr',
-        description: 'Customer portal for banking and insurance services',
+        description:
+          'New version of the customer portal for banking and insurance services.',
         stack: ['JavaScript', 'CSS', 'jQuery'],
       },
     ],
@@ -300,7 +327,7 @@ providing news and account information`,
         teamSize: 2,
         language: 'fr',
         description: `Mobile application to declare damaged structures in the street, and find local services,
-such as glass bins or recycling center`,
+such as glass bins or recycling center.`,
         stack: [
           'JavaScript',
           'Azure',
@@ -329,7 +356,7 @@ such as glass bins or recycling center`,
         language: 'fr',
         description: `Audit of current stack, and migrating to said stack an
 application done in Microsoft Access to help opticians
-draw and cut optical lens`,
+draw and cut optical lens.`,
         stack: ['JavaScript', 'CSS', 'C#', '.Net Nancy'],
       },
     ],
@@ -346,7 +373,7 @@ draw and cut optical lens`,
         role: 'Tech Lead',
         teamSize: 4,
         language: 'fr',
-        description: 'Version 2 of previous project',
+        description: 'Version 2 of previous project.',
         stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
       {
@@ -355,7 +382,7 @@ draw and cut optical lens`,
         teamSize: 2,
         language: 'fr',
         description:
-          'Auditing and developing application in Microsoft Dynamics to handle customers data',
+          'Auditing and developing application in Microsoft Dynamics to handle customers data.',
         stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
     ],
@@ -373,7 +400,7 @@ draw and cut optical lens`,
         role: 'Developer',
         teamSize: 1,
         language: 'fr',
-        description: 'Mobile application to declare days off',
+        description: 'Mobile application to declare days off.',
         stack: ['Windows Phone', 'C#'],
       },
       {
@@ -381,7 +408,7 @@ draw and cut optical lens`,
         role: 'Developer',
         teamSize: 4,
         language: 'fr',
-        description: 'Customer portal to manage IT budget and resources',
+        description: 'Customer portal to manage IT budget and resources.',
         stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
       {
@@ -389,7 +416,7 @@ draw and cut optical lens`,
         role: 'Developer',
         teamSize: 2,
         language: 'fr',
-        description: 'Version 2 of FFTT tournament application use by referee',
+        description: 'Version 2 of FFTT tournament application use by referee.',
         stack: ['C#', 'WPF'],
       },
       {
@@ -398,7 +425,7 @@ draw and cut optical lens`,
         teamSize: 3,
         language: 'fr',
         description: `Migration and merge of 2 application handling and
-optimizing of biological material freezer`,
+optimizing of biological material freezer.`,
         stack: ['JavaScript', 'CSS', 'C#', 'ASP.NET MVC'],
       },
       {
@@ -407,7 +434,7 @@ optimizing of biological material freezer`,
         teamSize: 6,
         language: 'fr',
         description: `Application to handle import, export and use certificate
-for endangered flora and fauna`,
+for endangered flora and fauna.`,
         stack: ['Java', 'JavaScript', 'CSS'],
       },
     ],
@@ -427,7 +454,7 @@ for endangered flora and fauna`,
         teamSize: 3,
         language: 'fr',
         description:
-          'Customer portal to help them generate / manage their e-commerce website',
+          'Customer portal to generate / manage customers e-commerce website.',
         stack: ['JavaScript', 'CSS', 'PHP', 'FLEX'],
       },
     ],
@@ -446,7 +473,7 @@ for endangered flora and fauna`,
         teamSize: 12,
         language: 'fr',
         description:
-          'Migrating application handling different process of AXA Re',
+          'Migrating application handling different process of AXA Re.',
         stack: ['C#', 'WinForm'],
       },
       {
@@ -455,7 +482,7 @@ for endangered flora and fauna`,
         teamSize: 2,
         language: 'fr',
         description:
-          'Customer portal to access account and monetary information',
+          'Customer portal to access account and monetary information.',
         stack: ['C#', 'ASP.NET', 'CSS'],
       },
       {
@@ -464,7 +491,7 @@ for endangered flora and fauna`,
         teamSize: 5,
         language: 'fr',
         description:
-          'Mainframe application handling different process of Groupama',
+          'Mainframe application handling different process of Groupama.',
         stack: ['COBOL'],
       },
     ],
