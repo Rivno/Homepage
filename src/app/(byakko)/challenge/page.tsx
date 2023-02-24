@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 import { challenges } from '@/challenges';
 import {
   ChallengeCard,
@@ -32,11 +29,13 @@ export default function Category() {
     <>
       <Title>Challenges</Title>
 
-      <ChallengeCardList>
-        {sortChallenges.map((challenge) => (
-          <ChallengeCard key={challenge.key} challenge={challenge} />
-        ))}
-      </ChallengeCardList>
+      <div className={styles.content}>
+        <ChallengeCardList>
+          {sortChallenges.map((challenge) => (
+            <ChallengeCard key={challenge.key} challenge={challenge} />
+          ))}
+        </ChallengeCardList>
+      </div>
     </>
   );
 }

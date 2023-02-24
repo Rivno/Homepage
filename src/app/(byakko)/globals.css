@@ -1,3 +1,9 @@
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
 :root {
   --white: hsl(0, 0%, 100%);
   --yellow-light: hsl(45, 91%, 91%);
@@ -16,6 +22,28 @@
   --black: hsl(0, 0%, 0%);
 
   --color-text: hsl(0 0% 85%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --yellow-light: hsl(45, 91%, 91%);
+    --yellow: hsl(42, 93%, 57%);
+    --yellow-dark: hsl(25, 59%, 52%);
+    --green-light: hsl(133, 94%, 93%);
+    --green: hsl(86, 63%, 60%);
+    --green-dark: hsl(147, 28%, 36%);
+    --blue-light: hsl(189, 60%, 93%);
+    --blue: hsl(225, 48%, 76%);
+    --blue-dark: hsl(222, 36%, 50%);
+    --purple-light: hsl(294, 95%, 92%);
+    --purple: hsl(276, 42%, 63%);
+    --purple-dark: hsl(292, 39%, 30%);
+    --grey: hsl(240, 4%, 40%);
+    --black: hsl(0, 0%, 0%);
+
+    --color-text: hsl(0 0% 85%);
+  }
 }
 
 * {
@@ -47,6 +75,7 @@ body {
 a {
   text-decoration: none;
   outline: none;
+  color: var(--purple-light);
 }
 
 a:focus {

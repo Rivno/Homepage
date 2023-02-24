@@ -1,7 +1,12 @@
 .container {
   line-height: 4rem;
-  font-size: 6rem;
-  margin-bottom: 50px;
+  font-size: 4em;
+  margin-left: -0.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .container > span {
@@ -10,4 +15,10 @@
 
 .container > span:first-letter {
   color: var(--purple);
+}
+
+@media screen and (min-width: 480px) {
+  .roles {
+    font-size: 6em;
+  }
 }

@@ -1,0 +1,13 @@
+.content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.building {
+  margin-top: 50px;
+  font-size: 3em;
+  color: var(--yellow);
+  font-weight: 700;
+}

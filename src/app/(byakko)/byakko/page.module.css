@@ -1,7 +1,7 @@
 .main_title {
-  margin-left: -0.5rem;
+  /* margin-left: -0.5rem;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 0; */
 }
 
 .block2,
@@ -18,9 +18,16 @@
 .block2 p,
 .block3 p,
 .block4 p {
-  width: 50%;
   backdrop-filter: blur(10px);
   z-index: 1;
+}
+
+@media screen and (min-width: 480px) {
+  .block2 p,
+  .block3 p,
+  .block4 p {
+    width: 50%;
+  }
 }
 
 .block2 {
@@ -68,32 +75,77 @@
 .experience {
   padding: 50px;
   display: flex;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.description {
+  white-space: pre-line;
 }
 
 .logo svg {
   width: 100%;
-  max-height: 300px;
+  max-height: 40px;
 }
 
 .experience img {
-  width: auto;
-  height: 100%;
-  max-height: 250px;
-  max-width: 100%;
   object-fit: contain;
+  max-height: 100%;
 }
 
 .experience > div {
   display: flex;
   flex-direction: column;
-  width: 50%;
   gap: 20px;
 }
 
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 480px) {
+  .experience {
+    display: flex;
+    position: initial;
+  }
+
+  .experience > div {
+    width: 50%;
+  }
+
+  .logo {
+    position: initial;
+    top: initial;
+    right: initial;
+    height: initial;
+  }
+
+  .experience_image {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    max-height: initial;
+  }
+
+  .experience img {
+    width: auto;
+    height: 100%;
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: initial;
+  }
+
+  .logo svg {
+    max-height: 300px;
+  }
+}
+
 .experience_image {
-  display: flex;
-  justify-content: center;
-  flex: 1;
+  max-height: 100%;
 }
 
 .white_bg > img {
@@ -134,11 +186,19 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 0.8em;
+}
+
+.stacks > span {
+  gap: 1em;
 }
 
 .stacks > span:not(:last-child)::after {
-  content: '-';
+  content: '•';
+}
+
+.separator_dot {
+  font-size: 16px;
 }
 
 .project .title {
@@ -174,7 +234,7 @@
   cursor: pointer;
   border: 2px solid var(--purple);
   border-radius: 10px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   font-size: 3em;
   color: var(--blue-light);
   transition: box-shadow 200ms ease, transform 350ms ease-in-out;

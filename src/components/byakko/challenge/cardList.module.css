@@ -1,8 +1,15 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
   grid-auto-rows: max-content;
   justify-content: center;
   gap: 30px;
-  padding: 10px 20px 30px;
+  justify-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .cards {
+    padding: 10px 20px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  }
 }

@@ -79,19 +79,21 @@ export default function Home() {
                       <div className={styles.title}>{project.title}</div>
                       <div className={styles.info}>
                         <span className={styles.role}>{project.role}</span>
-                        <span>-</span>
+                        <span className={styles.separator_dot}>•</span>
                         <span className={styles.team_size}>
                           <LogoPeople className={styles.icon} />
                           <span>{project.teamSize}</span>
                         </span>
-                        <span>-</span>
+                        <span className={styles.separator_dot}>•</span>
                         {project.language === 'en' ? (
                           <FlagEn className={styles.icon} />
                         ) : (
                           <FlagFr className={styles.icon} />
                         )}
                       </div>
-                      <div>{project.description}</div>
+                      <div className={styles.description}>
+                        {project.descriptionAlt ?? project.description}
+                      </div>
                       <div className={styles.stacks}>
                         {project.stack.map((tech) => (
                           <TechItem key={tech} tech={tech} />
