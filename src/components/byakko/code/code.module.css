@@ -15,6 +15,7 @@
 .container > pre {
   background-color: hsl(240, 1%, 20%);
   padding: 20px;
+  white-space: pre-wrap;
 }
 
 .file_name + pre {
