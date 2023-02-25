@@ -1,19 +1,31 @@
 'use client';
 
+import hljs from 'highlight.js/lib/core';
+import elixir from 'highlight.js/lib/languages/elixir';
+import ini from 'highlight.js/lib/languages/ini';
+import javascript from 'highlight.js/lib/languages/javascript';
+import xml from 'highlight.js/lib/languages/xml';
 import { HTMLAttributes, useEffect, useRef } from 'react';
 
 import styles from './code.module.css';
+import 'highlight.js/styles/a11y-dark.css';
+
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('ini', ini);
+hljs.registerLanguage('elixir', elixir);
 
 export function Code({
   fileName,
   children,
   ...props
 }: HTMLAttributes<HTMLPreElement> & { fileName?: string }) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLPreElement>(null);
 
   useEffect(() => {
-    // @ts-ignore
-    hljs.highlightBlock(ref.current);
+    if (ref.current) {
+      hljs.highlightBlock(ref.current);
+    }
   }, []);
 
   return (
