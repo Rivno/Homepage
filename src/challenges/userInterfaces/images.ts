@@ -19,3 +19,7 @@ export const profilesIllustration = [
   'https://m.media-amazon.com/images/G/01/digital/INVI_2021_PVProfileImageCircle_256x256_BlackSamson_LightOrange.png',
   'https://m.media-amazon.com/images/G/01/digital/INVI_2021_PVProfileImageCircle_256x256_MonsterGirl_LightGreen.png',
 ];
+
+export const forest = [
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mt_Hood_Natl_Forest.jpg/800px-Mt_Hood_Natl_Forest.jpg',
+];
