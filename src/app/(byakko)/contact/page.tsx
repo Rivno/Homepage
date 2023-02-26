@@ -4,6 +4,11 @@ import { Title } from '@/components/byakko/title';
 
 import styles from './page.module.css';
 
+export const metadata = {
+  title: 'Contact - ATORA',
+  description: 'Contact - ATORA',
+};
+
 export default function Contact() {
   return (
     <>

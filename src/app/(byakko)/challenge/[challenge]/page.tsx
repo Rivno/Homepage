@@ -30,3 +30,15 @@ export async function generateStaticParams() {
     challenge,
   }));
 }
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { challenge: string };
+}) {
+  const { title } = challenges[params.challenge] || {};
+  return {
+    title: `${title} - ATORA`,
+    description: `${title} - ATORA`,
+  };
+}

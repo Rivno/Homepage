@@ -8,6 +8,11 @@ import { DesignClient } from './designClient';
 
 import styles from './page.module.css';
 
+export const metadata = {
+  title: 'Design - ATORA',
+  description: 'Design - ATORA',
+};
+
 export default function Design() {
   return (
     <div className={styles.container}>

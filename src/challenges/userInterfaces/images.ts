@@ -23,3 +23,19 @@ export const profilesIllustration = [
 export const forest = [
   'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mt_Hood_Natl_Forest.jpg/800px-Mt_Hood_Natl_Forest.jpg',
 ];
+
+export const musics = [
+  'https://i.scdn.co/image/ab67616d00001e024b42e0a290fa21e7151244ec',
+  'https://i.scdn.co/image/ab67616d00001e02e48c107df7912345a0888d42',
+  'https://i.scdn.co/image/ab67616d00001e022b54fd5d5c38a38eba502188',
+  'https://i.scdn.co/image/ab67616d00001e023e4b149dd3110f1432bfeca0',
+  'https://i.scdn.co/image/ab67616d00001e02bad7062c3fd2f2d037989694',
+  'https://i.scdn.co/image/ab67616d00001e021ba82db99d8fce7e3fb63bc5',
+  'https://i.scdn.co/image/ab67616d00001e023682b0570ea2c19f758a435d',
+  'https://i.scdn.co/image/ab67616d00001e02030915ffa58125ae36f13a6f',
+  'https://i.scdn.co/image/ab67616d00001e02543b743609ede4f6be72c10d',
+  'https://i.scdn.co/image/ab67616d00001e02ae59a83ebb38ad0c093f3719',
+  'https://i.scdn.co/image/ab67616d00001e02f80fe67d0f4293be5b8f5251',
+  'https://i.scdn.co/image/ab67616d00001e02b33d46dfa2635a47eebf63b2',
+  'https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400',
+];
