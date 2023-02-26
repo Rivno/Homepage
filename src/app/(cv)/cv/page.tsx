@@ -17,6 +17,14 @@ const PageBreak = () => (
 
 const Separator = () => <div className={styles.separator} />;
 
+export const metadata = {
+  title: 'CV - ATORA',
+  description: 'CV - ATORA',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
 export default function CV() {
   const [lastXp, previousXP, ...listXP] = experience;
   const itemPerPage = 4;

@@ -7,6 +7,11 @@ import { Title } from '@/components/byakko/title';
 
 import styles from './page.module.css';
 
+export const metadata = {
+  title: 'Challenge - ATORA',
+  description: 'Challenge - ATORA',
+};
+
 export default function Category() {
   const challengesKeys = Object.keys(challenges);
   const sortChallenges = challengesKeys

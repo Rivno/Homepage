@@ -24,6 +24,12 @@ const nextConfig = {
         port: '',
         pathname: '/wikipedia/commons/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        port: '',
+        pathname: '/image/**',
+      },
     ],
   },
 };

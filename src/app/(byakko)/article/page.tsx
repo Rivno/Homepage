@@ -3,6 +3,11 @@ import { Title } from '@/components/byakko/title';
 
 import styles from './page.module.css';
 
+export const metadata = {
+  title: 'Articles - ATORA',
+  description: 'Articles - ATORA',
+};
+
 export default function Article() {
   return (
     <>

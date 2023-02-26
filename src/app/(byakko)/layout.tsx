@@ -9,6 +9,14 @@ import { DetectMobile } from './detectMobile';
 import './globals.css';
 import styles from './layout.module.css';
 
+export const metadata = {
+  title: 'ATORA',
+  description: 'Allan Bienne Freelance ReactJS / NodeJS',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
 export default async function RootLayout({
   children,
 }: {

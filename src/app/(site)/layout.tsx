@@ -6,6 +6,14 @@ import { ReactQuery } from '@/components/reactQuery';
 import styles from './layout.module.css';
 import '../globals.css';
 
+export const metadata = {
+  title: 'RIVNO HOMEPAGE',
+  description: 'RIVNO HOMEPAGE',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
 export default async function RootLayout({
   children,
 }: {
