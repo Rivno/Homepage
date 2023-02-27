@@ -15,3 +15,4 @@ export * from './accountPopup';
 export * from './analyticsChart';
 export * from './countdown';
 export * from './musicStore';
+export * from './notesApp';
