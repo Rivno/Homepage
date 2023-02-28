@@ -16,3 +16,4 @@ export * from './analyticsChart';
 export * from './countdown';
 export * from './musicStore';
 export * from './notesApp';
+export * from './notesCard';

@@ -8,8 +8,8 @@ import { Title } from '@/components/byakko/title';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Challenge - ATORA',
-  description: 'Challenge - ATORA',
+  title: 'Challenge',
+  description: 'List of UI / UX challenge done',
 };
 
 export default function Category() {

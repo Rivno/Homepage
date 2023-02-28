@@ -10,8 +10,37 @@ import './globals.css';
 import styles from './layout.module.css';
 
 export const metadata = {
-  title: 'ATORA',
+  title: {
+    default: 'Atora',
+    template: '%s | Atora',
+  },
   description: 'Allan Bienne Freelance ReactJS / NodeJS',
+  authors: [{ name: 'Allan Bienne' }],
+  keywords: [
+    'Freelance',
+    'Developer',
+    'Next.js',
+    'React',
+    'JavaScript',
+    'ReactJS',
+    'Node',
+    'NodeJS',
+    'NextJS',
+  ],
+  openGraph: {
+    title: 'Atora',
+    description: 'Allan Bienne Freelance ReactJS / NodeJS',
+    siteName: 'Atora',
+    images: [
+      {
+        url: `${process.env.NEXTAUTH_URL}/preview.png`,
+        width: 800,
+        height: 524,
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
   icons: {
     icon: '/favicon.ico',
   },

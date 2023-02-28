@@ -9,8 +9,8 @@ import { DesignClient } from './designClient';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Design - ATORA',
-  description: 'Design - ATORA',
+  title: 'Design',
+  description: 'Color palette use on this website',
 };
 
 export default function Design() {
