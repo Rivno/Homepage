@@ -4,8 +4,8 @@ import { Title } from '@/components/byakko/title';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Articles - ATORA',
-  description: 'Articles - ATORA',
+  title: 'Articles',
+  description: 'List of blog articles',
 };
 
 export default function Article() {

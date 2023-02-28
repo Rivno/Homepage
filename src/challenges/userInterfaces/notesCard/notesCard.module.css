@@ -1,0 +1,183 @@
+.container {
+  flex: 1;
+  background-color: hsl(194, 89%, 72%);
+  color: hsl(0, 0%, 56%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  z-index: 1;
+}
+
+.card {
+  position: absolute;
+  top: 40px;
+  transform-origin: center top;
+  transform: translateY(20px);
+  display: grid;
+  grid-template-rows: 60px 250px 90px;
+  grid-template-columns: 400px;
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.card:not(:first-child) .header {
+  opacity: 0;
+}
+
+.card:nth-child(2) {
+  z-index: -1;
+  transform: scale(0.95);
+}
+
+.card:nth-child(3) {
+  top: 25px;
+  transform: scale(0.9);
+  z-index: -2;
+}
+
+.header {
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card_content {
+  padding: 0 60px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.card:nth-child(1) {
+  background: linear-gradient(135deg, hsl(165, 67%, 99%), hsl(157, 93%, 95%));
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(135deg, hsl(0, 0%, 96%), hsl(0, 0%, 96%));
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(135deg, hsl(194, 53%, 91%), hsl(199, 81%, 94%));
+}
+
+.card:nth-child(1) .header {
+  background: linear-gradient(90deg, hsl(165, 67%, 99%), hsl(157, 93%, 95%));
+}
+
+.card:nth-child(2) .header {
+  background: linear-gradient(90deg, hsl(0, 0%, 96%), hsl(0, 0%, 96%));
+}
+
+.card:nth-child(3) .header {
+  background: linear-gradient(90deg, hsl(194, 53%, 91%), hsl(199, 81%, 94%));
+}
+
+.header button {
+  height: 30px;
+}
+
+.btn_add > span,
+.btn_close > span {
+  --thick: 6px;
+  --length: 30px;
+  display: inline-block;
+  background: hsl(224, 39%, 26%);
+  height: var(--thick);
+  position: relative;
+  width: var(--length);
+  border-radius: 6px;
+  transform: translateY(-25%);
+}
+
+.btn_add > span::before,
+.btn_close > span::before {
+  background: hsl(224, 39%, 26%);
+  content: '';
+  height: var(--length);
+  left: calc(var(--length) * 0.5 - var(--thick) * 0.5);
+  position: absolute;
+  top: calc(var(--length) * -0.5 - var(--thick) * -0.5);
+  width: var(--thick);
+  border-radius: 6px;
+}
+
+.btn_close > span {
+  transform: translateY(-25%) rotate(45deg);
+}
+
+.btn_add > span,
+.btn_add > span::before {
+  background: hsl(86, 69%, 60%);
+}
+
+.more_actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.dot {
+  border-radius: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: hsl(86, 69%, 60%);
+}
+
+button.btn_cog {
+  color: hsl(86, 69%, 60%);
+}
+
+.btn_cog svg {
+  width: 30px;
+  height: 30px;
+}
+
+.card_cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.btn_save {
+  border-radius: 100px;
+  padding: 10px 70px;
+  font-size: 28px;
+  width: max-content;
+  background-color: hsl(86, 69%, 60%);
+  color: white;
+  box-shadow: 0 0 15px 10px hsl(86, 69%, 80%);
+  transition: box-shadow 200ms ease, transform 350ms ease-in-out;
+}
+
+.btn_save:focus,
+.btn_save:hover {
+  box-shadow: 0 0 15px 6px hsl(86, 69%, 40%);
+}
+
+.btn_save:active {
+  transform: scale(0.9);
+}

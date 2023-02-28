@@ -36,9 +36,23 @@ export async function generateMetadata({
 }: {
   params: { challenge: string };
 }) {
-  const { title } = challenges[params.challenge] || {};
+  const { title, number } = challenges[params.challenge] || {};
   return {
-    title: `${title} - ATORA`,
-    description: `${title} - ATORA`,
+    title: title,
+    description: `Challenge for ${title}`,
+    openGraph: {
+      title: title,
+      description: `Challenge for ${title}`,
+      siteName: 'Atora',
+      images: [
+        {
+          url: `${process.env.NEXTAUTH_URL}/challenges/${number}.png`,
+          width: 800,
+          height: 450,
+        },
+      ],
+      locale: 'en-US',
+      type: 'website',
+    },
   };
 }

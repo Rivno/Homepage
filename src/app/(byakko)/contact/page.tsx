@@ -5,8 +5,8 @@ import { Title } from '@/components/byakko/title';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Contact - ATORA',
-  description: 'Contact - ATORA',
+  title: 'Contact',
+  description: 'Contact information',
 };
 
 export default function Contact() {
