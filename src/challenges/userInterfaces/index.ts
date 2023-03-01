@@ -17,3 +17,4 @@ export * from './countdown';
 export * from './musicStore';
 export * from './notesApp';
 export * from './notesCard';
+export * from './photoGallery';
