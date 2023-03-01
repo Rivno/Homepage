@@ -12,6 +12,14 @@ export function Challenge() {
   const challengesKeys = Object.keys(challenges);
   const sortChallenges = challengesKeys
     .sort((a, b) => {
+      if (challenges[a].showcase && !challenges[b].showcase) {
+        return -1;
+      }
+
+      if (!challenges[a].showcase && challenges[b].showcase) {
+        return 1;
+      }
+
       if (challenges[a].number < challenges[b].number) {
         return 1;
       }

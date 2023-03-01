@@ -1,0 +1,198 @@
+.container {
+  flex: 1;
+  background-color: hsl(206, 22%, 87%);
+  color: hsl(192, 2%, 43%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 10px 10px 20px 4px hsla(0, 0%, 0%, 0.15),
+    -10px -10px 20px 4px hsla(0, 0%, 100%);
+  padding: 40px 121px 120px;
+  border: 1px solid hsl(220, 33%, 98%);
+  border-radius: 24px;
+  flex: 1;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navbar a,
+.navbar a:visited {
+  text-decoration: none;
+  color: hsl(192, 2%, 43%);
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar a::after {
+  content: '';
+  background-color: hsl(192, 2%, 43%);
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  border-radius: 10px;
+  left: 50%;
+  width: 0;
+  transform: translateX(-50%);
+  transition: width 400ms ease;
+}
+
+.navbar a[aria-current='page']::after {
+  width: 30px;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  grid-auto-rows: 200px;
+  justify-content: center;
+  gap: 15px;
+  justify-items: center;
+}
+
+.gallery_item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery_item > img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gallery_item_info {
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+  right: 0;
+  height: 30%;
+  padding: 10px 15px;
+  background-color: hsl(192, 2%, 43%, 0.5);
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0 0 3px black;
+  transition: bottom 400ms ease;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery_item_info svg {
+  width: 20px;
+  height: 20px;
+}
+
+.gallery_item_info > div:first-child {
+  flex: 1;
+}
+
+.gallery_item_info > div > div:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.gallery_item_info > div > div:last-child {
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.gallery_item:hover > div {
+  bottom: 0;
+}
+
+.search {
+  display: flex;
+  gap: 20px;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid hsl(208, 22%, 83%);
+  color: hsl(208, 22%, 83%);
+}
+
+.search > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.search > input {
+  background-color: white;
+  color: hsl(208, 22%, 83%);
+  border: none;
+  font-size: 16px;
+  width: 75px;
+  transition: width 400ms ease;
+}
+
+.search > input:focus {
+  outline: none;
+  width: 100px;
+}
+
+@media screen and (min-width: 480px) {
+  .search > input:focus {
+    width: 250px;
+  }
+}
+
+.search > input::placeholder {
+  color: hsl(208, 22%, 83%);
+}
+
+.search > input:focus::placeholder {
+  color: transparent;
+}
+
+button.btn_upload {
+  background-color: hsl(200, 9%, 19%);
+  color: hsl(210, 2%, 82%);
+  border-radius: 8px;
+  padding: 15px 50px;
+  box-shadow: 5px 5px 10px 4px hsla(0, 0%, 0%, 0.15),
+    -5px -5px 10px 4px hsla(0, 0%, 100%);
+  font-size: 18px;
+  transition: transform 400ms ease, box-shadow 400ms ease;
+}
+
+.btn_upload:hover,
+.btn_upload:focus {
+  box-shadow: 5px 5px 10px 4px hsla(0, 0%, 0%, 0.35),
+    -5px -5px 10px 4px hsla(0, 0%, 85%);
+}
+
+.btn_upload:active {
+  transform: scale(0.9);
+}
