@@ -17,6 +17,11 @@ export default function Design() {
   return (
     <div className={styles.container}>
       <Title>Design</Title>
+      <p>
+        The colors palette use on this website are taken from the coolest mech
+        design made to this day, the <span>EVA 01</span> from{' '}
+        <span>Neon Genesis Evangelion</span>.
+      </p>
       <div className={styles.center}>
         <div className={styles.content}>
           <DesignClient />

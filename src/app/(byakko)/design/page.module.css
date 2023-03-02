@@ -5,6 +5,10 @@
   flex: 1;
 }
 
+.container > p > span {
+  color: var(--purple-light);
+}
+
 .content {
   display: flex;
   flex-direction: column;
