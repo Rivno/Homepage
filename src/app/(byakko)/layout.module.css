@@ -28,6 +28,12 @@
 }
 
 .container main > * {
-  padding-left: 8.75rem;
+  padding-left: 4.75rem;
   padding-right: 4rem;
+}
+
+@media screen and (min-width: 480px) {
+  .container main > * {
+    padding-left: 7.75rem;
+  }
 }
