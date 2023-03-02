@@ -1,0 +1,58 @@
+.container {
+  flex: 1;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(192, 2%, 43%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  --height: 50px;
+  --position: 5px;
+  --border: 10px;
+  border-radius: 100px;
+  background-color: hsl(0, 0%, 84%);
+  z-index: 0;
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: var(--height);
+  appearance: none;
+}
+
+.switch::before {
+  content: '';
+  background: hsl(0, 0%, 100%);
+  border: var(--border) solid hsl(147, 28%, 36%);
+  outline: 3px solid hsl(0, 0%, 84%);
+  border-radius: 100px;
+  position: absolute;
+  top: var(--position);
+  bottom: var(--position);
+  aspect-ratio: 1 / 1;
+  transition: left 400ms ease, border-color 400ms ease;
+}
+
+.switch:not(:checked)::before {
+  left: var(--position);
+  border-color: hsl(343, 74%, 52%);
+}
+
+.switch:checked::before {
+  left: calc(100% - var(--height) + var(--position));
+}
+
+.switch::after {
+  content: '';
+  border-radius: 100px;
+  z-index: -1;
+  background-color: hsl(147, 28%, 66%, 0.5);
+  position: absolute;
+  inset: var(--position);
+  transition: background-color 400ms ease;
+}
+
+.switch:not(:checked)::after {
+  background-color: hsl(343, 74%, 72%, 0.5);
+}
