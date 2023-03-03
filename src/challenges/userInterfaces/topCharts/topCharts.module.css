@@ -23,7 +23,6 @@
   align-items: flex-start;
   gap: 20px;
   max-width: 1024px;
-  flex: 1;
 }
 
 .header > div > div {
@@ -31,26 +30,25 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   color: hsl(350, 67%, 89%);
 }
 
 .header h1 {
   color: hsl(0, 0%, 100%);
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 600;
-  position: relative;
 }
 
 .arrow {
-  width: 30px;
+  width: 24px;
 }
 
 .content {
   display: flex;
   justify-content: center;
-  padding: 30px 10px 60px;
+  padding: 30px 0 60px;
   flex: 1;
   position: relative;
   z-index: 0;
@@ -82,18 +80,25 @@
 }
 
 .top_item {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 35px 100px auto;
+  grid-template-areas:
+    'rank img info'
+    'rank img info'
+    'rank img count';
   align-items: center;
   gap: 20px;
+  row-gap: 5px;
 }
 
 .top_item img {
+  grid-area: img;
   object-fit: cover;
   border-radius: 4px;
 }
 
 .top_item > *:first-child {
+  grid-area: rank;
   font-size: 20px;
   font-weight: 700;
   width: 35px;
@@ -106,22 +111,24 @@
 }
 
 .top_item > *:nth-child(3) {
+  grid-area: info;
   flex: 1;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 300;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .top_item > *:nth-child(3) > div:first-child {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .top_item > *:last-child {
+  grid-area: count;
   color: hsl(0, 0%, 58%);
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -138,4 +145,52 @@
 .top_item:nth-child(3) > div:first-child {
   color: hsl(12, 40%, 56%);
   border-color: hsl(12, 40%, 56%);
+}
+
+@media screen and (min-width: 480px) {
+  .header > div {
+    flex: 1;
+  }
+
+  .arrow {
+    width: 30px;
+  }
+
+  .header > div > div {
+    font-size: 20px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .top_item {
+    display: grid;
+    grid-template-columns: 35px 100px auto auto;
+    grid-template-areas: 'rank img info count';
+    align-items: center;
+    row-gap: initial;
+  }
+
+  .top_item > *:nth-child(3) {
+    gap: 20px;
+  }
+
+  .top_item > *:nth-child(3) > div:first-child {
+    font-size: 30px;
+  }
+
+  .top_item > *:last-child {
+    font-size: 24px;
+    text-align: end;
+  }
+
+  .top_item > *:nth-child(3) {
+    font-size: 24px;
+  }
 }
