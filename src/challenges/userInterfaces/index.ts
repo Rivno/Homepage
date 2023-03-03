@@ -19,3 +19,4 @@ export * from './notesApp';
 export * from './notesCard';
 export * from './photoGallery';
 export * from './switch';
+export * from './topCharts';
