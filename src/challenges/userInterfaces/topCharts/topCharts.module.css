@@ -59,10 +59,10 @@
   content: '';
   position: absolute;
   background-color: hsl(351, 68%, 65%);
-  top: -100px;
+  top: -300px;
   left: 0;
   right: 0;
-  height: 300px;
+  height: 500px;
   transform: skewY(-5deg);
   z-index: -1;
 }
