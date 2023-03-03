@@ -1,0 +1,141 @@
+.container {
+  flex: 1;
+  background-color: hsl(0, 0%, 97%);
+  color: hsl(0, 2%, 30%);
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: hsl(351, 68%, 65%);
+  color: hsl(0, 0%, 100%);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  font-size: 32px;
+}
+
+.header > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1024px;
+  flex: 1;
+}
+
+.header > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  color: hsl(350, 67%, 89%);
+}
+
+.header h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 34px;
+  font-weight: 600;
+  position: relative;
+}
+
+.arrow {
+  width: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px 60px;
+  flex: 1;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  background-color: hsl(351, 68%, 65%);
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 300px;
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
+.content > div {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 6px 2px hsla(0, 0%, 0%, 0.15);
+  border-radius: 4px;
+  gap: 40px;
+  max-width: 1024px;
+  flex: 1;
+  padding: 60px;
+}
+
+.top_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.top_item img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.top_item > *:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  width: 35px;
+  aspect-ratio: 1 / 1;
+  border: 2px solid hsl(0, 0%, 86%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_item > *:nth-child(3) {
+  flex: 1;
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top_item > *:nth-child(3) > div:first-child {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.top_item > *:last-child {
+  color: hsl(0, 0%, 58%);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.top_item:first-child > div:first-child {
+  color: hsl(36, 44%, 48%);
+  border-color: hsl(36, 44%, 48%);
+}
+
+.top_item:nth-child(2) > div:first-child {
+  color: hsl(320, 2%, 64%);
+  border-color: hsl(320, 2%, 64%);
+}
+
+.top_item:nth-child(3) > div:first-child {
+  color: hsl(12, 40%, 56%);
+  border-color: hsl(12, 40%, 56%);
+}
