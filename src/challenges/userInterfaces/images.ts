@@ -39,3 +39,12 @@ export const musics = [
   'https://i.scdn.co/image/ab67616d00001e02b33d46dfa2635a47eebf63b2',
   'https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400',
 ];
+
+export const imagesSrc = [
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Great_Wave_off_Kanagawa2.jpg/1920px-Great_Wave_off_Kanagawa2.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Golden_Gate_1.jpg/1920px-Golden_Gate_1.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Snowboard_pow.jpg/1920px-Snowboard_pow.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Kinkaku3402CBcropped.jpg/1920px-Kinkaku3402CBcropped.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Haifa_White_Tigers-9129-13.jpg/1920px-Haifa_White_Tigers-9129-13.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2017_Total_Solar_Eclipse_%2835909952653%29.jpg/1920px-2017_Total_Solar_Eclipse_%2835909952653%29.jpg',
+];

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import preview from '../../../../public/challenges/119.png';
+import { imagesSrc } from '../images';
 
 import { SearchInput } from './searchInput';
 
@@ -9,37 +10,37 @@ import styles from './photoGallery.module.css';
 const images = [
   {
     title: 'Great wave of Kanagawa',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Great_Wave_off_Kanagawa2.jpg/1920px-Great_Wave_off_Kanagawa2.jpg',
+    src: imagesSrc[0],
     like: 9,
     share: 5,
   },
   {
     title: 'Golden Gate',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Golden_Gate_1.jpg/1920px-Golden_Gate_1.jpg',
+    src: imagesSrc[1],
     like: 9,
     share: 5,
   },
   {
     title: 'Pow is life',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Snowboard_pow.jpg/1920px-Snowboard_pow.jpg',
+    src: imagesSrc[2],
     like: 9,
     share: 5,
   },
   {
     title: 'Kinkaku-ji',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Kinkaku3402CBcropped.jpg/1920px-Kinkaku3402CBcropped.jpg',
+    src: imagesSrc[3],
     like: 9,
     share: 5,
   },
   {
     title: 'Haifa white tigers',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Haifa_White_Tigers-9129-13.jpg/1920px-Haifa_White_Tigers-9129-13.jpg',
+    src: imagesSrc[4],
     like: 9,
     share: 5,
   },
   {
     title: 'Total solar eclipse',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2017_Total_Solar_Eclipse_%2835909952653%29.jpg/1920px-2017_Total_Solar_Eclipse_%2835909952653%29.jpg',
+    src: imagesSrc[5],
     like: 9,
     share: 5,
   },

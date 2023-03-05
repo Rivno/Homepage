@@ -1,0 +1,182 @@
+.container {
+  flex: 1;
+  background-color: hsl(245, 41%, 14%);
+  color: hsl(211, 20%, 61%);
+  display: flex;
+  justify-content: center;
+  padding: 200px 50px 0;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  max-width: 1024px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar button {
+  position: relative;
+  text-decoration: none;
+  color: hsl(192, 2%, 43%);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar button > svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 600ms ease;
+}
+
+.navbar button::after {
+  content: '';
+  background: linear-gradient(to right, hsl(189, 75%, 57%), hsl(214, 74%, 58%));
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  border-radius: 10px;
+  left: 50%;
+  width: 0;
+  transform: translateX(-50%);
+  transition: width 400ms ease;
+}
+
+.navbar button[aria-selected='true'],
+.navbar button[aria-current='page'] {
+  color: hsl(214, 74%, 58%);
+}
+
+.navbar button[aria-current='page']::after {
+  width: 30px;
+}
+
+.navbar button[aria-selected='true'] > svg {
+  transform: rotateX(180deg);
+}
+
+.navbar button[aria-selected='true']::after,
+.navbar button:hover::after,
+.navbar button:focus::after {
+  width: 100%;
+}
+
+.sub_menu {
+  background: linear-gradient(
+    to bottom right,
+    hsl(189, 75%, 57%),
+    hsl(214, 74%, 58%)
+  );
+  color: hsl(236, 39%, 14%);
+  position: absolute;
+  right: 50%;
+  transform: translateX(30%);
+  top: calc(100% + 20px);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+.navbar button[aria-selected='true'] > .sub_menu {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.sub_menu {
+  display: flex;
+  gap: 100px;
+  font-size: 16px;
+  padding: 50px 75px;
+}
+
+.sub_menu > div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+
+.sub_menu > div:not(:last-child)::after {
+  content: '';
+  background: linear-gradient(
+    to bottom,
+    hsl(206, 62%, 54%),
+    hsl(208, 61%, 53%)
+  );
+  position: absolute;
+  right: -52px;
+  width: 2px;
+  top: 40px;
+  bottom: 40px;
+}
+
+.sub_menu > div h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-bottom: 10px;
+}
+
+.sub_menu a {
+  color: hsl(236, 39%, 14%);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 100px;
+  white-space: nowrap;
+  margin-left: -20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub_menu a svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sub_menu a:visited {
+  color: hsl(236, 39%, 14%);
+  text-decoration: none;
+}
+
+.sub_menu a:hover,
+.sub_menu a:focus {
+  background-color: hsl(195, 74%, 73%);
+}
+
+.sub_menu img {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.preview {
+  gap: 20px;
+}
+
+.author {
+  font-weight: 700;
+}
+
+.author + div {
+  font-size: 14px;
+  font-weight: 200;
+}

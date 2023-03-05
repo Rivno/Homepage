@@ -20,3 +20,4 @@ export * from './notesCard';
 export * from './photoGallery';
 export * from './switch';
 export * from './topCharts';
+export * from './bigMenu';
