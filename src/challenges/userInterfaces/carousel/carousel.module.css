@@ -1,0 +1,143 @@
+.container {
+  flex: 1;
+  background-color: hsl(40, 41%, 93%);
+  color: hsl(192, 2%, 43%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 30px 10px hsl(39, 45%, 87%);
+  padding: 40px 40px 80px;
+  border: 1px solid hsl(220, 33%, 98%);
+  border-radius: 24px;
+  flex: 1;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.navbar a,
+.navbar a:visited {
+  color: hsl(192, 2%, 53%);
+  text-decoration: none;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: hsl(60, 4%, 15%);
+  background-color: hsl(41, 90%, 96%);
+}
+
+.navbar a[aria-current='page'] {
+  font-weight: 500;
+  color: hsl(60, 4%, 15%);
+  background-color: hsl(41, 90%, 96%);
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_nav {
+  color: hsl(36, 3%, 72%);
+}
+
+.btn_nav > svg {
+  width: 42px;
+  height: 42px;
+}
+
+.nav_left {
+  transform: rotate(180deg);
+}
+
+.carousel_panel {
+  width: calc(250px * 3 + 15px * 2);
+  overflow: hidden;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  left: 0;
+  transition: 1000ms left ease;
+}
+
+.gallery_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery_item > img {
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.gallery_item_info {
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid hsl(0, 0%, 91%);
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.gallery_item_info h3 {
+  color: hsl(0, 0%, 11%);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button.btn {
+  background-color: hsl(11, 80%, 60%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  padding: 15px 50px;
+  box-shadow: 0 0 10px 4px hsl(9, 81%, 94%);
+  font-size: 18px;
+  transition: transform 400ms ease, box-shadow 400ms ease;
+  width: fit-content;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px 6px hsl(9, 81%, 74%);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}

@@ -34,6 +34,10 @@ export function BigMenuClient() {
     setSelectedMenu(type || null);
   };
 
+  const onSubClic = (e: any) => {
+    e.stopPropagation();
+  };
+
   const handleClickOutside = useCallback((event: any) => {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
       setSelectedMenu(null);
@@ -57,7 +61,7 @@ export function BigMenuClient() {
           >
             <span>Products</span>
             <Chevron />
-            <div className={styles.sub_menu}>
+            <div className={styles.sub_menu} onClick={onSubClic}>
               <div>
                 <h3>Products</h3>
                 <a>
@@ -108,7 +112,7 @@ export function BigMenuClient() {
           >
             <span>Features</span>
             <Chevron />
-            <div className={styles.sub_menu}>
+            <div className={styles.sub_menu} onClick={onSubClic}>
               <div>
                 <h3>Features</h3>
                 <a>
@@ -147,7 +151,7 @@ export function BigMenuClient() {
           >
             <span>Ressources</span>
             <Chevron />
-            <div className={styles.sub_menu}>
+            <div className={styles.sub_menu} onClick={onSubClic}>
               <div>
                 <h3>Resources</h3>
                 <a>
@@ -316,7 +320,7 @@ export function BigMenuClient() {
           >
             <span>Pricing</span>
             <Chevron />
-            <div className={styles.sub_menu}>
+            <div className={styles.sub_menu} onClick={onSubClic}>
               <div>
                 <h3>Pricing</h3>
                 <a>
