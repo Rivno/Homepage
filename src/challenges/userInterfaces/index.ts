@@ -21,3 +21,4 @@ export * from './photoGallery';
 export * from './switch';
 export * from './topCharts';
 export * from './bigMenu';
+export * from './carousel';
