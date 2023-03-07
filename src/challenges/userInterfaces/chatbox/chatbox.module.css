@@ -1,0 +1,255 @@
+.container {
+  flex: 1;
+  background-color: hsl(247, 17%, 21%);
+  color: hsl(240, 2%, 91%);
+  display: flex;
+  justify-content: center;
+  padding-top: 700px;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.chatbox {
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.btn_chatbox {
+  border-radius: 50%;
+  color: hsl(240, 2%, 91%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: transform 400ms ease;
+}
+
+.btn_chatbox:active {
+  transform: scale(0.95);
+}
+
+.btn_chatbox svg {
+  width: 32px;
+  height: 32px;
+}
+
+.chatbox_window {
+  background-color: hsl(243, 20%, 19%);
+  position: absolute;
+  display: grid;
+  grid-template-columns: 450px;
+  grid-template-rows: 75px 370px 125px;
+  border-radius: 10px;
+  overflow: hidden;
+  right: 0;
+  bottom: calc(100% + 20px);
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.btn_chatbox[aria-expanded='true'] + .chatbox_window {
+  opacity: 1;
+}
+
+.header,
+button.btn_chatbox {
+  background-color: hsl(360, 100%, 71%);
+}
+
+.message > div:last-child,
+.policy {
+  background-color: hsl(243, 15%, 26%);
+}
+
+.header {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.header > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header > div:last-child > div:last-child {
+  font-size: 14px;
+  font-weight: 300;
+  color: hsl(0, 100%, 92%);
+}
+
+.messages {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.message {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.message.message_from_me {
+  flex-direction: row;
+}
+
+.message > div:last-child {
+  border-radius: 10px;
+  padding: 15px;
+  white-space: pre-line;
+  color: hsl(240, 2%, 91%);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  position: relative;
+}
+
+.avatar {
+  object-fit: cover;
+  border: 3px solid hsl(240, 9%, 98%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.message > div:last-child::before {
+  --triangle-side: 10px;
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: var(--triangle-side) solid transparent;
+  border-bottom: var(--triangle-side) solid transparent;
+  border-left: var(--triangle-side) solid hsl(243, 15%, 26%);
+  right: -10px;
+}
+
+.message.message_from_me > div:last-child::before {
+  right: initial;
+  left: -10px;
+  transform: rotate(180deg);
+}
+
+.avatar_list {
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+
+.avatar_list > .avatar:nth-child(2n) {
+  position: relative;
+  z-index: -1;
+  margin: 0 -10px;
+}
+
+.policy {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.policy > button {
+  border: 2px solid hsl(359, 77%, 66%);
+  border-radius: 100px;
+  color: hsl(360, 100%, 71%);
+  padding: 10px 30px;
+  font-size: 20px;
+  width: fit-content;
+}
+
+.policy > p {
+  color: hsl(240, 2%, 91%);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.policy a {
+  color: hsl(360, 100%, 71%);
+  cursor: pointer;
+}
+
+.policy[data-agree-tos='true'] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat_input {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.chat_input > p {
+  color: hsl(240, 2%, 91%);
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.chat_input > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.chat_input > div > textarea {
+  min-height: 100%;
+  flex: 1;
+  background-color: hsl(243, 15%, 26%);
+  border: 1px solid hsl(359, 77%, 66%);
+  border-radius: 10px;
+  color: hsl(240, 2%, 91%);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  resize: none;
+  padding: 5px;
+}
+
+.chat_input > div > textarea:focus {
+  outline-width: 1px;
+}
+
+.chat_input > div > button {
+  border-radius: 10px;
+  color: hsl(240, 2%, 91%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(360, 100%, 71%);
+  min-height: 100%;
+  width: 50px;
+  transition: transform 400ms ease;
+}
+
+.chat_input > div > button:active {
+  transform: scale(0.95);
+}
+
+.chat_input > div > button svg {
+  width: 32px;
+  height: 32px;
+}
