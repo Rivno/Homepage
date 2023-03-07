@@ -22,3 +22,4 @@ export * from './switch';
 export * from './topCharts';
 export * from './bigMenu';
 export * from './carousel';
+export * from './chatbox';
