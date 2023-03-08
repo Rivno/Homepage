@@ -6,8 +6,10 @@ import styles from './scrollAnimate.module.css';
 
 export function ScrollAnimate({
   children,
+  twoWays = false,
 }: {
   children: React.ReactNode | React.ReactNode[];
+  twoWays?: boolean;
 }) {
   const observer = useMemo(() => {
     if (typeof IntersectionObserver === 'undefined') {
@@ -19,7 +21,7 @@ export function ScrollAnimate({
         const entry = entries[index];
         if (entry.isIntersecting) {
           entry.target.setAttribute('data-scroll-show', 'true');
-        } else {
+        } else if (twoWays) {
           entry.target.removeAttribute('data-scroll-show');
         }
       }
