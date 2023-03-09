@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import preview from '../../../../public/challenges/115.png';
-import { forest } from '../images';
+import { landscape } from '../images';
 
 import { CountdownClock } from './CountdownClock';
 
@@ -20,7 +20,7 @@ function Countdown() {
           <Image
             width={800}
             height={354}
-            src={forest[0]}
+            src={landscape[0]}
             alt="forest"
             unoptimized
           />
