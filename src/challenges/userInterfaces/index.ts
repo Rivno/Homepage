@@ -24,3 +24,4 @@ export * from './bigMenu';
 export * from './carousel';
 export * from './chatbox';
 export * from './donate';
+export * from './loginCard';

@@ -20,8 +20,9 @@ export const profilesIllustration = [
   'https://m.media-amazon.com/images/G/01/digital/INVI_2021_PVProfileImageCircle_256x256_MonsterGirl_LightGreen.png',
 ];
 
-export const forest = [
+export const landscape = [
   'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mt_Hood_Natl_Forest.jpg/800px-Mt_Hood_Natl_Forest.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Water_drop_001.jpg/1920px-Water_drop_001.jpg',
 ];
 
 export const musics = [

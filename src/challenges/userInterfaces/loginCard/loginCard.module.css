@@ -1,0 +1,229 @@
+.container {
+  flex: 1;
+  background-color: hsl(0, 39%, 95%);
+  color: hsl(238, 12%, 46%);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.container a {
+  color: hsl(198, 33%, 58%);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container a:hover,
+.container a:focus-visible {
+  text-decoration: underline;
+}
+
+.container a:visited {
+  color: hsl(180deg 100% 36%);
+}
+
+.content {
+  --first-col: 550px;
+  --second-col: 400px;
+  --border-radius: 12px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: var(--border-radius);
+  flex: 1;
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: var(--first-col) var(--second-col);
+  position: relative;
+  z-index: 0;
+}
+
+.content button {
+  font-size: 18px;
+  color: hsl(0, 0%, 26%);
+  border: 2px solid hsl(212, 35%, 89%);
+  border-radius: 4px;
+  padding: 10px 30px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 400ms ease, box-shadow 400ms ease;
+}
+
+.content button svg {
+  width: 32px;
+  height: 32px;
+}
+
+.content button:active {
+  transform: scale(0.95);
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  right: var(--second-col);
+  box-shadow: -10px 0 20px 4px hsla(0, 0%, 85%);
+  z-index: -1;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: var(--first-col);
+  box-shadow: 5px 0 20px 4px hsl(180deg 100% 36%);
+  z-index: -1;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.content h1 {
+  color: hsl(236, 51%, 17%);
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.content h1 + p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content > img {
+  object-fit: cover;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  filter: hue-rotate(300deg);
+}
+
+.content > div:first-child {
+  padding: 75px;
+  background-color: hsl(0, 0%, 100%);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.content input[type='text'] {
+  background-color: transparent;
+  border: 2px solid hsl(212, 35%, 89%);
+  padding: 20px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.content input[type='text']::placeholder {
+  color: hsl(223, 12%, 65%);
+}
+
+.content input[type='text']:focus-visible {
+  outline-width: 1px;
+}
+
+.login_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_actions button {
+  background-color: hsl(181, 100%, 25%);
+  color: hsl(180, 100%, 100%);
+  padding: 20px 30px;
+  border: none;
+  gap: 20px;
+  box-shadow: 0 2px 10px 2px hsl(180deg 100% 85%);
+}
+
+.login_actions button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.login_actions button:hover {
+  box-shadow: 0 2px 10px 2px hsl(180deg 100% 36%);
+}
+
+.auth_providers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.auth_providers::before {
+  content: '';
+  background-color: hsl(221, 12%, 79%);
+  position: absolute;
+  top: -26px;
+  height: 1px;
+  right: 0;
+  left: 0;
+}
+
+.auth_providers > div:first-child {
+  font-size: 14px;
+  color: hsl(221, 12%, 69%);
+  text-align: center;
+}
+
+.auth_providers > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.sign_up {
+  text-align: center;
+  font-size: 14px;
+}
+
+button.btn_close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  padding: 0;
+}
+
+.btn_close::before,
+.btn_close::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  border-radius: 8px;
+  background-color: hsl(238, 12%, 46%);
+  position: absolute;
+  left: 50%;
+}
+
+.btn_close::before {
+  transform: translate(-50%) rotate(45deg);
+}
+
+.btn_close::after {
+  transform: translate(-50%) rotate(-45deg);
+}
