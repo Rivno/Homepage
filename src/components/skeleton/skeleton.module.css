@@ -1,3 +1,27 @@
+.container {
+  height: 1.6rem;
+  background-color: #f2f4f5;
+  position: relative;
+  display: inline-block;
+}
+
+.container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #bfc8cc;
+  animation: loadSkeleton 2s infinite;
+}
+
+.checkbox {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
 @keyframes loadSkeleton {
   0% {
     opacity: 0.4;
@@ -8,37 +32,4 @@
   100% {
     opacity: 0.4;
   }
-}
-
-.skeleton {
-  --increment: 0.25rem;
-  --color: #e1e4f7;
-
-  height: 1.15rem;
-  position: relative;
-  display: inline-block;
-  border-radius: var(--increment);
-}
-
-.skeleton::before {
-  content: '';
-  border-radius: var(--increment);
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--color);
-  animation: loadSkeleton 2s infinite;
-}
-
-.skeletonSquare {
-  aspect-ratio: 1 / 1;
-  height: auto;
-}
-
-.skeletonCircle,
-.skeletonCircle::before {
-  border-radius: 50%;
 }
