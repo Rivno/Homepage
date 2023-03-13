@@ -116,7 +116,7 @@ function AnalyticsChart() {
 
 export const challenge = {
   Component: AnalyticsChart,
-  number: 114,
+  number: 20230224,
   preview,
   title: 'Analytics Chart',
 };

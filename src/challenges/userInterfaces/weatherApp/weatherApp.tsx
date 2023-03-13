@@ -118,7 +118,7 @@ function WeatherApp() {
 
 export const challenge = {
   Component: WeatherApp,
-  number: 112,
+  number: 20230222,
   preview,
   title: 'Weather App',
 };

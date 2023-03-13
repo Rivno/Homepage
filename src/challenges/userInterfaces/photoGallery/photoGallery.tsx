@@ -100,7 +100,7 @@ const PhotoGallery = () => (
 
 export const challenge = {
   Component: PhotoGallery,
-  number: 119,
+  number: 20230301,
   preview,
   title: 'Photo Gallery',
 };

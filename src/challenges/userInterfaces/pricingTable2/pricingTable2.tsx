@@ -8,7 +8,7 @@ const PricingTable2 = () => {
 
 export const challenge = {
   Component: PricingTable2,
-  number: 108,
+  number: 20230218,
   preview,
   title: 'Pricing Table',
 };

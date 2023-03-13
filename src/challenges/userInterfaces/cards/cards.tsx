@@ -43,7 +43,7 @@ const Cards = () => (
 
 export const challenge = {
   Component: Cards,
-  number: 100,
+  number: 20230210,
   preview,
   title: 'Cards',
 };

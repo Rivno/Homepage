@@ -6,7 +6,7 @@ const BigMenu = () => <BigMenuClient />;
 
 export const challenge = {
   Component: BigMenu,
-  number: 123,
+  number: 20230305,
   preview,
   title: 'Big Menu',
 };

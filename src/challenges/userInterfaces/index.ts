@@ -25,3 +25,4 @@ export * from './carousel';
 export * from './chatbox';
 export * from './donate';
 export * from './loginCard';
+export * from './reviews';
