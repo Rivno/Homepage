@@ -63,7 +63,7 @@ const UserCard = () => (
 
 export const challenge = {
   Component: UserCard,
-  number: 102,
+  number: 20230212,
   preview,
   title: 'User Card',
 };

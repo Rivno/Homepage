@@ -64,7 +64,7 @@ function Kanban() {
 
 export const challenge = {
   Component: Kanban,
-  number: 107,
+  number: 20230217,
   preview,
   title: 'Kanban',
 };

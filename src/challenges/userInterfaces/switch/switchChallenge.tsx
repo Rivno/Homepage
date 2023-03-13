@@ -14,7 +14,7 @@ function SwitchChallenge() {
 
 export const challenge = {
   Component: SwitchChallenge,
-  number: 120,
+  number: 20230302,
   preview,
   title: 'Switch',
 };

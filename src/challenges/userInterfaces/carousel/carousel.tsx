@@ -60,7 +60,7 @@ function Carousel() {
 
 export const challenge = {
   Component: Carousel,
-  number: 124,
+  number: 20230306,
   preview,
   title: 'Carousel',
 };

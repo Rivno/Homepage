@@ -8,7 +8,7 @@ const ColorGenerator = () => {
 
 export const challenge = {
   Component: ColorGenerator,
-  number: 105,
+  number: 20230215,
   preview,
   title: 'Color Generator',
 };

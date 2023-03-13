@@ -50,7 +50,7 @@ function IncidentHistory() {
 
 export const challenge = {
   Component: IncidentHistory,
-  number: 110,
+  number: 20230220,
   preview,
   title: 'Incident History',
 };
