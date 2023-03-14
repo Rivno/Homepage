@@ -1,16 +1,6 @@
 .container {
   padding: 0;
-  /* display: grid;
-  grid-template-columns: 4.75rem 1fr;
-  grid-template-rows: 100vh;
-  grid-template-areas: 'sidebar main'; */
   font-size: 1.2rem;
-}
-
-.scroll_content {
-  /* grid-area: main;
-  overflow-y: auto; */
-  /* height: 100%; */
 }
 
 .container main {
@@ -28,12 +18,13 @@
 }
 
 .container main > * {
-  padding-left: 4.75rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media screen and (min-width: 480px) {
   .container main > * {
     padding-left: 7.75rem;
+    padding-right: 4rem;
   }
 }

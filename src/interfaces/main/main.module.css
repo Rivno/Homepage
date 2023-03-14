@@ -2,8 +2,9 @@
 .block3,
 .block4,
 .block5 {
-  padding: 50px;
-  color: var(--blue-dark);
+  padding: 50px 2rem;
+  color: hsl(110, 100%, 99%);
+  text-shadow: 0 0 5px black;
   display: flex;
   justify-content: flex-start;
   font-size: 1.25em;
@@ -17,6 +18,13 @@
 }
 
 @media screen and (min-width: 480px) {
+  .block2,
+  .block3,
+  .block4,
+  .block5 {
+    padding: 50px;
+  }
+
   .block2 p,
   .block3 p,
   .block4 p {
@@ -25,8 +33,7 @@
 }
 
 .block2 {
-  color: #fafff9;
-  background-color: #979e4c;
+  background-color: hsl(65, 35%, 46%);
 }
 
 .block4 img,
@@ -51,17 +58,15 @@
 }
 
 .block3 {
-  background-color: #e9e8e6;
+  background-color: hsl(222, 35%, 15%);
   justify-content: flex-end;
 }
 
 .block4 {
-  color: #fafff9;
-  background-image: linear-gradient(#442a90, #2e1c6a);
+  background-image: linear-gradient(hsl(255, 55%, 36%), hsl(254, 58%, 26%));
 }
 
 .block5 {
-  color: #fafff9;
   background-color: var(--green-dark);
   padding: 50px;
 }

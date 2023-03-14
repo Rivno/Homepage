@@ -1,7 +1,7 @@
 .container {
   position: fixed;
-  top: -325px;
-  height: 400px;
+  top: -270px;
+  height: 330px;
   left: -10px;
   grid-area: sidebar;
   gap: 2rem;
@@ -15,17 +15,17 @@
 }
 
 .container::before {
-  height: 425px;
+  height: 350px;
   width: 40px;
   content: '';
   position: absolute;
   right: -40px;
-  top: -10%;
-  background: linear-gradient(90deg, hsl(289, 33%, 37%), var(--purple-dark));
+  top: -35px;
+  background: linear-gradient(90deg, hsl(295deg 29% 38%), var(--purple-dark));
   transform: skewY(-33deg);
   border: 1px solid var(--black);
   border-left: none;
-  box-shadow: 3px 4px 3px -1px var(--yellow);
+  box-shadow: 2px 3px 3px -1px var(--yellow);
 }
 
 .content {
@@ -39,7 +39,7 @@
 
 .expanded_button {
   position: absolute;
-  top: 350px;
+  top: 280px;
   right: -24px;
   width: 28px;
   height: 28px;

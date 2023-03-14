@@ -9,6 +9,33 @@ export const metadata = {
   description: 'Contact information',
 };
 
+const following = [
+  {
+    name: 'Kevin Powell',
+    description: 'CSS Evangelist',
+    twitter: 'https://twitter.com/KevinJPowell',
+    youtube: '',
+  },
+  {
+    name: 'Jack Harrington',
+    twitter: '',
+    youtube: '',
+  },
+  {
+    name: 'ThePrimeagen',
+    twitter: '',
+    youtube: '',
+  },
+  {
+    name: 'Web dev simplified',
+    youtube: '',
+  },
+  {
+    name: 'NextJS',
+    twitter: '',
+  },
+];
+
 export default function Contact() {
   return (
     <>
