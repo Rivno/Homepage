@@ -2,6 +2,7 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    mdxRs: false,
   },
   webpack: (config, options) => {
     config.module.rules.push({
@@ -34,4 +35,20 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+import mdx from '@next/mdx';
+import remarkMdxCodeMeta from 'remark-mdx-code-meta';
+
+const withMDX = mdx({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkMdxCodeMeta],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: '@mdx-js/react',
+  },
+});
+
+export default withMDX({
+  ...nextConfig,
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+});

@@ -7,7 +7,6 @@ import SvgDoubleArrow from '@/icons/double_arrow.svg';
 import SvgHome from '@/icons/home.svg';
 import SvgMail from '@/icons/mail.svg';
 import SvgNews from '@/icons/news.svg';
-import SvgPalette from '@/icons/palette.svg';
 import SvgPhysics from '@/icons/physics.svg';
 
 import { SidebarLink } from './sidebarLink';
@@ -34,6 +33,10 @@ export const Sidebar = () => {
     };
   }, [handleClickOutside]);
 
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [pathname]);
+
   return (
     <div
       className={styles.container}
@@ -52,10 +55,6 @@ export const Sidebar = () => {
         <SidebarLink href="/article" currentPath={pathname}>
           <span>Articles</span>
           <SvgNews />
-        </SidebarLink>
-        <SidebarLink href="/design" currentPath={pathname}>
-          <span>Palette</span>
-          <SvgPalette />
         </SidebarLink>
         <SidebarLink href="/contact" currentPath={pathname}>
           <span>Contact</span>
