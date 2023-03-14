@@ -14,11 +14,6 @@ function H2({ children }) {
   // ...
 }
 
-// function Pre(props) {
-//   console.log('props', props);
-//   return <Code {...props} />;
-// }
-
 function Pre({ fileName, children, ...props }) {
   if (React.isValidElement(children) && children.type === 'code') {
     return (
