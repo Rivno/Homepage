@@ -1,0 +1,264 @@
+.container {
+  flex: 1;
+  background-color: hsl(227, 17%, 16%);
+  color: hsl(224, 10%, 79%);
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container *:not(a):focus-visible {
+  outline: 2px dashed hsl(201deg 56% 80%);
+  outline-offset: 3px;
+}
+
+.container button {
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  font-size: 18px;
+  color: hsl(0, 0%, 25%);
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 4px;
+  padding: 20px 40px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 400ms ease, box-shadow 400ms ease;
+}
+
+.container button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.container button:active {
+  transform: scale(0.95);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  min-height: 100%;
+  flex: 1;
+}
+
+.content > div {
+  padding: 100px;
+}
+
+.content > div:first-child {
+  max-width: 770px;
+  justify-self: flex-end;
+}
+
+.content > div:last-child {
+  background-color: hsl(226, 13%, 19%);
+}
+
+.content > div:last-child > div:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.content > div:last-child > div:first-child {
+  margin-top: 90px;
+  margin-bottom: 200px;
+}
+
+.content p {
+  white-space: pre-line;
+}
+
+.content h1,
+.content h2 {
+  font-family: 'Lucida Console', Courier, monospace;
+}
+
+.content h1 {
+  color: hsl(180, 100%, 100%);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  color: hsl(195, 8%, 91%);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+.content h3 {
+  color: hsl(195, 8%, 91%);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.date {
+  font-size: 18px;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.name {
+  color: hsl(195, 8%, 91%);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.pseudo {
+  font-size: 16px;
+}
+
+.content form {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.content form .checkbox {
+  margin-top: 10px;
+}
+
+.content form h2 {
+  color: hsl(180, 100%, 99%);
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: initial;
+  font-family: inherit;
+  grid-column: span 2;
+}
+
+.content form > *:nth-child(n + 8) {
+  grid-column: span 2;
+}
+
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox > input[type='checkbox'] {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid hsl(227, 10%, 27%);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox > input[type='checkbox']:checked::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
+  border: solid hsl(0, 0%, 100%);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox > label {
+  line-height: 18px;
+  color: hsl(240, 7%, 74%);
+}
+
+.content form label {
+  font-size: 16px;
+}
+
+.content form label + input[type='text'],
+.content form label + textarea,
+.content form label + .select {
+  margin-top: 5px;
+}
+
+.content form textarea {
+  resize: none;
+  height: 150px;
+}
+
+.content form input[type='text'],
+.content form textarea {
+  background-color: transparent;
+  border: 2px solid hsl(227, 10%, 27%);
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.content form input[type='text']::placeholder,
+.content form textarea::placeholder {
+  color: hsl(220, 4%, 48%);
+}
+
+.content form input[type='text']:focus-visible,
+.content form textarea:focus-visible {
+  outline-width: 1px;
+}
+
+.select {
+  position: relative;
+}
+
+.select select {
+  background-color: transparent;
+  border: 2px solid hsl(227, 10%, 27%);
+  width: 100%;
+  padding: 20px;
+  padding-right: 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  appearance: none;
+}
+
+.select::before {
+  content: '';
+  position: absolute;
+  background-color: hsl(224, 10%, 79%);
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-60%);
+  clip-path: path(
+    'M12 15.25C11.9015 15.2504 11.8038 15.2312 11.7128 15.1934C11.6218 15.1557 11.5392 15.1001 11.47 15.03L6.47 10.03C6.37027 9.88408 6.32527 9.70765 6.34293 9.53181C6.36058 9.35598 6.43977 9.19202 6.56651 9.06886C6.69325 8.94571 6.85941 8.87126 7.03569 8.85866C7.21196 8.84606 7.38702 8.89611 7.53 8.99998L12 13.44L16.47 8.99998C16.611 8.90859 16.7785 8.86717 16.9458 8.88235C17.1131 8.89754 17.2705 8.96846 17.3927 9.08374C17.5149 9.19902 17.5948 9.35198 17.6197 9.51812C17.6446 9.68425 17.613 9.85394 17.53 9.99998L12.53 15C12.4633 15.0755 12.3819 15.1367 12.2908 15.1797C12.1997 15.2227 12.1007 15.2466 12 15.25Z'
+  );
+}
+
+.shares {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.shares svg {
+  width: 24px;
+  height: 24px;
+}
