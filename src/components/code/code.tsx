@@ -1,39 +1,51 @@
 'use client';
 
-import hljs from 'highlight.js/lib/core';
-import elixir from 'highlight.js/lib/languages/elixir';
-import ini from 'highlight.js/lib/languages/ini';
-import javascript from 'highlight.js/lib/languages/javascript';
-import xml from 'highlight.js/lib/languages/xml';
-import { HTMLAttributes, useEffect, useRef } from 'react';
+import Highlight, { defaultProps, Language } from 'prism-react-renderer';
+import { HTMLAttributes } from 'react';
+
+import { theme } from './theme';
 
 import styles from './code.module.css';
-import 'highlight.js/styles/a11y-dark.css';
-
-hljs.registerLanguage('javascript', javascript);
-hljs.registerLanguage('xml', xml);
-hljs.registerLanguage('ini', ini);
-hljs.registerLanguage('elixir', elixir);
 
 export function Code({
   fileName,
   children,
+  className = 'language-js',
   ...props
-}: HTMLAttributes<HTMLPreElement> & { fileName?: string }) {
-  const ref = useRef<HTMLPreElement>(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      hljs.highlightElement(ref.current);
-    }
-  }, []);
+}: Omit<HTMLAttributes<HTMLPreElement>, 'children'> & {
+  fileName?: string;
+  children: string;
+}) {
+  const language = className.replace(/language-/, '');
 
   return (
     <div className={styles.container}>
       {fileName ? <p className={styles.file_name}>{fileName}</p> : null}
-      <pre ref={ref} {...props}>
-        {children}
-      </pre>
+      <Highlight
+        {...defaultProps}
+        code={children.trim()}
+        language={language as Language}
+        theme={theme}
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre
+            className={className}
+            style={style}
+            data-lines={String(tokens.length).length}
+          >
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line, key: i })}>
+                <div className={styles.line_no}>{i + 1}</div>
+                <div>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
     </div>
   );
 }
