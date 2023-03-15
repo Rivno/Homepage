@@ -1,0 +1,10 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  line-height: 1.5;
+}
+
+.content br {
+  height: 30px;
+}

@@ -17,8 +17,8 @@ function H2({ children }) {
 function Pre({ fileName, children, ...props }) {
   if (React.isValidElement(children) && children.type === 'code') {
     return (
-      <Code fileName={fileName} {...props}>
-        {children}
+      <Code fileName={fileName} {...children.props}>
+        {children.props.children}
       </Code>
     );
   }

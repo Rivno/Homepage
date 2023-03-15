@@ -1,11 +1,14 @@
+export const meta = {
+  title: 'Deploy NextJS 13 to Azure',
+  slug: 'azure_nextjs_deploy',
+};
+
 # How to deploy NextJS / NodeJS webserver on Azure Webapps Free plan
 
-\
 Are you trying to deploy a NextJS apps on Azure Webapps, everything is
 deploy on the server, but nothing is working ? You are probably
 missing some configuration files very specific to IIS.
-\
-\
+
 You will need a custom server, so that IISnode can run it, yarn start
 will not work. So here a very basic custom server for NextJS.
 
@@ -41,7 +44,6 @@ app.prepare().then(() => {
 });
 ```
 
-\
 Since we are on IIS we need a web.config file. This file is very basic and can be generate by azure if you don't have it. It basically give IIS the information of which file should be start with node. You guess it our server.js
 
 ```xml fileName="<root>/web.config"
@@ -108,21 +110,18 @@ Since we are on IIS we need a web.config file. This file is very basic and can b
 </configuration>
 ```
 
-\
 Finally we need to tell the server to install our npm package, (sending them along the deploy is bad pratice, since some package are OS specific)
-\
-\
+
 The first file tell IIS that it should execute a custom script
 
-```ini fileName="<root>/.deployment"
+```makefile fileName="<root>/.deployment"
 [config]
 command = deploy.cmd
 ```
 
-\
 The second file will check if we have node and npm and install our deps
 
-```elixir fileName="<root>/deploy.cmd"
+```makefile fileName="<root>/deploy.cmd"
 @if "%SCM_TRACE_LEVEL%" NEQ "4" @echo off
 
 :: ----------------------
@@ -263,5 +262,4 @@ endlocal
 echo Finished successfully.
 ```
 
-\
 With these file add to your project you should now be able to have your NextJS website working on Azure Webapps Free plan

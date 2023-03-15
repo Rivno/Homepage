@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  margin-top: 20px;
 }
 
 .file_name {
@@ -9,17 +8,46 @@
   left: 0;
   right: 0;
   color: var(--yellow);
-  padding: 10px 20px;
-  background-color: hsl(0, 0%, 12%);
+  padding: 10px 5px 10px 20px;
+  background-color: hsl(0, 0%, 18%);
 }
 
-.container > pre {
-  background-color: hsl(240, 1%, 20%);
-  padding: 20px;
+.container pre {
+  color: hsl(0, 0%, 83%);
+  background-color: hsl(0, 0%, 12%);
+  padding: 10px 20px 10px 5px;
   white-space: pre-wrap;
   line-break: anywhere;
+  text-align: left;
+  overflow: scroll;
 }
 
 .file_name + pre {
   padding-top: 60px;
+}
+
+.container pre > div {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.container pre[data-lines='1'] > div {
+  grid-template-columns: 25px 1fr;
+}
+
+.container pre[data-lines='3'] > div {
+  grid-template-columns: 35px 1fr;
+}
+
+.container pre[data-lines='4'] > div {
+  grid-template-columns: 40px 1fr;
+}
+
+.line_no {
+  text-align: right;
+  user-select: none;
+  opacity: 0.5;
+  color: var(--yellow-light);
 }

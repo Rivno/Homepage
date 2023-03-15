@@ -124,23 +124,26 @@
   text-decoration: none;
 }
 
-.link:focus::before,
-.link:hover::before {
+.link::after {
   content: '';
+  background-color: hsl(192, 2%, 43%);
   position: absolute;
+  height: 0;
   width: 4px;
-  right: 35px;
-  top: 0;
-  bottom: 0;
-  background-color: var(--green);
+  right: -10px;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: height 400ms ease;
 }
 
 .link[aria-current='page']::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  right: -10px;
-  top: 0;
-  bottom: 0;
+  height: 20px;
   background-color: var(--yellow);
+}
+
+.link:hover::after,
+.link:focus::after {
+  height: 120%;
+  background-color: var(--green);
 }
