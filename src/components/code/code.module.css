@@ -16,10 +16,9 @@
   color: hsl(0, 0%, 83%);
   background-color: hsl(0, 0%, 12%);
   padding: 10px 20px 10px 5px;
-  white-space: pre-wrap;
-  line-break: anywhere;
   text-align: left;
   overflow: scroll;
+  min-height: 135px;
 }
 
 .file_name + pre {
@@ -38,11 +37,11 @@
 }
 
 .container pre[data-lines='3'] > div {
-  grid-template-columns: 35px 1fr;
+  grid-template-columns: 40px 1fr;
 }
 
 .container pre[data-lines='4'] > div {
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 55px 1fr;
 }
 
 .line_no {
@@ -50,4 +49,32 @@
   user-select: none;
   opacity: 0.5;
   color: var(--yellow-light);
+}
+
+button.copy {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 20px;
+  background-color: hsl(0, 0%, 18%);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  box-shadow: 0 0 0 transparent;
+  transition: opacity 400ms ease, box-shadow 400ms ease;
+}
+
+.copy:hover {
+  box-shadow: 0 0 5px var(--yellow);
+}
+
+.copy svg {
+  width: 24px;
+  height: 24px;
+}
+
+.container:hover .copy {
+  opacity: 1;
 }

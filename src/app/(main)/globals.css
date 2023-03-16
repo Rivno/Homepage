@@ -53,7 +53,7 @@
 }
 
 *:not(a):focus-visible {
-  outline: 3px dashed hsl(201deg 56% 80%);
+  outline: 1px dashed hsl(201deg 56% 80%);
   outline-offset: 3px;
 }
 

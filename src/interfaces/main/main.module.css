@@ -45,6 +45,15 @@
   bottom: 0;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.5);
+}
+
+@media screen and (min-width: 480px) {
+  .block4 img,
+  .block3 img,
+  .block2 img {
+    filter: initial;
+  }
 }
 
 .block2 img {
