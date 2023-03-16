@@ -27,3 +27,4 @@ export * from './donate';
 export * from './loginCard';
 export * from './reviews';
 export * from './webinarSignup';
+export * from './accordion2';
