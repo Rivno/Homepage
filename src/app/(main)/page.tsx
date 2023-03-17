@@ -13,10 +13,9 @@ import { Early } from '@/interfaces/main/early';
 import { Iut } from '@/interfaces/main/iut';
 import { Role } from '@/interfaces/main/role';
 import { Supinfo } from '@/interfaces/main/supinfo';
-
-import FlagEn from '../../../public/cv/lang/en.svg';
-import FlagFr from '../../../public/cv/lang/fr.svg';
-import LogoPeople from '../../../public/cv/school/people.svg';
+import FlagEn from '@/public/cv/lang/en.svg';
+import FlagFr from '@/public/cv/lang/fr.svg';
+import LogoPeople from '@/public/cv/school/people.svg';
 
 import styles from './page.module.css';
 

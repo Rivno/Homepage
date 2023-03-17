@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import { challenges } from '@/challenges';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 
@@ -8,7 +10,13 @@ export default function Challenge({
 }: {
   params: { challenge: string };
 }) {
-  const { Component } = challenges[params.challenge] || {};
+  const challenge = challenges[params.challenge];
+
+  if (!challenge) {
+    notFound();
+  }
+
+  const { Component } = challenge;
 
   return (
     <>
@@ -37,6 +45,7 @@ export async function generateMetadata({
   params: { challenge: string };
 }) {
   const { title, number } = challenges[params.challenge] || {};
+
   return {
     title: title,
     description: `Challenge for ${title}`,

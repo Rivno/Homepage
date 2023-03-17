@@ -51,8 +51,14 @@
   position: relative;
   z-index: 0;
   background-color: #ffffff;
-  margin: 200px;
+  margin: 40px;
   border-radius: 12px;
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    margin: 200px;
+  }
 }
 
 .content > div:not(.circle) {
@@ -214,7 +220,7 @@
 }
 
 .panels > div:has(input[type='checkbox']:checked) > div:last-child {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .panels > div:has(input[type='checkbox']:checked) > div:first-child {
