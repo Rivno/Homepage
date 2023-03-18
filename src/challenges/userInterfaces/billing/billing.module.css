@@ -1,0 +1,302 @@
+.container {
+  flex: 1;
+  background-color: hsl(237, 84%, 95%);
+  color: hsl(247, 8%, 55%);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container *:not(a):focus-visible {
+  outline: 1px dashed hsl(201deg 56% 80%);
+  outline-offset: 3px;
+}
+
+.container a {
+  cursor: pointer;
+}
+
+.container button {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(249, 7%, 38%);
+  border: 2px solid hsl(240, 2%, 83%);
+  border-radius: 8px;
+  padding: 10px 20px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 400ms ease, box-shadow 400ms ease;
+}
+
+.container button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.container button:active {
+  transform: scale(0.95);
+}
+
+.content {
+  --sidebar: 270px;
+  --padding: 50px;
+  position: relative;
+  z-index: 0;
+  background-color: hsl(270, 100%, 100%);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: var(--sidebar) 1fr;
+  z-index: 0;
+  min-height: 400px;
+  box-shadow: -10px 10px 40px hsl(242, 45%, 77%);
+}
+
+.content > div {
+  padding: var(--padding);
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--padding) * -1);
+  bottom: calc(var(--padding) * -1);
+  left: calc(var(--padding) * -1);
+  width: var(--sidebar);
+  background-color: hsl(7, 84%, 58%);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    margin: 200px;
+  }
+}
+
+.content h1,
+.content h2 {
+  color: hsl(247, 34%, 24%);
+  font-weight: 700;
+}
+
+.sidebar {
+  background-color: hsl(231, 100%, 98%);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.sidebar > *:last-child {
+  margin-top: auto;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar a {
+  color: hsl(242, 13%, 60%);
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar a svg {
+  width: 26px;
+  height: 26px;
+}
+
+.sidebar a::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 0;
+  border-radius: 10px;
+  transition: height 400ms ease;
+}
+
+.sidebar a[aria-current='page'] {
+  color: hsl(248, 19%, 25%);
+}
+
+.sidebar a:hover {
+  color: hsl(7, 84%, 68%);
+}
+
+.sidebar a:hover::before {
+  background-color: hsl(7, 84%, 68%);
+  height: 20px;
+}
+
+.sidebar a[aria-current='page']::before {
+  background-color: hsl(7, 84%, 58%);
+  height: 40px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  line-height: 1.2;
+}
+
+.profile img {
+  border-radius: 12px;
+  width: 50px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 16px;
+  color: hsl(247, 34%, 24%);
+  font-weight: 700;
+}
+
+.pseudo {
+  font-size: 16px;
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'content side';
+  grid-template-rows: 50px 1fr;
+  gap: 50px;
+}
+
+.main > h1 {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+}
+
+.main h2 {
+  font-size: 16px;
+}
+
+.main p {
+  font-size: 16px;
+}
+
+.plan {
+  background-color: hsl(7, 84%, 58%);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: hsl(27, 100%, 95%);
+  min-width: 230px;
+}
+
+.plan button {
+  color: hsl(27, 100%, 95%);
+  border-color: hsl(8, 95%, 74%);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.plan h2 {
+  color: hsl(27, 100%, 95%);
+  font-size: 28px;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history > div {
+  display: grid;
+  grid-template-columns: 300px 300px auto;
+  align-items: center;
+}
+
+.history > div:first-child {
+  font-size: 16px;
+  color: hsl(247, 10%, 48%);
+}
+
+.history > div:not(:first-child) {
+  margin: -10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(249, 7%, 38%);
+}
+
+.history > div:not(:first-child):hover {
+  background-color: white;
+  box-shadow: 0px 10px 20px -5px hsl(242, 45%, 77%);
+  border-radius: 8px;
+}
+
+.main > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.payment_method {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(249, 7%, 38%);
+}
+
+.payment_method > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.payment_method > div > div:nth-child(2) {
+  flex: 1;
+}
+
+.payment_method svg {
+  border: 2px solid hsl(240, 2%, 83%);
+  border-radius: 8px;
+  width: auto;
+  height: 50px;
+  padding: 5px 20px;
+}
+
+button.btn_load_more {
+  border: none;
+  padding: 0;
+  color: hsl(7, 84%, 58%);
+}
+
+.btn_load_more:hover {
+  text-decoration: underline;
+}

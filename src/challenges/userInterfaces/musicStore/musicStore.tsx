@@ -197,6 +197,5 @@ export const challenge = {
   Component: MusicStore,
   number: 20230226,
   preview,
-  showcase: true,
   title: 'Music Store',
 };

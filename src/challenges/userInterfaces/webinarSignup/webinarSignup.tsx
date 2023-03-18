@@ -117,5 +117,6 @@ export const challenge = {
   Component: WebinarSignup,
   number: 20230315,
   preview,
+  showcase: true,
   title: 'Webinar Signup',
 };
