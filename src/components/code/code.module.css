@@ -17,7 +17,7 @@
   background-color: hsl(0, 0%, 12%);
   padding: 10px 20px 10px 5px;
   text-align: left;
-  overflow: scroll;
+  overflow: auto;
   min-height: 135px;
 }
 

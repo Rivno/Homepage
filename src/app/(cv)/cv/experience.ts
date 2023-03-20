@@ -83,7 +83,14 @@ such as internet provider, landlines and mobile lines`,
         descriptionAlt: `BtoB dashboard where customer can manage their communication services, such as internet provider, landlines and mobile lines.
           They can for example define the default ringtone, answering machine announce and all kind of settings.
 `,
-        stack: ['GraphQL', 'JavaScript', 'ReactJS', 'NodeJS', 'CSS'],
+        stack: [
+          'GraphQL',
+          'JavaScript',
+          'TypeScript',
+          'ReactJS',
+          'NodeJS',
+          'CSS',
+        ],
       },
     ],
   },
@@ -289,7 +296,7 @@ providing news and account information.`,
         description: 'Application to handle e-documents',
         descriptionAlt:
           'All documents receive by the compoany are scanned, this application handle them and track their status.',
-        stack: ['JavaScript', 'ReactJS', 'NodeJS', 'Docker', 'CSS', 'NextJS'],
+        stack: ['JavaScript', 'ReactJS', 'NodeJS', 'Docker', 'CSS'],
       },
     ],
   },
@@ -302,7 +309,7 @@ providing news and account information.`,
     logo: logoAxa,
     projects: [
       {
-        title: 'Espace client',
+        title: 'Customer portal',
         role: 'Developer front',
         teamSize: 20,
         language: 'fr',
