@@ -41,6 +41,10 @@ export const Header = () => (
         <LogoSnowboarder className={styles.icon} />
         <LogoDiver className={styles.icon} />
       </div>
+      <div className={styles.contact}>
+        <div>tel: 06 24 61 32 57</div>
+        <div>mail: abienne@gmail.com</div>
+      </div>
     </div>
     <div className={styles.tech}>
       <TechItem tech="ReactJS" />
