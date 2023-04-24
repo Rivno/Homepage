@@ -4,7 +4,8 @@
   color: var(--color-text-white);
   height: 175px;
   width: 100vw;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
