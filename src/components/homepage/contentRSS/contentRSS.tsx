@@ -12,14 +12,13 @@ export const ContentRSS = () => (
       <FeedRSS url={FEED_URL.CRUNCH} />
     </div>
     <div className={styles.column}>
-      <FeedRSS url={FEED_URL.JVC} />
+      <FeedRSS url={FEED_URL.WOWHEAD} />
       <FeedRSS url={FEED_URL.GK} />
       <FeedRSS url={FEED_URL.GSPOT} />
     </div>
     <div className={styles.column}>
       <FeedRSS url={FEED_URL.TVERGE} />
       <FeedRSS url={FEED_URL.MONDE} />
-      <FeedRSS url={FEED_URL.CNN} />
     </div>
   </div>
 );
