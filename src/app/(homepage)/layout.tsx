@@ -21,7 +21,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        <meta name="google-site-verification" content="-cLkUtsbhpmz0h_q2T5LGUfA_LGCS7BRdaIMX1KoiPo" />
+      </head>
       <body>
         <AuthContext>
           <ReactQuery>
