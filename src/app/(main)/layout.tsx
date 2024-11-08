@@ -52,7 +52,10 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>{/* <script src="/scripts/theme-mode.js" /> */}</head>
+      <head>
+        {/* <script src="/scripts/theme-mode.js" /> */}
+        <meta name="google-site-verification" content="-cLkUtsbhpmz0h_q2T5LGUfA_LGCS7BRdaIMX1KoiPo" />
+      </head>
       <body>
         <AuthContext>
           <div className={styles.container}>
